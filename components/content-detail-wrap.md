@@ -1,12 +1,12 @@
-# ContentDetailWrap 详情包裹组件
+# ContentDetailWrap 상세 내용 래핑 컴포넌트
 
-`1.2.4` 新增
+`1.2.4` 추가
 
-用于展示详情，自带返回按钮。
+상세 정보를 표시하는데 사용되며，뒤로가기 버튼이 포함되어 있습니다.
 
-ContentDetailWrap 组件位于 [src/components/ContentDetailWrap](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/ContentDetailWrap) 内
+ContentDetailWrap 컴포넌트 : [src/components/ContentDetailWrap](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/ContentDetailWrap) 
 
-## 用法
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -14,29 +14,29 @@ import { ContentDetailWrap } from '@/components/ContentDetailWrap'
 </script>
 
 <template>
-  <ContentDetailWrap title="详情" @back="push('/example/example-page')">
+  <ContentDetailWrap title="상세정보" @back="push('/example/example-page')">
     Details
   </ContentDetailWrap>
 </template>
 
 ```
 
-## ContentDetailWrap 属性
+## ContentDetailWrap 속성
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| title | 标题 | `string` | - | - |
+| title | 제목 | `string` | - | - |
 
-## ContentDetailWrap 事件
+## ContentDetailWrap 이벤트
 
-| 方法名 | 说明 | 回调参数 |
+| 함수 명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| back | 返回事件 | - |
+| back | 뒤로가기 이벤트 | - |
 
-## ContentDetailWrap 插槽
+## ContentDetailWrap 슬롯
 
-| 插槽名 | 说明 | 子标签 |
+| 슬롯 명 | 설명 | 하위 태그 |
 | ---- | ---- | ---- |
-| - | 默认展示内容 | - |
-| title | 自定义标题内容 | - |
-| right | 自定义右侧内容 | - |
+| - | 기본 표시 내용 | - |
+| title | 사용자 정의 제목 | - |
+| right | 사용자 정의 내용(오른쪽) | - |

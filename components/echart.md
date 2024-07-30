@@ -1,12 +1,12 @@
-# Echart 图表组件
+# Echart 차트 컴포넌트
 
-对 `echarts` 进行封装，自适应窗口大小。
+`echarts` 를 확장，창 크기 조절。
 
-Echart 组件位于 [src/components/Echart](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Echart) 内
+Echart 컴포넌트 :  [src/components/Echart](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Echart)
 
-## 用法
+## 사용법
 
-只需传入对应的 `options` 和 `height` 即可展示图表。
+해당 `options`, `height` 만 전달하면 차트를 표시할 수 있습니다。
 
 ```vue
 <template>
@@ -14,10 +14,10 @@ Echart 组件位于 [src/components/Echart](https://github.com/kailong321200875/
 </template>
 ```
 
-## Echart 属性
+## Echart 속성
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| options | echart 对应的配置项，[详见](https://echarts.apache.org/zh/option.html#title) | `EChartsOption` | - | [] |
-| width | 图表宽度 | `string`/`number` | - | - |
-| height | 图表高度 | `string`/`number` | - | 500 |
+| options | echart 설정 항목，[자세히 보기](https://echarts.apache.org/zh/option.html#title) | `EChartsOption` | - | [] |
+| width | 차트 너비 | `string`/`number` | - | - |
+| height | 차트 높이 | `string`/`number` | - | 500 |

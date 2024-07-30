@@ -1,12 +1,12 @@
-# CountTo 数字动画组件
+# CountTo 숫자 애니메이션 컴포넌트
 
-基于 `vue-count-to` 改造
+`vue-count-to`를 기반으로 개선
 
-CountTo 组件位于 [src/components/CountTo](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/CountTo) 内
+CountTo 컴포넌트 : [src/components/CountTo](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/CountTo) 
 
-## 用法
+## 사용법
 
-更复杂点的例子，请[在线预览](https://element-plus-admin.cn/#/components/count-to)
+더 복잡한 예시, [온라인 미리보기](http://demo-wils.logis-hub.co.kr/#/components/form/default-form)
 
 ```vue
 <script setup lang="ts">
@@ -19,18 +19,18 @@ import { CountTo } from '@/components/CountTo'
 
 ```
 
-## CountTo 属性
+## CountTo 속성
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| startVal | 初始值 | `number` | - | 0 |
-| endVal | 最后展示的值 | `number` | - | 2021 |
-| duration | 动画时间 | `number` | - | 3000 |
-| autoplay | 是否自动播放 | `boolean` | - | true |
-| decimals | 小位数 | `number` | - | 0 |
-| decimal | 小位数分割符号 | `string` | - | . |
-| separator | 分割符号 | `string` | - | , |
-| prefix | 前缀 | `string` | - | - |
-| suffix | 后缀 | `string` | - | - |
-| useEasing | 过渡动画 | `boolean` | - | true |
-| easingFn | 自定义动画效果 | `(t: number, b: number, c: number, d: number) => number` | - | - |
+| startVal | 초기값 | `number` | - | 0 |
+| endVal | 최종값 | `number` | - | 2021 |
+| duration | 애니메이션 시간 | `number` | - | 3000 |
+| autoplay | 자동재생 여부 | `boolean` | - | true |
+| decimals | 소수점 자릿수 | `number` | - | 0 |
+| decimal | 소수점 자릿수 구분 기호 | `string` | - | . |
+| separator | 구분 기호 | `string` | - | , |
+| prefix | 접두사 | `string` | - | - |
+| suffix | 접미사 | `string` | - | - |
+| useEasing | 전환 애니메이션 | `boolean` | - | true |
+| easingFn | 사용자 정의 애니메이션 | `(t: number, b: number, c: number, d: number) => number` | - | - |

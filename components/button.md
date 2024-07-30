@@ -1,13 +1,13 @@
-# BaseButton 按钮组件
+# BaseButton 컴포넌트
 
-二次封装 `ElButton` ，支持修改主题色
+`ElButton`의 확장 컴포넌트，테마 색상 변경 지원
 
-BaseButton 组件位于 [src/components/Button](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Button) 内
+BaseButton 컴포넌트 : [src/components/Button](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Button) 
 
-BaseButton 已经全局引入，无需在手动引入
+BaseButton 컴포넌트는 전역적으로 등록되어 있어, 별도로 import할 필요가 없습니다.
 
 
-### 基本用法
+### 사용법
 
 ```vue
 <template>
@@ -16,6 +16,6 @@ BaseButton 已经全局引入，无需在手动引入
 
 ```
 
-## BaseButton 属性<span id="BaseButton"></span>
+## BaseButton 속성<span id="BaseButton"></span>
 
-支持 `ElButton` 的所有属性
+`BaseButton` 컴포넌트는 `ElButton`의 모든 속성을 지원 합니다.

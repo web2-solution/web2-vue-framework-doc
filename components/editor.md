@@ -1,14 +1,16 @@
-# Editor 富文本组件
+# Editor 리치 텍스트 컴포넌트
 
-基于 [wangeditor](https://www.wangeditor.com/) 封装。
+[wangeditor](https://www.wangeditor.com/)를 기반으로 확장。
 
-目前项目中的 `editor` 只是做了简单的封装，需要开发者根据实际情况，自行配置 `editorConfig` 属性，如，上传图片功能。
+현재 프로젝트의 `editor` 는 단한 패키지일 뿐이며, 
 
-可自行阅读 [wangeditor文档](https://www.wangeditor.com/v5/)
+개발자는 필요에따라 `editorConfig` 속성을 직접 설정해야 합니다, 예를 들어, 이미지 업로드 기능을 설정할 수 있습니다。
 
-Editor 组件位于 [src/components/Editor](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Editor) 内
+[wangeditor문서](https://www.wangeditor.com/v5/)
 
-## 用法
+Editor 컴포넌트 [src/components/Editor](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Editor)
+
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -28,23 +30,23 @@ const change = (html: string) => {
 
 ```
 
-## Editor 属性
+## Editor 속성
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| editorId | 富文本组件唯一值，必填项 | `string` | - | wangeEditor-1 |
-| height | 高度 | `string`/`number` | - | 500px |
-| editorConfig | wangeditor 组件的所有配置项 | `IEditorConfig` | - | - |
-| modelValue | 内容双向绑定，支持v-model | `string` | - | - |
+| editorId | 리치 텍스트 컴포넌트 고유 값, 필수 항목 | `string` | - | wangeEditor-1 |
+| height | 높이 | `string`/`number` | - | 500px |
+| editorConfig | wangeditor 컴포넌트의 모든 설정 항목 | `IEditorConfig` | - | - |
+| modelValue | 양방향 바인딩, v-model 지원 | `string` | - | - |
 
-## Editor 事件
+## Editor 이벤트
 
-| 方法名 | 说明 | 回调参数 |
+| 함수 명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| change | 内容改变时，返回 editor 实例 | editor: IDomEditor |
+| change | 내용이 변경될 때 'editor' 인스턴스 반환 | editor: IDomEditor |
 
-## Editor 方法
+## Editor 메소드
 
-| 方法名 | 说明 | 回调参数 |
+| 함수 명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| getEditorRef | 获取 editor 实例 | `() => Promise<IDomEditor>` |
+| getEditorRef | editor 인스턴스 가져오기 | `() => Promise<IDomEditor>` |

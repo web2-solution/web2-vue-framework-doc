@@ -1,10 +1,10 @@
-# Avatars 头像列表
+# Avatar 목록
 
-展示多个头像集合
+아바타 모음
 
-Avatars 组件位于 [src/components/Avatars](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Avatars) 内
+Avatars 컴포넌트 : [src/components/Avatars](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Avatars) 
 
-## 用法
+## 사용법
 
 
 ```vue
@@ -57,18 +57,18 @@ const data = ref<AvatarItem[]>([
 
 ```
 
-## Avatars 属性<span id="Avatars"></span>
+## Avatars 속성<span id="Avatars"></span>
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| size | 头像尺寸 | `ComponentSize、number` | - | - |
-| max | 最大展示个数 | `number` | - | 5 |
-| data | 头像数据，[详见](#data) | `AvatarItem[]` | - | - |
-| showTooltip | 是否展示名称tip | `boolean` | - | true |
+| size | 아바타 크기 | `ComponentSize、number` | - | - |
+| max | 최대 표시 개수 | `number` | - | 5 |
+| data | 아바타 데이터，[자세히보기](#data) | `AvatarItem[]` | - | - |
+| showTooltip | 툴팁 표시여부 | `boolean` | - | true |
 
 ### data<span id="data"></span>
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| url | 头像图片地址 | `string` | - | - |
-| name | 名称，非必填 | `string` | - | - |
+| url | 이미지 url | `string` | - | - |
+| name | 이름，(선택적 요소) | `string` | - | - |

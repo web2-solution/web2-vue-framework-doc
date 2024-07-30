@@ -1,20 +1,18 @@
-# Descriptions 描述组件
+# Descriptions 컴포넌트 설명
 
-::: warning 注意
-从 v2.5.3之后，Descriptions 组件不再基于 `element-plus` 的 `Descriptions` 进行二次封装，所以可能有的属性无法使用，具体可以自行修改或者改造，或者可以提issue。
+::: warning v2.5.3 이후, Descriptions 컴포넌트는 더 이상 `element-plus`의 `Descriptions`를 기반으로 한 확장을 제공하지 않습니다. 따라서 일부 속성을 사용할 수 없을 수 있습니다. 구체적인 수정이나 변경은 직접 진행하시거나, 이슈를 제기하실 수 있습니다.
 :::
 
-~~对 `element-plus` 的 `Descriptions` 组件进行封装。~~
+~~`element-plus` 의 `Descriptions` 의 컴포넌트를 확장。~~
 
-Descriptions 组件位于 [src/components/Descriptions](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Descriptions) 内
+Descriptions 컴포넌트 : [src/components/Descriptions](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Descriptions) 
 
-::: warning 注意
-推荐使用 `tsx` 来使用 `Descriptions` 组件
+::: warning Descriptions 컴포넌트를 사용하려면 **tsx**를 사용하는 것이 좋습니다.
 :::
 
-## 用法
+## 사용법
 
-更复杂点的例子，请[在线预览](https://element-plus-admin.cn/#/components/descriptions)
+더 복잡한 예시, [온라인 미리보기](https://element-plus-admin.cn/#/components/descriptions)
 
 ```vue
 <script setup lang="tsx">
@@ -23,12 +21,12 @@ import { reactive } from 'vue'
 
 const data = reactive({
   username: 'chenkl',
-  nickName: '梦似花落。',
+  nickName: '꿈은 꽃이 지듯',
   age: 26,
   phone: '13655971xxxx',
   email: '502431556@qq.com',
-  addr: '这是一个很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的地址',
-  sex: '男',
+  addr: 'Seoul',
+  sex: '남',
   certy: '3505831994xxxxxxxx'
 })
 
@@ -68,29 +66,31 @@ const schema = reactive<DescriptionsSchema[]>([
 
 ```
 
-## Descriptions 属性
+## Descriptions 속성
 
-除以下参数外，还支持 `element-plus` 的 `Descriptions` 所有属性，[详见](https://element-plus.org/zh-CN/component/descriptions.html#descriptions-%E5%B1%9E%E6%80%A7)
+다음 매개변수 이외에, `element-plus`의 `Descriptions`에서 지원하는 모든 속성을 지원합니다. 
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+ [자세히 보기](https://element-plus.org/zh-CN/component/descriptions.html#descriptions-%E5%B1%9E%E6%80%A7)
+
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| title | 标题 | `string` | - | - |
-| message | 提示 | `string` | - | - |
-| collapse | 是否显示展开按钮 | `boolean` | - | true |
-| schema | 布局结构数据，[详见](#Schema) | `DescriptionsSchema[]` | - | [] |
-| data | 展示的数据 | `Recordable` | - | {} |
+| title | 제목 | `string` | - | - |
+| message | 알림 | `string` | - | - |
+| collapse | 확장 버튼 표시여부 | `boolean` | - | true |
+| schema | 레이아웃 구조 데이터，[참조](#Schema) | `DescriptionsSchema[]` | - | [] |
+| data | 데이터 | `Recordable` | - | {} |
 
 ### Schema<span id="Schema"></span>
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| span | 栅格占比 | `number` | - | - |
-| field | 字段名，唯一值，需要与 data 中的属性名对应 | `string` | - | - |
-| label | 列表标题 | `string` | - | - |
-| width | 列表宽度 | `string`/`number` | - | - |
-| minWidth | 列表最小宽度 | `string`/`number` | - | - |
-| align | 内容对齐方式 | `string` | left/center/right | left |
-| labelAlign | 标题对齐方式 | `string` | left/center/right | left |
-| className | 自定义内容标签类名 | `string` | - | - |
-| labelClassName | 自定义标题标签类名 | `string` | - | - |
-| slots | 插槽对象 | `object` | - | - |
+| span | 그리드 비율 | `number` | - | - |
+| field | 필드 이름, 고유 값, (data에서의 속성 이름과 일치해야 합니다.) | `string` | - | - |
+| label | 제목 | `string` | - | - |
+| width | 목록 너비 | `string`/`number` | - | - |
+| minWidth | 목록 최소 너비 | `string`/`number` | - | - |
+| align | 정렬 방식 | `string` | left/center/right | left |
+| labelAlign | 제목 정렬 방식 | `string` | left/center/right | left |
+| className | 사용자 지정 클래스 이름 | `string` | - | - |
+| labelClassName | 사용자 지정 제목 클래스 이름 | `string` | - | - |
+| slots | 슬롯 | `object` | - | - |

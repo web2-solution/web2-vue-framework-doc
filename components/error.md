@@ -1,10 +1,10 @@
-# Error 缺省组件
+# Error 기본 컴포넌트
 
-用于各种占位图组件，如 `404`、`403`、`500` 等错误页面。
+`404`,`403`,`500` 등 다양한 오류 페이지와 같은 컴포넌트에 사용됩니다。
 
-Error 组件位于 [src/components/Error](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Error) 内
+Error 컴포넌트 : [src/components/Error](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Error) 
 
-## 用法
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -17,20 +17,20 @@ import { Error } from '@/components/Error'
 
 ```
 
-## Error 属性
+## Error 속성
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| type | 占位图类型 | `string` | - | 404 |
+| type | 대체 화면 유형을 설정 | `string` | - | 404 |
 
-## Error 事件
+## Error 이벤트
 
-| 方法名 | 说明 | 回调参数 |
+| 함수 명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| errorClick | 点击按钮后的回调 | - |
+| errorClick | 버튼 클릭 후의 콜백 | - |
 
-## 如何扩展新类型
+## 새로운 유형을 확장하는 방법
 
-目前只提供了 `404`、`403`、`500` 三种类型，如果不满足实际需求，可自行扩展。
+현재는 `404`, `403`, `500`의 세 가지 유형만 제공됩니다. 만약 실제 요구에 맞지 않는 경우, 직접 확장할 수 있습니다.
 
-只需在 [src/components/Error/src/Error.vue](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Error/src/Error.vue) 文件的 `errorMap` 对象扩展对应类型即可。
+[src/components/Error/src/Error.vue](https://github.com/web2-solution/web2-vue-framework/blob/dev/src/components/Error/src/Error.vue) 파일의 `errorMap` 객체에서 해당 유형을 확장하면 됩니다。

@@ -1,6 +1,6 @@
-# Highlight 高亮组件
+# Highlight 하이라이트 컴포넌트
 
-Highlight 组件位于 [src/components/Highlight](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Highlight) 内
+Highlight 컴포넌트 : [src/components/Highlight](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Highlight) 
 
 ## 用法
 
