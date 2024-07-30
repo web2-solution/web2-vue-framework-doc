@@ -79,10 +79,10 @@ const loadMore = () => {
 | reset | 창 크기 변경 시 레이아웃 재구성 여부| `boolean` | true/false | true |
 | width | 각 항목의 너비 | `number` | - | 200 |
 | gap | 각 항목의 간격 | `number` | - | 20 |
-| loadingText | 로딩 중 텍스트 | `string` | - | 加载中... |
+| loadingText | 로딩 중 텍스트 | `string` | - | 로딩 중... |
 | loading | 로딩 중 여부 | `boolean` | - | false |
 | end | 로딩 완료 여부 | `boolean` | - | false |
-| endText | 로딩 완료 텍스트 여부 | `string` | - | 没有更多了 |
+| endText | 로딩 완료 텍스트 여부 | `string` | - | 더 이상 없습니다 |
 | props | 필드 별칭 | `object` | - | { src: 'src', height: 'height' } |
 
 ## Waterfall 이벤트

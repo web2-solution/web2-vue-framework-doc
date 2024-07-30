@@ -1,8 +1,8 @@
 # IAgree 컴포넌트
 
-用于同意协议选项
+동의 약관 옵션에 사용됩니다.
 
-IAgree 组件位于 [src/components/IAgree](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/IAgree) 内
+IAgree 컴포넌트 [src/components/IAgree](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/IAgree) 内
 
 ## 사용법
 

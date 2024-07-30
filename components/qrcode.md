@@ -29,7 +29,7 @@ import { Qrcode } from '@/components/Qrcode'
 | width | QR 코드 너비 | `number` | - | 200 |
 | logo | QR 코드 logo | `QrcodeLogo`/`string` | - | - |
 | disabled | QR 코드만료 여부 | `boolean` | - | false |
-| disabledText | 二维码过期提示内容 | `string` | - | - |
+| disabledText | QR 코드 만료 안내 메시지 | `string` | - | - |
 
 ## Qrcode 이벤트
 
