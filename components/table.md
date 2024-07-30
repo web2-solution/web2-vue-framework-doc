@@ -1,17 +1,16 @@
-# Table 表格组件
+# Table 테이블 컴포넌트
 
-对 `element-plus` 的 `Table` 组件进行封装，只需传入 `columns` 与 `data` 参数，即可渲染出响应的表格出来。
+`element-plus`의 `Table` 컴포넌트를 래핑하여 `columns`와 `data` 매개변수만 전달하면 응답하는 테이블을 렌더링할 수 있습니다.
 
-Table 组件位于 [src/components/Table](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Table) 内
+Table 컴포넌트 : [src/components/Table](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Table)
 
-::: warning 注意
-推荐使用 tsx 来使用 `Table` 组件。
+::: warning 주의
+Table 컴포넌트를 사용할 때는 tsx를 사용하는 것이 좋습니다.
 :::
 
-## 用法
+## 사용법
 
-### 基础用法
-
+### 기본 사용법
 ```vue
 <script setup lang="ts">
 import { reactive } from 'vue'
@@ -52,9 +51,9 @@ const data = reactive([
 
 ### useTable
 
-推荐配合 `useTable` 来使用
+element-plus의 Table 컴포넌트를 사용할 때 `useTable` 훅을 함께 사용하는 것이 유용합니다. 
 
-复杂点的例子，请[在线预览](https://element-plus-admin.cn/#/components/table/use-table)
+복잡한 예제는 [온라인 미리보기](https://element-plus-admin.cn/#/components/table/use-table)를 참조하세요.
 
 ```vue
 <script setup lang="tsx">
@@ -185,7 +184,7 @@ const actionFn = (data: TableSlotDefault) => {
 
 ```
 
-#### 参数介绍
+#### 파라미터 정의
 
 ```ts
 const { tableRegister, tableState, tableMethods } = useTable(props: UseTableConfig)
@@ -193,88 +192,88 @@ const { tableRegister, tableState, tableMethods } = useTable(props: UseTableConf
 
 **props**
 
-在使用 `useTable` 的时候，需要传入 `fetchDataApi`，为了保证可定制，需要自行在 `fetchDataApi` 中完成请求逻辑，之后返回结果 { list: Array, total?: number }，后续分页，就可以自动请求数据。
+`useTable`을 사용할 때는 `fetchDataApi`를 전달해야 합니다. 커스터마이징을 보장하기 위해, 요청 로직을 `fetchDataApi`에서 직접 구현하고, 결과로 { list: Array, total?: number }를 반환해야 합니다. 이후 페이지네이션이 자동으로 데이터 요청을 처리합니다.
 
-如果需要删除，同样需要传入 `fetchDelApi` ，返回一个 `Boolean` 来判断是否删除完成，后续 `useTable` 将自行刷新表格。
+삭제가 필요한 경우, fetchDelApi도 전달해야 하며, 반환 값으로 Boolean을 제공하여 삭제 완료 여부를 판단합니다. 이후 useTable이 자동으로 테이블을 새로 고칩니다.
 
 **tableRegister**
 
-`tableRegister` 用于注册 `useTable`，如果需要使用 `useTable` 提供的 `api`，必须将 `tableRegister` 传入组件的 `onRegister`
+`tableRegister`는 `useTable`을 등록하는 데 사용됩니다. `useTable`이 제공하는 `api`를 사용하려면, 반드시 `tableRegister`를 컴포넌트의 `onRegister`에 전달해야 합니다.
 
 **tableState**
 
-表格状态
+테이블 상태
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| pageSize | 每页显示多少条 | `number` | - | 10 |
-| currentPage | 当前页 | `number` | - | 1 |
-| total | 总条数 | `number` | - | - |
-| dataList | 表格数据 | `any[]` | - | [] |
-| loading | 表格是否加载中 | `boolean` | - | false |
+| pageSize | 페이지당 표시할 항목 수 | `number` | - | 10 |
+| currentPage | 현재 페이지 | `number` | - | 1 |
+| total | 총 항목 수 | `number` | - | - |
+| dataList | 테이블 데이터 | `any[]` | - | [] |
+| loading | 테이블 로딩 중 여부 | `boolean` | - | false |
 
 **tableMethods**
 
-| 方法名 | 说明 | 回调参数 |
+| 함수 명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| setProps | 用于表格组件属性 | (props: Recordable) => void |
-| getList | 获取表格数据 | `() => Promise<void>` |
-| setColumn | 设置表头结构 | (columnProps: TableSetProps[]) => void |
-| addColumn | 新增表头结构 | (tableColumn: TableColumn, index?: number) => void |
-| delColumn | 删除表头结构 | (field: string) => void |
-| getElTableExpose | 获取 ElTable 实例 | `() => Promise<typeof ElTable>` |
-| refresh | 刷新表格 | () => void |
-| delList | 删除数据 | `(idsLength: number) => Promise<void>` |
+| setProps | 테이블 속성 설정 | (props: Recordable) => void |
+| getList | 테이블 데이터 가져오기 | `() => Promise<void>` |
+| setColumn | 테이블 헤더 구조 설정 | (columnProps: TableSetProps[]) => void |
+| addColumn | 테이블 헤더 구조 추가 | (tableColumn: TableColumn, index?: number) => void |
+| delColumn | 테이블 헤더 구조 삭제 | (field: string) => void |
+| getElTableExpose |ElTable 인스턴스 가져오기 | `() => Promise<typeof ElTable>` |
+| refresh | 테이블 새로고침 | () => void |
+| delList | 데이터 삭제 | `(idsLength: number) => Promise<void>` |
 
-## Table 属性
+## Table 속성
 
-除以下参数外，还支持 `element-plus` 的 `Table` 所有属性，[详见](https://element-plus.org/zh-CN/component/table.html#table-attributes)
+다음 파라미터 이외에, `element-plus` 의 `Table` 컴포넌트가 지원하는 모든 속성도 지원합니다，[자세히 보기](https://element-plus.org/zh-CN/component/table.html#table-attributes)
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| pageSize | 每页显示多少条，支持 v-model 双向绑定 | `number` | - | 10 |
-| currentPage | 当前页，支持 v-model 双向绑定 | `number` | - | 1 |
-| selection | 是否多选 | `boolean` | - | true |
-| showOverflowTooltip | 是否所有的超出隐藏，优先级低于 schema 中的 showOverflowTooltip  | `boolean` | - | true |
-| columns | 表头结构，[详见](#Columns) | `TableColumn[]` | - | [] |
-| expand | 是否显示展开行 | `boolean` | - | false |
-| pagination | 是否展示分页，[详见](#Pagination) | `Pagination`/`undefined` | - | - |
-| reserveSelection | 仅对 type=selection 的列有效，类型为 Boolean，为 true 则会在数据更新之后保留之前选中的数据（需指定 row-key） | `boolean` | - | false |
-| loading | 加载状态 | `boolean` | - | false |
-| reserveIndex | 是否叠加索引 | `boolean` | - | false |
-| align | 内容对齐方式 | `string` | `left`/`center`/`right` | left |
-| headerAlign | 表头对齐方式 | `string` | `left`/`center`/`right` | left |
-| data | 表格数据 | `Recordable[]` | - | [] |
-| showAction | 是否显示表格操作 | `boolean` | - | false |
-| imagePreview | 需要展示图片的字段 | `string[]` | - | - |
-| videoPreview | 需要展示视频的字段 | `string[]` | - | - |
-| customContent | 是否自定义内容 | `boolean` | - | false |
-| cardBodyStyle | 卡片内容样式 | `CSSProperties` | - | - |
-| cardBodyClass | 卡片内容类名 | `string` | - | - |
-| cardWrapStyle | 卡片容器样式 | `CSSProperties` | - | - |
-| cardWrapClass | 卡片容器类名 | `string` | - | - |
+| pageSize | 페이지당 표시할 항목 수, v-model을 통한 양방향 바인딩 지원 | `number` | - | 10 |
+| currentPage | 현재 페이지, v-model을 통한 양방향 바인딩 지원 | `number` | - | 1 |
+| selection | 다중 선택 여부 | `boolean` | - | true |
+| showOverflowTooltip | 화면 범위 넘어설 때의 숨김 여부, schema에서의 showOverflowTooltip 설정보다 우선 순위가 낮음  | `boolean` | - | true |
+| columns | 테이블 헤더 구조 [자세히 보기](#Columns) | `TableColumn[]` | - | [] |
+| expand | 확장 행 표시 여부 | `boolean` | - | false |
+| pagination | 페이지네이션 표시 여부, [자세히 보기](#Pagination) | `Pagination`/`undefined` | - | - |
+| reserveSelection | type=selection의 열에만 적용됩니다. 유형은 Boolean이며, true로 설정하면 데이터 업데이트 후 이전에 선택된 데이터가 유지 됨(단, row-key를 지정해야 함) | `boolean` | - | false |
+| loading | 로딩 상태 | `boolean` | - | false |
+| reserveIndex | 인덱스 중첩 여부 | `boolean` | - | false |
+| align | 내용 정렬 방식 | `string` | `left`/`center`/`right` | left |
+| headerAlign | 헤더 정렬 방식 | `string` | `left`/`center`/`right` | left |
+| data | 테이블 데이터 | `Recordable[]` | - | [] |
+| showAction | 테이블 조작 표시 여부 | `boolean` | - | false |
+| imagePreview | 이미지를 표시해야 하는 필드 | `string[]` | - | - |
+| videoPreview | 비디오를 표시해야 하는 필드 | `string[]` | - | - |
+| customContent | 콘텐츠 사용자 정의 여부 | `boolean` | - | false |
+| cardBodyStyle | 카드 내용 스타일 | `CSSProperties` | - | - |
+| cardBodyClass | 카드 내용 클래스 이름 | `string` | - | - |
+| cardWrapStyle | 카드 컨테이너 스타일 | `CSSProperties` | - | - |
+| cardWrapClass | 카트 컨테이너 클래스 이름 | `string` | - | - |
 
 ### Columns<span id="Columns"></span>
 
-除了以下属性，还支持 `element-plus` 的 `TableColumn` 属性。
+다음 속성 이외에, `element-plus`의 `TableColumn` 속성도 지원합니다.
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| field | 唯一值，如需展示正确的数据，需要与 data 中的属性名对应 | `string` | - | - |
-| label | 表头名称 | `string` | - | - |
-| hidden | 是否隐藏 | `boolean` | - | - |
-| slots | 插槽对象 | `object` | - | - |
-| children | 子项，用于多级表头 | `TableColumn[]` | - | - |
+| field | 고유 값. 올바른 데이터를 표시하려면 data 내의 속성명과 일치해야 합니다. | `string` | - | - |
+| label | 헤더 이름 | `string` | - | - |
+| hidden | 숨김 여부 | `boolean` | - | - |
+| slots | 슬롯 객체 | `object` | - | - |
+| children | 하위 항목, 다중 계층 헤더에 사용됩니다 | `TableColumn[]` | - | - |
 
 ### Pagination<span id="Pagination"></span>
 
-支持 `element-plus` 的 `Pagination` 所有属性，[详见](https://element-plus.org/zh-CN/component/pagination.html#%E5%B1%9E%E6%80%A7)
+element-plus의 Pagination에서 지원하는 모든 속성, [자세히 보기](https://element-plus.org/zh-CN/component/pagination.html#%E5%B1%9E%E6%80%A7)
 
-## Table 方法
+## Table 함수
 
-| 方法名 | 说明 | 回调参数 |
+| 함수명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| setProps | 用于设置表格属性 | (props: Recordable) => void |
-| setColumn | 用于修改表头结构 | (columnProps: TableSetPropsType[]) => void |
-| addColumn | 新增表头结构 | (tableColumn: TableColumn, index?: number) => void |
-| delColumn | 删除表头结构 | (field: string) => void |
+| setProps | 테이블 속성 설정 | (props: Recordable) => void |
+| setColumn | 헤더 구조 수정 | (columnProps: TableSetPropsType[]) => void |
+| addColumn | 헤더 구조 추가 | (tableColumn: TableColumn, index?: number) => void |
+| delColumn | 헤더 구조 삭제 | (field: string) => void |

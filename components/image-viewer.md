@@ -1,10 +1,10 @@
-# ImageViewer 图片预览组件
+# ImageViewer 이미지 미리보기 컴포넌트
 
-将 `element-plus` 的 `ImageViewer` 组件函数化，通过函数方便创建组件。
+`element-plus`의 `ImageViewer` 컴포넌트를 함수형으로 변환하여, 함수를 통해 컴포넌트를 쉽게 생성할 수 있도록 합니다.
 
-ImageViewer 组件位于 [src/components/ImageViewer](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/ImageViewer) 内
+ImageViewer 컴포넌트 : [src/components/ImageViewer](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/ImageViewer)
 
-## 用法
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -14,33 +14,32 @@ import { ElButton } from 'element-plus'
 const open = () => {
   createImageViewer({
     urlList: [
-      'https://img1.baidu.com/it/u=657828739,1486746195&fm=26&fmt=auto&gp=0.jpg',
-      'https://img0.baidu.com/it/u=3114228356,677481409&fm=26&fmt=auto&gp=0.jpg',
-      'https://img1.baidu.com/it/u=508846955,3814747122&fm=26&fmt=auto&gp=0.jpg',
-      'https://img1.baidu.com/it/u=3536647690,3616605490&fm=26&fmt=auto&gp=0.jpg',
-      'https://img1.baidu.com/it/u=4087287201,1148061266&fm=26&fmt=auto&gp=0.jpg',
-      'https://img2.baidu.com/it/u=3429163260,2974496379&fm=26&fmt=auto&gp=0.jpg'
+      'https://test.jpg',
+      'https://test2.jpg',
+      'https://test3.jpg',
+      'https://test4.jpg',
+      'https://test5.jpg',
     ]
   })
 }
 </script>
 
 <template>
-  <ElButton type="primary" @click="open">预览</ElButton>
+  <ElButton type="primary" @click="open">미리 보기</ElButton>
 </template>
 
 ```
 
 ## createImageViewer
 
-### 参数
+### 파라 미터
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| urlList | 图片列表 | `string[]` | - | - |
-| zIndex | 层级 | `number` | - | - |
-| initialIndex | 默认展示第几张 | `number` | - | 1 |
-| infinite | 是否可以循环切换 | `boolean` | - | true |
-| hideOnClickModal | 点击蒙版是否关闭 | `boolean` | - | false |
-| appendToBody | 是否添加到 body 中 | `boolean` | - | false |
-| show | 是否显示图片预览 | `boolean` | - | false |
+| urlList | 사진 목록 | `string[]` | - | - |
+| zIndex | 레벨 | `number` | - | - |
+| initialIndex | 기본적으로 몇 번째 이미지를 표시할지 설정 | `number` | - | 1 |
+| infinite | 반복 전환이 가능한지 여부 | `boolean` | - | true |
+| hideOnClickModal | 클릭할 때 닫히는지 여부 | `boolean` | - | false |
+| appendToBody | body에 추가할지 여부 | `boolean` | - | false |
+| show | 미리보기 표시 여부 | `boolean` | - | false |

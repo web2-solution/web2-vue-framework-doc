@@ -1,10 +1,10 @@
-# InputPassword 密码输入框
+# InputPassword 비밀번호 입력
 
-对 `element-plus` 的 `Input` 组件进行封装。
+`element-plus`의 `Input` 컴포넌트를 래핑합니다.
 
-InputPassword 组件位于 [src/components/InputPassword](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/InputPassword) 内
+InputPassword 컴포넌트 : [src/components/InputPassword](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/InputPassword) 
 
-## 用法
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -20,11 +20,11 @@ const password = ref('')
 
 ```
 
-## InputPassword 属性
+## InputPassword 속성
 
-除以下参数外，还支持 `element-plus` 的 `Input` 所有属性，[详见](https://element-plus.org/zh-CN/component/input.html#autocomplete-%E5%B1%9E%E6%80%A7)
+다음 매개변수 이외에 `element-plus`의  `Input` 컴포넌트의 모든 속성을 지원 합니다，[자세히 보기](https://element-plus.org/zh-CN/component/input.html#autocomplete-%E5%B1%9E%E6%80%A7)
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| strength | 是否显示强度校验 | `boolean` | - | false |
-| modelValue | 选中项绑定值，支持v-model | `string` | - | - |
+| strength | 비밀번호 강도검사 표시여부 | `boolean` | - | false |
+| modelValue | 선택된 항목 바인딩 값, v-model 지원 | `string` | - | - |

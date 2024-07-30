@@ -1,27 +1,27 @@
-# Icon 图标组件
+# Icon 아이콘 컴포넌트
 
-用于项目内组件的展示，基本支持所有图标库（支持按需加载，只打包所用到的图标），支持使用本地 svg 和 Iconify 图标。
+프로젝트 내 컴포넌트 표시를 위해 사용되며, 기본적으로 모든 아이콘 라이브러리를 지원합니다 (필요에 따라 로드되며, 사용된 아이콘만 패키징됨). 로컬 SVG와 Iconify 아이콘 사용을 지원합니다.
 
-Icon 组件位于 [src/components/Icon](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Icon) 内
+Icon 컴포넌트 : [src/components/Icon](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Icon) 
 
 ::: tip
 
-在 [Iconify](https://iconify.design) 上，你可以查询到你想要的所有图标并使用，不管是不是 `element-plus` 的图标库。
+Iconify에서 원하는 모든 아이콘을 검색하고 사용할 수 있습니다. 이 아이콘이 `element-plus` 아이콘 라이브러리 포함여부와는 상관없이 사용할 수 있습니다.
 
 :::
 
-## 用法
+## 사용법
 
-### 基本用法
+### 기본 사용법
 
-如果以`svg-icon:` 开头，则会在本地中找到该 `svg` 图标，否则，会加载 `Iconify` 图标。
+`svg-icon:`로 시작하는 경우, 로컬에서 해당 `SVG` 아이콘을 찾고, 그렇지 않으면 `Iconify` 아이콘을 로드합니다.
 
 ```vue
 <template>
-  <!-- 加载本地 svg -->
+  <!-- 로컬 svg -->
   <Icon icon="svg-icon:peoples" />
 
-  <!-- 加载 Iconify -->
+  <!-- Iconify에서 불러오기 -->
   <Icon icon="ep:aim" />
 </template>
 
@@ -29,7 +29,7 @@ Icon 组件位于 [src/components/Icon](https://github.com/kailong321200875/vue-
 
 ### useIcon
 
-如果需要在其他组件中如 `ElButton` 传入 `icon` 属性，可以使用 `useIcon`
+다른 컴포넌트, 예를 들어 `ElButton`에 `icon` 속성을 전달해야 하는 경우, `useIcon`을 사용할 수 있습니다.
 
 ```vue
 <script setup lang="ts">
@@ -44,7 +44,7 @@ const icon = useIcon({ icon: 'svg-icon:save' })
 </template>
 ```
 
-#### 参数介绍
+#### 파라미터 소개
 
 ```ts
 const icon = useIcon(props)
@@ -52,13 +52,13 @@ const icon = useIcon(props)
 
 **props**
 
-[详见](#Icon)
+[자세히 보기](#Icon)
 
-## Icon 属性<span id="Icon"></span>
+## Icon 속성<span id="Icon"></span>
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| icon | 图标名 | `string` | - | - |
-| color | 图标颜色 | `string` | - | - |
-| size | 图标大小 | `number` | - | 16 |
-| hoverColor | hover颜色 | `string` | - | - |
+| icon | 아이콘 이름 | `string` | - | - |
+| color | 아이콘 색상 | `string` | - | - |
+| size | 아이콘 크기 | `number` | - | 16 |
+| hoverColor | hover 색상 | `string` | - | - |

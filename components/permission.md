@@ -1,20 +1,20 @@
-# Permission 权限组件
+# Permission 권한 컴포넌트
 
-用于颗粒级别的按钮权限组件
+세분화된 권한 수준의 버튼 컴포넌트
 
-Permission 组件位于 [src/components/Permission](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Permission) 内
+Permission 컴포넌트 [src/components/Permission](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Permission)
 
-## 在线例子
+## 온라인 예제
 
-[在线例子](https://element-plus-admin.cn/#/authorization/test)
+[온라인 예제](https://element-plus-admin.cn/#/authorization/test)
 
-## 用法
+## 사용법
 
-由于项目中的颗粒级别的权限，是放在路由表中，所以会判断在当前路由 `meta.permission` 是否包含传入的权限值，有的话则展示。
+프로젝트의 세분화된 권한은 라우터 테이블에 포함되어 있으므로, 현재 라우터의 `meta.permission`에 전달된 권한 값이 포함되어 있는지 여부를 확인합니다. 포함되어 있다면 해당 권한에 따라 표시됩니다
 
-如果权限实现不一致的话，可以自行改造下。
+권한 구현이 요구사항과 일치하지않을 경우, 직접 수정할 수 있습니다.
 
-### 基本用法
+### 기본 사용법
 
 ```vue
 <template>
@@ -25,18 +25,18 @@ Permission 组件位于 [src/components/Permission](https://github.com/kailong32
 
 ```
 
-### 指令形式
+### 형식
 
-权限控制目前还提供了指令的使用方式，并且已经全局注册，所以可以在任意组件中使用 `v-hasPermi`
+권한 제어는 명령어 형태로도 제공되며, 전역적으로 등록되어 있어서 모든 컴포넌트에서 v-hasPermi를 사용할 수 있습니다.
 
 ```vue
 <ElButton v-hasPermi="'add'" type="primary"> Add </ElButton>
 
 ```
 
-### 函数形式
+### 함수 형태
 
-除了以上两种，还可以使用函数的形式进行控制
+위의 두 가지 방법 외에도 함수 형태로 제어할 수 있습니다.
 
 ``` ts
 import { hasPermi } from '@/components/Permission'
@@ -48,8 +48,8 @@ import { hasPermi } from '@/components/Permission'
 
 ```
 
-## Permission 属性<span id="Permission"></span>
+## Permission 속성<span id="Permission"></span>
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| permission | 权限值 | `string` | - | - |
+| permission | 권한 값 | `string` | - | - |

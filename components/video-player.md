@@ -1,11 +1,11 @@
-# VideoPlayer 视频播放器组件（2.5.0+）
+# VideoPlayer 비디오 플레이어 컴포넌트（2.5.0+）
 
-基于 `xgplayer` 二次封装的视频播放器
+xgplayer를 기반으로 한 비디오 플레이어의 재구성
 
-VideoPlayer 组件位于 [src/components/VideoPlayer](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/VideoPlayer) 内
+VideoPlayer 컴포넌트 : [src/components/VideoPlayer](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/VideoPlayer)
 
 
-## 用法
+## 사용법
 
 
 ```vue
@@ -22,9 +22,9 @@ import { VideoPlayer } from '@/components/VideoPlayer'
 
 ```
 
-## VideoPlayer 属性<span id="VideoPlayer"></span>
+## VideoPlayer 속성<span id="VideoPlayer"></span>
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| url | 视频的地址 | `string` | - | - |
-| poster | 视频的封面 | `string` | - | - |
+| url | 비디오 url 주소 | `string` | - | - |
+| poster | 비디오 커버 이미지 | `string` | - | - |

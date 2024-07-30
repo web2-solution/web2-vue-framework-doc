@@ -1,16 +1,16 @@
-# IconPicker 图标选择器组件
+# IconPicker 아이콘 선택 컴포넌트
 
-用于快速选择 Iconify 图标。
+Iconify 아이콘을 선택하는데 사용됩니다.
 
-IconPicker 组件位于 [src/components/IconPicker](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/IconPicker) 内
+IconPicker 컴포넌트 [src/components/IconPicker](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/IconPicker) 
 
 ::: tip
 
-目前只集成了 Ant Design Icons 、Element Plus、TDesign Icons 三个开源项目图标
+현재는 Ant Design Icons, Element Plus, TDesign Icons 세 가지 오픈 소스 프로젝트의 아이콘만 통합되어 있습니다.
 
 :::
 
-## 用法
+## 사용법
 
 
 ```vue
@@ -26,14 +26,14 @@ const currentIcon = ref('tdesign:book-open')
 
 ```
 
-## 如何添加其他开源项目的图标
+## 다른 오픈 소스 프로젝트의 아이콘을 추가하는 방법
 
-可以执行 `pnpm run icon` 然后选择你想要的图标集
+`pnpm run icon`을 실행한 후, 원하는 아이콘 세트를 선택할 수 있습니다.
 
-之后，在 [IconPicker.vue](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/IconPicker/src/IconPicker.vue) 导入，并添加到 `icons` 中即可。
+그 후, [IconPicker.vue](https://github.com/web2-solution/web2-vue-framework/blob/dev/src/components/IconPicker/src/IconPicker.vue) 에서 해당 아이콘을 가져와 `icons`에 추가하면 됩니다.
 
-## Icon 属性<span id="Icon"></span>
+## Icon 속성<span id="Icon"></span>
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| modelValue | 选中项绑定值，支持v-model | `string` | - | - |
+| modelValue | 선택된 항목의 바인딩 값, v-model 지원 | `string` | - | - |

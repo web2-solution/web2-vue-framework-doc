@@ -2,9 +2,9 @@
 
 Highlight 컴포넌트 : [src/components/Highlight](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Highlight) 
 
-## 用法
+## 사용법
 
-组件只能接收纯文本。
+이 컴포넌트는 순수 텍스트만 받을 수 있습니다.
 
 ```vue
 <script setup lang="ts">
@@ -12,23 +12,23 @@ import { Highlight } from '@/components/Highlight'
 </script>
 
 <template>
-  <Highlight :keys="['十年前', '现在']">
-    种一棵树最好的时间是十年前，其次就是现在。
+  <Highlight :keys="['10년전', '현재']">
+    나무를 심기에 가장 좋은 때는 10년 전이었고, 그 다음이 지금이다.
   </Highlight>
 </template>
 
 ```
 
-## Highlight 属性
+## Highlight 속성
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | tag | 包裹标签 | `string` | - | span |
 | keys | 高亮的关键字 | `string[]` | - | [] |
 | color | 高亮的颜色 | `string` | - | var(--el-color-primary) |
 
-## Highlight 事件
+## Highlight 이벤트
 
-| 方法名 | 说明 | 回调参数 |
+| 함수명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| click | 关键字点击事件 | key: string |
+| click | 키워드 클릭 이벤트 | key: string |

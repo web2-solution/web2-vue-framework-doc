@@ -1,12 +1,12 @@
-# Qrcode 二维码组件
+# Qrcode QR코드 컴포넌트
 
-基于 `qrcode` 封装。
+`qrcode`를 기반으로 한 래핑
 
-Qrcode 组件位于 [src/components/Qrcode](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Qrcode) 内
+Qrcode 컴포넌트 : [src/components/Qrcode](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Qrcode) 
 
-## 用法
+## 사용법
 
-更复杂点的例子，请[在线预览](https://element-plus-admin.cn/#/components/qrcode)
+좀 더 복잡한 예제를 보시려면 [온라인 미리보기](https://element-plus-admin.cn/#/components/qrcode)를 참조하세요.
 
 ```vue
 <script setup lang="ts">
@@ -19,22 +19,22 @@ import { Qrcode } from '@/components/Qrcode'
 
 ```
 
-## Qrcode 属性
+## Qrcode 속성
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| tag | 以什么标签生成二维码 | `string` | canvas/img | canvas |
-| text | 二维码内容 | `string`/`Array` | - | - |
-| options | qrcode.js 配置项 | `QRCodeRenderersOptions` | - | {} |
-| width | 二维码宽度 | `number` | - | 200 |
-| logo | 二维码 logo | `QrcodeLogo`/`string` | - | - |
-| disabled | 二维码是否过期 | `boolean` | - | false |
+| tag | QR 코드를 생성할 태그 | `string` | canvas/img | canvas |
+| text | QR 코드 내용 | `string`/`Array` | - | - |
+| options | qrcode.js 설정 항목 | `QRCodeRenderersOptions` | - | {} |
+| width | QR 코드 너비 | `number` | - | 200 |
+| logo | QR 코드 logo | `QrcodeLogo`/`string` | - | - |
+| disabled | QR 코드만료 여부 | `boolean` | - | false |
 | disabledText | 二维码过期提示内容 | `string` | - | - |
 
-## Qrcode 事件
+## Qrcode 이벤트
 
-| 方法名 | 说明 | 回调参数 |
+| 함수 명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| done | 生成二维码后的回调 | - |
-| click | 二维码点击事件 | - |
-| disabled-click | 二维码过期后点击事件 | - |
+| done | QR 코드 생성 후의 콜백 | - |
+| click | QR 코드 클릭 이벤트 | - |
+| disabled-click | QR 코드 만료 후 클릭 이벤트 | - |

@@ -1,6 +1,6 @@
 # Echart 차트 컴포넌트
 
-`echarts` 를 확장，창 크기 조절。
+`echarts` 를 캡슐화，창 크기 조절。
 
 Echart 컴포넌트 :  [src/components/Echart](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Echart)
 

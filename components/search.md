@@ -1,18 +1,17 @@
-# Search 查询组件
+# Search 검색 컴포넌트
 
-基于 `Form` 组件封装，支持收缩展开。
+`Form` 컴포넌트를 기반으로 한 래퍼이며, 축소 및 확장을 지원합니다.
 
-Search 组件位于 [src/components/Search](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Search) 内
+Search 컴포넌트 :  [src/components/Search](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Search) 
 
-::: warning 注意
-推荐使用 `tsx` 来使用 `Search` 组件
+::: warning 주의
+`Search` 컴포넌트를 사용할 때는 `tsx`를 사용하는 것이 좋습니다.
 :::
 
-## 用法
+## 사용법
 
-### 基础用法
-
-更复杂例子，请[在线预览](https://element-plus-admin.cn/#/components/search)
+### 기본 사용법
+좀 더 복잡한 예시는 [온라인 미리보기](https://element-plus-admin.cn/#/components/search)에서 확인 하세요.
 
 ```vue
 <script setup lang="ts">
@@ -37,7 +36,7 @@ const schema = reactive<FormSchema[]>([
 
 ### useSearch
 
-对于复杂的场景，可以配合 `useSearch` 来使用。
+복잡한 상황에서는 `useSearch`와 함께 사용할 수 있습니다.
 
 ```vue
 <script setup lang="ts">
@@ -309,7 +308,7 @@ const changeResetLoading = () => {
 
 ```
 
-#### 参数介绍
+#### 파라미터 정의
 
 ```ts
 const { searchRegister, searchMethods } = useSearch()
@@ -317,52 +316,52 @@ const { searchRegister, searchMethods } = useSearch()
 
 **register**
 
-`searchRegister` 用于注册 `useSearch`，如果需要使用 `useSearch` 提供的 `api`，必须将 `searchRegister` 传入组件的 `onRegister`
+`searchRegister`는 `useSearch`를 등록하는 데 사용됩니다. `useSearch`에서 제공하는 `api`를 사용하려면 `searchRegister`를 컴포넌트의 `onRegister`에 전달해야 합니다.
 
 **formMethods**
 
-| 方法名 | 说明 | 回调参数 |
+| 함수명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| setValues | 用于设置表单值 | (data: Recordable) => void |
-| setProps | 用于设置表单属性 | (props: Recordable) => void |
-| delSchema | 用于删除表单结构 | (field: string) => void |
-| addSchema | 用于新增表单结构 | (formSchema: FormSchema, index?: number) => void |
-| setSchema | 用于编辑表单结构 | (schemaProps: FormSetPropsType[]) => void |
-| getFormData | 用于获取表单数据 | `<T = Recordable>() => Promise<T>` |
+| setValues | 폼 값을 설정 | (data: Recordable) => void |
+| setProps | 폼 속성을 설정 | (props: Recordable) => void |
+| delSchema | 폼 구조를 삭제 | (field: string) => void |
+| addSchema | 폼 구조를 추가 | (formSchema: FormSchema, index?: number) => void |
+| setSchema | 폼 구조를 편집 | (schemaProps: FormSetPropsType[]) => void |
+| getFormData | 폼 데이터를 가져옴 | `<T = Recordable>() => Promise<T>` |
 
-## Search 属性
+## Search 속성
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| schema | 生成 Search 的布局结构数组，[详见](#Schema) | `FormSchema` | - | [] |
-| isCol | 是否需要栅格布局 | `boolean` | - | true |
-| labelWidth | 表单 label 宽度 | `string`/`number` | - | auto |
-| layout | 操作按钮风格位置 | `string` | inline/bottom | inline |
-| buttonPosition | 底部操作按钮的对齐方式 | `string` | left/center/right | center |
-| showSearch | 是否显示查询按钮 | `boolean` | - | true |
-| showReset | 是否显示重置按钮 | `boolean` | - | true |
-| expand | 是否显示伸缩按钮 | `boolean` | - | false |
-| expandField | 伸缩的界限字段 | `string` | - | - |
-| inline | 是否是行内 | `boolean` | - | true |
-| removeNoValueItem | 是否自动去除空值 | `boolean`| - | true |
-| model | 初始化数据 | `object` | - | - |
-| searchLoading | 查询按钮加载状态 | `boolean` | - | false |
-| resetLoading | 重置按钮加载状态 | `boolean` | - | false |
+| schema | Search의 레이아웃 구조 배열을 생성 [자세히 보기](#Schema) | `FormSchema` | - | [] |
+| isCol | 격자 레이아웃 필요 여부 | `boolean` | - | true |
+| labelWidth | 폼 label 너비 | `string`/`number` | - | auto |
+| layout | 작업 버튼 스타일 및 위치 | `string` | inline/bottom | inline |
+| buttonPosition | 버튼 정렬 방식 | `string` | left/center/right | center |
+| showSearch | 검색 버튼 표시 여부 | `boolean` | - | true |
+| showReset | 재설정 버튼 표시 여부 | `boolean` | - | true |
+| expand | 확장/축소 버튼 표시 여부 | `boolean` | - | false |
+| expandField | 확장/축소 경계 필드 | `string` | - | - |
+| inline | inline 설정 여부 | `boolean` | - | true |
+| removeNoValueItem | 자동 빈값 제거설정 | `boolean`| - | true |
+| model | 초기화 데이터 | `object` | - | - |
+| searchLoading | 검색 버튼 로딩 상태 | `boolean` | - | false |
+| resetLoading | 재설정 버튼 로딩 상태 | `boolean` | - | false |
 
-## Search 事件
+## Search 이벤트
 
-| 方法名 | 说明 | 回调参数 |
+| 함수 명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| search | 查询后的回调 | data: Recordable |
-| reset | 重置后的回调 | data: Recordable |
+| search | 조회 후 콜백 | data: Recordable |
+| reset | 리셋 후 콜백 | data: Recordable |
 
-## Search 方法
+## Search 메소드
 
-| 方法名 | 说明 | 回调参数 |
+| 함수 명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| setValues | 用于设置表单值 | (data: Recordable) => void |
-| setProps | 用于设置表单属性 | (props: Recordable) => void |
-| delSchema | 用于删除表单结构 | (field: string) => void |
-| addSchema | 用于新增表单结构 | (formSchema: FormSchema, index?: number) => void |
-| setSchema | 用于编辑表单结构 | (schemaProps: FormSetPropsType[]) => void |
-| getElFormExpose | 用于获取 Form 组件的实例 | `() => Promise<typeof ElForm>` |
+| setValues | 폼의 값 설정 | (data: Recordable) => void |
+| setProps | 폼의 속성 설정 | (props: Recordable) => void |
+| delSchema | 폼의 구조 삭제 | (field: string) => void |
+| addSchema | 폼의 구조 추가 | (formSchema: FormSchema, index?: number) => void |
+| setSchema | 폼의 구조 편집 | (schemaProps: FormSetPropsType[]) => void |
+| getElFormExpose |Form 컴포넌트의 인스턴스를 가져오는 데 사용 | `() => Promise<typeof ElForm>` |

@@ -1,16 +1,16 @@
-# Waterfall 瀑布流组件
+# Waterfall 격자형 레이아웃 컴포넌트
 
-瀑布流组件
+격자형 레이아웃 컴포넌트
 
-Waterfall 组件位于 [src/components/Waterfall](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Waterfall) 内
+Waterfall 컴포넌트 : [src/components/Waterfall](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Waterfall) 
 
 ::: tip
 
-data 数据必须带有高度字段，用于确保计算出正确的位置
+data 데이터는 반드시 높이 필드를 포함해야 하며, 이는 올바른 위치를 계산하는 데 필요합니다.
 
 :::
 
-## 用法
+## 사용법
 
 ```vue
 <script lang="ts" setup>
@@ -24,7 +24,7 @@ const data = ref<any>([])
 const getList = () => {
   const list: any = []
   for (let i = 0; i < 20; i++) {
-    // 随机 100, 500 之间的整数
+    // 100과 500 사이의 무작위 정수
     const height = Mock.Random.integer(100, 500)
     const width = Mock.Random.integer(100, 500)
     list.push(
@@ -71,22 +71,22 @@ const loadMore = () => {
 
 ```
 
-## Waterfall 属性<span id="Waterfall"></span>
+## Waterfall 속성<span id="Waterfall"></span>
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| data | 要展示的数据 | `Array` | - | - |
-| reset | 窗口变化是否重新布局 | `boolean` | true/false | true |
-| width | 每个项的宽度 | `number` | - | 200 |
-| gap | 每个项的间距 | `number` | - | 20 |
-| loadingText | 加载中文字 | `string` | - | 加载中... |
-| loading | 是否加载中 | `boolean` | - | false |
-| end | 是否加载结束 | `boolean` | - | false |
-| endText | 是否加载结束文字 | `string` | - | 没有更多了 |
-| props | 字段别名 | `object` | - | { src: 'src', height: 'height' } |
+| data | 표시할 데이터 | `Array` | - | - |
+| reset | 창 크기 변경 시 레이아웃 재구성 여부| `boolean` | true/false | true |
+| width | 각 항목의 너비 | `number` | - | 200 |
+| gap | 각 항목의 간격 | `number` | - | 20 |
+| loadingText | 로딩 중 텍스트 | `string` | - | 加载中... |
+| loading | 로딩 중 여부 | `boolean` | - | false |
+| end | 로딩 완료 여부 | `boolean` | - | false |
+| endText | 로딩 완료 텍스트 여부 | `string` | - | 没有更多了 |
+| props | 필드 별칭 | `object` | - | { src: 'src', height: 'height' } |
 
-## Waterfall 事件
+## Waterfall 이벤트
 
-| 方法名 | 说明 | 回调参数 |
+| 함수 명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| loadMore | 加载更多事件 | - |
+| loadMore | 더 많은 데이터 로드 이벤트 | - |

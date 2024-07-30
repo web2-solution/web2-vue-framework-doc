@@ -1,12 +1,12 @@
-# JsonEditor JSON编辑器组件（2.2.0+）
+# JsonEditor JSON 편집기 컴포넌트（2.2.0+）
 
-基于 [vue-json-pretty](https://leezng.github.io/vue-json-pretty/) 封装。
+[vue-json-pretty](https://leezng.github.io/vue-json-pretty/)를 기반으로 래핑되었습니다.
 
-可自行阅读 [vue-json-pretty文档](https://github.com/leezng/vue-json-pretty)
+[vue-json-pretty문서](https://github.com/leezng/vue-json-pretty)
 
-JsonEditor 组件位于 [src/components/JsonEditor](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/JsonEditor) 内
+JsonEditor 컴포넌트 : [src/components/JsonEditor](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/JsonEditor) 
 
-## 用法
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -19,8 +19,8 @@ import { ref, watch } from 'vue'
 const { t } = useI18n()
 
 const defaultData = ref({
-  title: '标题',
-  content: '内容'
+  title: '제목',
+  content: '내용'
 })
 
 watch(
@@ -35,8 +35,8 @@ watch(
 
 setTimeout(() => {
   defaultData.value = {
-    title: '异步标题',
-    content: '异步内容'
+    title: '비동기 제목',
+    content: '비동기 내용'
   }
 }, 4000)
 </script>
@@ -49,10 +49,10 @@ setTimeout(() => {
 
 ```
 
-## JsonEditor 属性
+## JsonEditor 속성
 
-可查看 [vue-json-pretty文档](https://github.com/leezng/vue-json-pretty)
+[vue-json-pretty 문서](https://github.com/leezng/vue-json-pretty)
 
-## Editor 事件
+## Editor 이벤트
 
-可查看 [vue-json-pretty文档](https://github.com/leezng/vue-json-pretty)
+[vue-json-pretty 문서](https://github.com/leezng/vue-json-pretty)

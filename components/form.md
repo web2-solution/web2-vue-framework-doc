@@ -98,7 +98,7 @@ const { formRegister, formMethods } = useForm()
 | 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | schema | Form의 레이아웃 구조 배열을 생성 [자세한 내용](#Schema) | `FormSchema` | - | [] |
-| isCol | 레이아웃 필요 여부 | `boolean` | - | true |
+| isCol | 격자 레이아웃 필요 여부 | `boolean` | - | true |
 | model | 폼 데이터 객체 | `Recordable` | - | {} |
 | autoSetPlaceholder | placeholder 자동설정 여부 | `boolean` | - | true |
 | isCustom | 콘텐츠 커스터마이징 여부 | `boolean` | - | false |

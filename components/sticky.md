@@ -1,10 +1,10 @@
-# Sticky 黏性组件
+# Sticky 컴포넌트
 
-`1.2.4` 新增
+`1.2.4` 추가
 
-Sticky 组件位于 [src/components/Sticky](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Search) 内
+Sticky 컴포넌트 : [src/components/Sticky](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Search)
 
-## 用法
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -13,17 +13,17 @@ import { Sticky } from '@/components/Sticky'
 
 <template>
   <Sticky :offset="90">
-    <div style="padding: 10px; background-color: lightblue"> Sticky 距离顶部90px </div>
+    <div style="padding: 10px; background-color: lightblue"> Sticky 상단에서 부터90px </div>
   </Sticky>
 </template>
 
 ```
 
-## Sticky 属性
+## Sticky 속성
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| offset | 距离顶部或者底部的距离 | `number` | - | 0 |
-| zIndex | 设置元素的堆叠顺序 | `number` | - | 999 |
-| className | 设置指定的class | `string`/`number` | - | - |
-| position | 定位方式，默认为(top)，表示距离顶部位置，可以设置为top或者bottom | `string` | top/bottom | top |
+| offset | 상단 또는 하단에서의 거리 | `number` | - | 0 |
+| zIndex | 요소의 쌓이는 순서 | `number` | - | 999 |
+| className | 지정된 클래스 설정 | `string`/`number` | - | - |
+| position | 위치 설정 방식, 기본값은 (top)으로, 'top' 또는 'bottom'으로 설정할 수 있습니다. | `string` | top/bottom | top |

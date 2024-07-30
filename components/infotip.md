@@ -1,10 +1,10 @@
-# Infotip 信息提示组件
+# Infotip 컴포넌트
 
-基于 `Highlight` 组件封装。
+`Highlight` 컴포넌트를 기반으로 래핑
 
-Infotip 组件位于 [src/components/Infotip](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/Infotip) 内
+Infotip 컴포넌트 [src/components/Infotip](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Infotip)
 
-## 用法
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -13,15 +13,15 @@ import { Infotip } from '@/components/Infotip'
 
 <template>
   <Infotip
-    title="推荐使用Iconify组件"
+    title="Iconify 컴포넌트 사용을 권장합니다."
     :schema="[
       {
-        label: 'Iconify组件基本包含所有的图标，你可以查询到你想要的任何图标。并且打包只会打包所用到的图标。',
+        label: 'Iconify 컴포넌트는 기본적으로 모든 아이콘을 포함하고 있어, 원하는 어떤 아이콘이든 검색할 수 있습니다. 또한, 번들링 시에는 사용된 아이콘만 포함되어 패키징됩니다.',
         keys: ['Iconify']
       },
       {
-        label: '访问地址',
-        keys: ['访问地址']
+        label: '접속 주소',
+        keys: ['접속 주소']
       }
     ]"
   />
@@ -29,17 +29,17 @@ import { Infotip } from '@/components/Infotip'
 
 ```
 
-## Infotip 属性
+## Infotip 속성
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| title | 标题 | `string` | - | - |
-| schema | 展示的数据内容 | `string[]`/`TipSchema[]` | - | [] |
-| showIndex | 显示序号 | `boolean` | - | true |
-| highlightColor | 高亮颜色 | `string` | - | var(--el-color-primary) |
+| title | 제목 | `string` | - | - |
+| schema | 표시할 데이터 내용 | `string[]`/`TipSchema[]` | - | [] |
+| showIndex | 번호 표시 여부 | `boolean` | - | true |
+| highlightColor | 하이라이트 색상 | `string` | - | var(--el-color-primary) |
 
-## Infotip 事件
+## Infotip 이벤트
 
-| 方法名 | 说明 | 回调参数 |
+| 함수 명 | 설명 | 콜백 파라미터 |
 | ---- | ---- | ---- |
-| click | 关键字点击事件 | key: string |
+| click | 키워드 클릭 이벤트 | key: string |

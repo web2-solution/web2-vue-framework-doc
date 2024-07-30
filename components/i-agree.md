@@ -1,37 +1,37 @@
-# IAgree 我同意
+# IAgree 컴포넌트
 
 用于同意协议选项
 
 IAgree 组件位于 [src/components/IAgree](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/IAgree) 内
 
-## 用法
+## 사용법
 
 ```vue
 <template>
   <IAgree
     :link="[
       {
-        text: '《隐私政策》',
-        url: 'https://www.baidu.com'
+        text: '웹투게더',
+        url: 'http://www.web2gether.co.kr/'
       }
     ]"
-    text="我同意《隐私政策》"
+    text="웹투게더"
   />
 </template>
 
 ```
 
-## Avatars 属性<span id="Avatars"></span>
+## Avatars 속성<span id="Avatars"></span>
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| text | 文案 | `string` | - | - |
-| link | 需要跳转的高亮数据，[详见](#link) | `LinkItem[]` | - | - |
+| text | 텍스트 | `string` | - | - |
+| link | 링크가 필요한 하이라이트 데이터 [자세히 보기](#link) | `LinkItem[]` | - | - |
 
 ### link<span id="link"></span>
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| url | 跳转地址，非必填 | `string` | - | - |
-| text | 高亮文案 | `string` | - | - |
-| onClick | 点击高亮文案执行的方法，非必填 | `() => void` | - | - |
+| url | url주소，필수항목 X | `string` | - | - |
+| text | 하이라이트 텍스트 | `string` | - | - |
+| onClick | 클릭했을 대 이벤트, 필수항목 X | `() => void` | - | - |
