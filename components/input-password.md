@@ -2,7 +2,7 @@
 
 `element-plus`의 `Input` 컴포넌트를 래핑합니다.
 
-InputPassword 컴포넌트 : [src/components/InputPassword](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/InputPassword) 
+InputPassword 컴포넌트 : [src/components/InputPassword](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/InputPassword) 
 
 ## 사용법
 

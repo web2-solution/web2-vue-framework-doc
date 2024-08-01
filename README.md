@@ -1,14 +1,14 @@
 # vue-element-plus-admin-doc
 
-## 如何本地开发
+## 로컬 개발 방법
 
 ```bash
-# 克隆本仓库
-$ git clone https://github.com/kailong321200875/vue-element-plus-admin-doc.git
+# 클론
+$ git clone https://github.com/web2-solution/web2-vue-framework-doc.git
 
-# 安装依赖
+# 의존성 설치
 $ yarn
 
-# 启动开发服务器
+# 개발 서버 실행
 $ npm run dev
 ```

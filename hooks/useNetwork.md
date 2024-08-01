@@ -1,10 +1,10 @@
 # useNetwork
 
-监听网络状态
+네트워크 상태를 모니터링합니다.
 
-useNetwork 位于 [src/hooks/web/useNetwork.ts](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/hooks/web/useNetwork.ts)
+useNetwork 는 [src/hooks/web/useNetwork.ts](https://github.com/web2-solution/web2-vue-framework/blob/dev/src/hooks/web/useNetwork.ts)파일에 위치해 있습니다.
 
-## 用法
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -17,7 +17,7 @@ console.log(online)
 
 ```
 
-### 参数介绍
+### 파라미터 소개
 
 ```ts
 const { online } = useNetwork()
@@ -25,4 +25,4 @@ const { online } = useNetwork()
 
 **online**
 
-`online` 网络是否已连接
+`online` 네트워크가 연결되어 있는지 여부를 나타냅니다.

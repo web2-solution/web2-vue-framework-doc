@@ -2,11 +2,11 @@
 
 `qrcode`를 기반으로 한 래핑
 
-Qrcode 컴포넌트 : [src/components/Qrcode](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Qrcode) 
+Qrcode 컴포넌트 : [src/components/Qrcode](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Qrcode) 
 
 ## 사용법
 
-좀 더 복잡한 예제를 보시려면 [온라인 미리보기](https://element-plus-admin.cn/#/components/qrcode)를 참조하세요.
+<!-- 좀 더 복잡한 예제를 보시려면 [온라인 미리보기](https://element-plus-admin.cn/#/components/qrcode)를 참조하세요.-->
 
 ```vue
 <script setup lang="ts">

@@ -4,7 +4,7 @@
 
 [vue-json-pretty문서](https://github.com/leezng/vue-json-pretty)
 
-JsonEditor 컴포넌트 : [src/components/JsonEditor](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/JsonEditor) 
+JsonEditor 컴포넌트 : [src/components/JsonEditor](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/JsonEditor) 
 
 ## 사용법
 

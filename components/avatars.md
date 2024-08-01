@@ -2,7 +2,7 @@
 
 아바타 모음
 
-Avatars 컴포넌트 : [src/components/Avatars](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Avatars) 
+Avatars 컴포넌트 : [src/components/Avatars](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Avatars) 
 
 ## 사용법
 

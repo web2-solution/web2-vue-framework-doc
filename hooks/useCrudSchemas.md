@@ -1,24 +1,21 @@
 # useCrudSchemas
+`Search`、`Form`、`Descriptions`、`Table` 컴포넌트에 필요한 데이터 구조를 통합 생성
 
-统一生成 `Search` 、 `Form` 、 `Descriptions` 、 `Table` 组件所需要的数据结构。
+위 네 가지 컴포넌트 모두 `Schema` 또는 `columns` 필드를 필요로 하며, 각 컴포넌트마다 이러한 구조를 작성하면 많은 중복 코드가 발생할 수 있습니다. 따라서 `useCrudSchemas를` 제공하여 데이터를 통합 생성할 수 있습니다.
 
-由于以上四个组件都需要 `Sechema` 或者 `columns` 的字段，如果每个组件都写一遍的话，会造成大量重复代码，所以提供 `useCrudSchemas` 来进行统一的数据生成。
+useCrudSchemas는 [src/hooks/web/useCrudSchemas.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/hooks/web/useCrudSchemas.ts) 파일에 위치해 있습니다.
 
-useCrudSchemas 位于 [src/hooks/web/useCrudSchemas.ts](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/hooks/web/useCrudSchemas.ts)
-
-## 用法
+## 사용법
 
 ::: tip
 
-如果不需要某个字段，如 `formSchema` 不需要 `field` 为 `index` 的字段，可以使用 `form: { hidden: true }` 进行过滤，其他组件同理。
+특정 필드가 필요 없는 경우, 예를 들어 `formSchema`에서 `field`가 `index`인 필드를 제외하려면 `form: { hidden: true }`를 사용하여 필터링할 수 있습니다. 다른 컴포넌트에서도 동일한 방법을 사용할 수 있습니다.
 
 :::
 
-`Search` 是基于 `Form` 进行二次封装的，所以 `Search` 支持的参数 `Form` 也都支持。
+`Search`는 `Form`을 기반으로 2차 래핑을 하여 만들어졌기 때문에, `Search`가 지원하는 매개변수는 `Form`에서도 모두 지원됩니다.
 
-`search` 与 `form` 字段，可以传入 `dictName` 来获取全局的字典数据，也可以传入 `api` 来获取接口数据，如果使用 `api` ，需要主动 `return` 数据。
-
-如果想看更复杂点的例子，请[在线预览](https://element-plus-admin.cn/#/hooks/useCrudSchemas)
+`search`와 `form` 필드는 `dictName`을 전달하여 전역 사전 데이터를 가져오거나 `api`를 전달하여 `API` 데이터를 가져올 수 있습니다. `api`를 사용하는 경우, 데이터를 직접 `return`해야 합니다.
 
 ```vue
 <script setup lang="ts">
@@ -88,15 +85,15 @@ const crudSchemas = reactive<CrudSchema[]>([
       componentProps: {
         options: [
           {
-            label: '重要',
+            label: '중요',
             value: 3
           },
           {
-            label: '良好',
+            label: '양호',
             value: 2
           },
           {
-            label: '一般',
+            label: '일반',
             value: 1
           }
         ]
@@ -145,7 +142,7 @@ const { allSchemas } = useCrudSchemas(crudSchemas)
 
 ```
 
-### 参数介绍
+### 파라미터 소개
 
 ```ts
 const { allSchemas } = useCrudSchemas(crudSchemas)
@@ -153,31 +150,31 @@ const { allSchemas } = useCrudSchemas(crudSchemas)
 
 **allSchemas**
 
-`allSchemas` 存放着四个组件所需要的数据结果
+`allSchemas` 는 네 가지 컴포넌트에 필요한 데이터 결과를 저장합니다.
 
 
 ***allSchemas.fromSchema***
 
-`Form` 组件的 `Sechema`
+`Form` 컴포넌트의  `Sechema`
 
 ***allSchemas.searchSchema***
 
-`Search` 组件的 `Sechema`
+`Search` 컴포넌트의  `Sechema`
 
 ***allSchemas.detailSchema***
 
-`Descriptions` 组件的 `Sechema`
+`Descriptions` 컴포넌트의  `Sechema`
 
 ***allSchemas.tableColumns***
 
-`Table` 组件的 `columns`
+`Table` 컴포넌트의  `columns`
 
 ## CrudSchema
 
-| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| 속성 | 설명 | 타입 | 선택 가능 값 | 기본 값 |
 | ---- | ---- | ---- | ---- | ---- |
-| search | 用于设置 `searchSchema` | `CrudSearchParams` | - | - |
-| table | 用于设置 `tableColumns` | `CrudTableParams` | - | - |
-| form | 用于设置 `fromSchema` | `CrudFormParams` | - | - |
-| detail | 用于设置 `DescriptionsSchema` | `CrudDescriptionsParams` | - | - |
-| children | 如果是 `Table` 组件，则可能会有多表头的情况存在 | `CrudSchema[]` | - | - |
+| search | `searchSchema`를 설정하는 데 사용 | `CrudSearchParams` | - | - |
+| table | `tableColumns`를 설정하는 데 사용 | `CrudTableParams` | - | - |
+| form | `fromSchema`를 설정하는 데 사용 | `CrudFormParams` | - | - |
+| detail | `DescriptionsSchema`를 설정하는 데 사용 | `CrudDescriptionsParams` | - | - |
+| children | `Table`컴포넌트의 경우, 여러 테이블 헤더가 있을 수 있음 | `CrudSchema[]` | - | - |

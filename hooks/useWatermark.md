@@ -1,10 +1,10 @@
 # useWatermark
 
-为元素设置水印
+요소에 워터마크를 설정합니다
 
-useWatermark 位于 [src/hooks/web/useWatermark.ts](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/hooks/web/useWatermark.ts)
+useWatermark 은 [src/hooks/web/useWatermark.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/hooks/web/useWatermark.ts) 파일에 위치해 있습니다.
 
-## 用法
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -24,7 +24,7 @@ onBeforeUnmount(() => {
 
 ```
 
-### 参数介绍
+### 파라미터 설명
 
 ```ts
 const { setWatermark, clear } = useWatermark()
@@ -32,8 +32,8 @@ const { setWatermark, clear } = useWatermark()
 
 **setWatermark**
 
-`setWatermark` 用于设置水印文案，接收一个 `string` 类型的参数
+`setWatermark`는 워터마크 문구를 설정하는 데 사용되며, `string` 타입의 매개변수를 받습니다.
 
 **clear**
 
-`clear` 用于清除水印
+`clear`는 워터마크를 제거하는 데 사용됩니다.

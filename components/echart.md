@@ -2,7 +2,7 @@
 
 `echarts` 를 캡슐화，창 크기 조절。
 
-Echart 컴포넌트 :  [src/components/Echart](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Echart)
+Echart 컴포넌트 :  [src/components/Echart](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Echart)
 
 ## 사용법
 
@@ -15,9 +15,9 @@ Echart 컴포넌트 :  [src/components/Echart](https://github.com/web2-solution/
 ```
 
 ## Echart 속성
-
+<!-- [자세히 보기](https://echarts.apache.org/zh/option.html#title) -->
 | 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| options | echart 설정 항목，[자세히 보기](https://echarts.apache.org/zh/option.html#title) | `EChartsOption` | - | [] |
+| options | echart 설정 항목 | `EChartsOption` | - | [] |
 | width | 차트 너비 | `string`/`number` | - | - |
 | height | 차트 높이 | `string`/`number` | - | 500 |

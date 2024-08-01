@@ -1,10 +1,10 @@
 # useTagsView（2.1.0+）
 
-操作标签页
+탭 페이지 조작
 
-useTagsView 位于 [src/hooks/web/useTagsView.ts](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/hooks/web/useTagsView.ts)
+useTagsView 는 [src/hooks/web/useTagsView.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/store/modules/tagsView.ts) 파일에 위치해 있습니다.
 
-## 用法
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -52,20 +52,20 @@ const setTabTitle = () => {
 }
 
 const setAnalysisTitle = () => {
-  setTitle(`分析页-${new Date().getTime().toString()}`, '/dashboard/analysis')
+  setTitle(`분석 페이지-${new Date().getTime().toString()}`, '/dashboard/analysis')
 }
 </script>
 
 <template>
   <ContentWrap title="useTagsView">
-    <ElButton type="primary" @click="closeAllTabs"> 关闭所有标签页 </ElButton>
-    <ElButton type="primary" @click="closeLeftTabs"> 关闭左侧标签页 </ElButton>
-    <ElButton type="primary" @click="closeRightTabs"> 关闭右侧标签页 </ElButton>
-    <ElButton type="primary" @click="closeOtherTabs"> 关闭其他标签页 </ElButton>
-    <ElButton type="primary" @click="closeCurrentTab"> 关闭当前标签页 </ElButton>
-    <ElButton type="primary" @click="refresh"> 刷新当前标签页 </ElButton>
-    <ElButton type="primary" @click="setTabTitle"> 修改当前标题 </ElButton>
-    <ElButton type="primary" @click="setAnalysisTitle"> 修改分析页标题 </ElButton>
+    <ElButton type="primary" @click="closeAllTabs"> 모든 탭 닫기 </ElButton>
+    <ElButton type="primary" @click="closeLeftTabs"> 왼쪽 탭 닫기 </ElButton>
+    <ElButton type="primary" @click="closeRightTabs"> 오른쪽 탭 닫기 </ElButton>
+    <ElButton type="primary" @click="closeOtherTabs"> 다른 탭 닫기 </ElButton>
+    <ElButton type="primary" @click="closeCurrentTab"> 현재 탭 닫기 </ElButton>
+    <ElButton type="primary" @click="refresh"> 현재 탭 새로 고침 </ElButton>
+    <ElButton type="primary" @click="setTabTitle"> 현재 제목 변경 </ElButton>
+    <ElButton type="primary" @click="setAnalysisTitle"> 분석 페이지 제목 변경 </ElButton>
   </ContentWrap>
 </template>
 
@@ -73,7 +73,7 @@ const setAnalysisTitle = () => {
 
 ```
 
-### 参数介绍
+### 파라미터 소개
 
 ```ts
 const { closeAll, closeLeft, closeRight, closeOther, closeCurrent, refreshPage, setTitle } = useTagsView()
@@ -81,28 +81,28 @@ const { closeAll, closeLeft, closeRight, closeOther, closeCurrent, refreshPage, 
 
 **closeAll**
 
-`closeAll` 用于关闭所有标签页
+`closeAll` 모든 탭을 닫습니다.
 
 **closeLeft**
 
-`closeLeft` 用于关闭当前左侧标签页
+`closeLeft` 현재 탭의 왼쪽에 있는 모든 탭을 닫습니다.
 
 **closeRight**
 
-`closeRight` 用于关闭当前右侧标签页
+`closeRight` 현재 탭의 오른쪽에 있는 모든 탭을 닫습니다.
 
 **closeOther**
 
-`closeOther` 用于关闭除当前标签页外的所有标签页
+`closeOther` 현재 탭을 제외한 모든 탭을 닫습니다.
 
 **closeCurrent**
 
-`closeCurrent` 用于关闭除当前标签页
+`closeCurrent` 현재 탭을 닫습니다.
 
 **refreshPage**
 
-`refreshPage` 用于刷新当前标签页
+`refreshPage` 현재 탭을 새로 고칩니다.
 
 **setTitle**
 
-`setTitle(title: string, path: string)` 用于设置某个标签页的标签，接收 标题和一个完整的path路径
+`setTitle(title: string, path: string)` 특정 탭의 제목을 설정합니다. title은 새로운 제목, path는 전체 경로입니다.

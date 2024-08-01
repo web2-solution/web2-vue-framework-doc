@@ -4,7 +4,7 @@
 
 상세 정보를 표시하는데 사용되며，뒤로가기 버튼이 포함되어 있습니다.
 
-ContentDetailWrap 컴포넌트 : [src/components/ContentDetailWrap](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/ContentDetailWrap) 
+ContentDetailWrap 컴포넌트 : [src/components/ContentDetailWrap](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/ContentDetailWrap) 
 
 ## 사용법
 

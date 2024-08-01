@@ -1,110 +1,112 @@
-# 开始
+# 시작
 
-本文将快速的帮助你从头运行并启动项目。
+본 문서에서는 프로젝트를 처음부터 실행하고 시작하는 방법을 빠르게 안내해 드리겠습니다.
 
-## 环境准备
+## 환경 준비
 
-本地环境需要安装 [Pnpm](https://pnpm.io/)、[Node.js](http://nodejs.org/) 和 [Git](https://git-scm.com/)
+로컬 환경에서는 [Pnpm](https://pnpm.io/)、[Node.js](http://nodejs.org/) 및 [Git](https://git-scm.com/)을 설치해야 합니다.
 
-为什么使用 [Pnpm](https://pnpm.io/)，而不是用其他包管理器，大家可以搜索一下，这里就不做过多的阐述了。
+왜 [Pnpm](https://pnpm.io/)을 사용하는지，다른 패키지 관리자를 사용하지 않는 이유는 여기에서는 자세히 설명하지 않겠습니다.
 
-::: warning 注意
+::: warning 주의
 
-- [Node.js](http://nodejs.org/) 版本要求`14.x`以上，这里推荐 `16.x` 及以上。
-
-:::
-
-## 工具配置
-
-如果你使用的 IDE 是[vscode](https://code.visualstudio.com/)的话，可以安装以下工具来提高开发效率及代码格式化：
-
-- [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Iconify 图标插件
-- [unocss](https://marketplace.visualstudio.com/items?itemName=antfu.unocss) - unocss 提示插件
-- [I18n-ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - i18n 插件
-- [Volar](https://gitee.com/link?target=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Djohnsoncodehk.volar) - vue 开发必备
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 脚本代码检查
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 代码格式化
-- [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - css 格式化
-- [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - .env 文件 高亮
-
-## 代码获取
-
-::: warning 注意
-
-注意存放代码的目录及所有父级目录不能存在中文、韩文、日文以及空格，否则安装依赖后启动会出错。
+- Node.js 버전 요구 사항은 14.x 이상이며, 16.x 이상의 버전을 권장합니다.
 
 :::
 
-### 从 GitHub 获取代码
+## 툴 설정
+
+만약 사용하는 IDE 가[vscode](https://code.visualstudio.com/)라면, 개발 효율성과 코드 포맷팅을 향상시키기 위해 다음 도구를 설치 할 수 있습니다.
+
+- [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Iconify 아이콘 플러그인
+- [unocss](https://marketplace.visualstudio.com/items?itemName=antfu.unocss) - unocss 팁 플러그인
+- [I18n-ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - i18n 플러그인
+- [Volar](https://gitee.com/link?target=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Djohnsoncodehk.volar) - vue 개발 필수 도구
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 스크립트 코드 검사
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 코드 포맷팅
+- [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - css 포맷팅
+- [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - .env 파일 관리
+
+## 코드 가져오기
+
+::: warning 주의
+
+코드를 저장하는 디렉토리 및 모든 상위 디렉토리에는 중국어, 한국어, 일본어 문자나 공백이 없어야 합니다. 그렇지 않으면 패키지를 설치한 후 시작 시 오류가 발생할 수 있습니다.
+
+:::
+
+### GitHub에서 코드 가져오기
 
 ```bash
-# clone 代码
-git clone https://github.com/kailong321200875/vue-element-plus-admin.git
+# clone code
+git clone https://github.com/web2-solution/web2-vue-framework/tree/demo.git
 
 ```
 
-### 从 Gitee 获取代码
+<!-- ### Gitee에서 코드 가져오기
 
 ```bash
 git clone https://gitee.com/kailong110120130/vue-element-plus-admin.git
 ```
 
-::: tip 代码同步
+::: tip 코드 동기화
 
-不用担心 [Gitee](https://gitee.com/kailong110120130/vue-element-plus-admin) 代码库和 [Github](https://github.com/kailong321200875/vue-element-plus-admin) 代码库不同步，每次版本提交发布，都会及时同步到 [Gitee](https://gitee.com/kailong110120130/vue-element-plus-admin) 上。
+[Gitee](https://gitee.com/kailong110120130/vue-element-plus-admin)와 [Github](https://github.com/kailong321200875/vue-element-plus-admin) 코드 저장소가 동기화되지 않을까 걱정할 필요 없습니다.
 
-:::
+ 버전이 제출되고 배포될 때마다 [Gitee](https://gitee.com/kailong110120130/vue-element-plus-admin)에서 즉시 동기화됩니다."
 
-## 安装
+::: -->
 
-### 安装 Node.js
+## 설치
 
-如果您电脑未安装[Node.js](https://nodejs.org/en/)，请安装它，推荐 `18.x` 及以上
+### Node.js 설치
 
-**验证**
+컴퓨터에[Node.js](https://nodejs.org/en/)가 설치되어 있지 않다면， `18.x` 이상을 권장합니다.
+
+**확인**
 
 ```bash
-# 验证 npm 是否安装成功
+# npm이 성공적으로 설치되었는지 확인
 npm -v
 
-# 验证 node 是否安装成功
+# node가 성공적으로 설치되었는지 확인
 node -v
 ```
 
-如果你需要同时存在多个 `node` 版本，可以使用 [Nvm](https://github.com/nvm-sh/nvm) 或者其他工具进行 Node.js 进行版本管理。
+여러버전의 `node`를 동시에 사용해야 하는 경우， [Nvm](https://github.com/nvm-sh/nvm) 또는 다른 Node.js버전 관리를 할 수 있습니다.
 
-### 安装依赖
+### 패키지 설치
 
-#### Pnpm 安装
+#### Pnpm 설치
 
-推荐使用 [Pnpm](https://pnpm.io/)进行依赖安装（若其他包管理器安装不了需要自行处理）。
+ [Pnpm](https://pnpm.io/)을 사용하여 패키지를 설치하는 것을 권장합니다(다른 패키지 관리자로 설치할 수 없는 경우에는 별도로 처리해야 합니다).
 
-如果未安装 `Pnpm`，可以用下面命令来进行全局安装
+ `Pnpm`이 설치되어 있지 않은 경우, 아래 명령어를 사용하여 전역으로 설치할 수 있습니다.
 
 ```bash
-# 全局安装 pnpm
+# pnpm 전역 설치
 npm i -g pnpm
 
-# 验证
+# 확인
 pnpm -v
 ```
 
-#### 安装依赖
+#### 패키지 설치
 
-在项目根目录下，打开命令窗口执行，耐心等待安装完成即可
+프로젝트 루트 디렉토리에서 명령 창을 열고 실행한 후, 설치가 완료될 때까지 기다리면 됩니다.
 
 ```bash
-# 安装依赖
+# 패키지 설치
 pnpm i
 ```
 
-::: tip 安装依赖时 husky 安装失败
+::: tip 패키지 설치 시 husky 설치 실패
 
-请查看你的源码是否从 [Github](https://github.com/kailong321200875/vue-element-plus-admin) 或者 [Gitee](https://gitee.com/kailong110120130/vue-element-plus-admin) 直接下载的，直接下载是没有 `.git` 文件夹的，而 `husky` 需要依赖 `git` 才能安装。此时需使用 `git init` 初始化项目，再尝试重新安装即可。
+소스 코드를 [Github](https://github.com/kailong321200875/vue-element-plus-admin) 또는 [Gitee](https://gitee.com/kailong110120130/vue-element-plus-admin) 에서 직접 다운로드했는지 확인해 보세요. 직접 다운로드한 경우 `.git` 폴더가 없으며, `husky`는 `git`에 의존하므로 설치할 수 없습니다. 이 경우, `git init` 명령어로 프로젝트를 초기화한 후, 다시 설치를 시도해 보세요."
 
 :::
 
-当依赖安装完成后，执行以下命令即可启动项目：
+패키지 설치가 완료된 후, 다음 명령어를 실행하여 프로젝트를 시작할 수 있습니다:：
 
 ```bash
 pnpm run dev
@@ -114,40 +116,40 @@ pnpm run dev
 
 ```bash
 "scripts": {
-  # 安装依赖
+  # 패키지 설치
   "i": "pnpm install",
-  # 本地开发环境运行
+  # 로컬 개발 환경 실행
   "dev": "vite --mode base",
-  # typeScript 检测
+  # typeScript 검사
   "ts:check": "vue-tsc --noEmit",
-  # 打包生产环境
+  # 프로덕션 환경으로 빌드
   "build:pro": "vite build --mode pro",
-  # 打包开发环境
+  # 개발 환경으로 빌드
   "build:dev": "npm run ts:check && vite build --mode dev",
-  # 打包测试环境
+  # 테스트 환경으로 빌드
   "build:test": "npm run ts:check && vite build --mode test",
-  # 本地预览 已打包的生产环境项目包
+  # 프로덕션 환경으로 빌드된 프로젝트 패키지 로컬 미리보기
   "serve:pro": "vite preview --mode pro",
-  # 本地预览 已打包的开发环境项目包
+  # 개발 환경으로 빌드된 프로젝트 패키지 로컬 미리보기
   "serve:dev": "vite preview --mode dev",
-  # 本地预览 已打包的测试环境项目包
+  # 테스트 환경으로 빌드된 프로젝트 패키지 로컬 미리보기
   "serve:test": "vite preview --mode test",
-  # 检测可更新依赖
+  # 업데이트 가능한 의존성 검사
   "npm:check": "npx npm-check-updates",
-  # 删除 node_modules
+  # node_modules 삭제
   "clean": "npx rimraf node_modules",
-  # 删除 缓存
+  # 캐시 삭제
   "clean:cache": "npx rimraf node_modules/.cache",
-  # eslint 检测
+  # eslint 검사
   "lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
-  # eslint 格式化
+  # eslint 포맷팅
   "lint:format": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,vue,html,md}\"",
-  # stylelint 格式化
+  # stylelint 포맷팅
   "lint:style": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
   "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
   "lint:pretty": "pretty-quick --staged",
   "postinstall": "husky install",
-  # 快速生成统一规范的模块
+  # 모듈 생성
   "p": "plop"
 },
 ```

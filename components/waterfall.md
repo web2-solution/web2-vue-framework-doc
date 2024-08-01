@@ -2,7 +2,7 @@
 
 격자형 레이아웃 컴포넌트
 
-Waterfall 컴포넌트 : [src/components/Waterfall](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Waterfall) 
+Waterfall 컴포넌트 : [src/components/Waterfall](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Waterfall) 
 
 ::: tip
 

@@ -1,14 +1,15 @@
 # useStorage（2.1.0+）
 
-用于操作 localStorage 和 sessionStorage
+localStorage와 sessionStorage를 조작하는 데 사용됩니다.
 
-useStorage 位于 [src/hooks/web/useStorage.ts](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/hooks/web/useStorage（2.ts)
 
-默认使用 `sessionStorage`，如需要使用 `localStorage` ，只需要传入 `localStorage` 即可，如：useStorage('localStorage')
+useStorage는 [src/hooks/web/useStorage.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/hooks/web/useStorage.ts)파일에 위치해 있습니다.
 
-支持非字符串类型存取值
+기본적으로 `sessionStorage`를 사용하며, `localStorage`를 사용하려면 `localStorage`를 인수로 전달하면 됩니다. 예: useStorage('localStorage')
 
-## 用法
+비 문자열 타입의 값도 저장하고 검색할 수 있습니다.
+
+## 사용법
 
 ```vue
 <script setup lang="ts">
@@ -27,7 +28,7 @@ clear()
 
 ```
 
-### 参数介绍
+### 파라미터 소개
 
 ```ts
 const { setStorage, getStorage, removeStorage, clear } = useStorage('localStorage')
@@ -35,17 +36,17 @@ const { setStorage, getStorage, removeStorage, clear } = useStorage('localStorag
 
 **setStorage**
 
-`setStorage` 存储数据
+`setStorage` 데이터를 저장합니다.
 
 
 **getStorage**
 
-`getStorage` 获取某个存储数据
+`getStorage` 저장된 특정 데이터를 가져옵니다.
 
 **removeStorage**
 
-`removeStorage` 清除某个存储数据
+`removeStorage` 특정 저장 데이터를 제거합니다.
 
 **clear**
 
-`clear` 清除所有缓存数据，如果需要排除某些数据，可以传入 excludes 来排除，如：clear(['key'])，这样 `key` 就不会被清除
+`clear`모든 캐시 데이터를 제거합니다. 특정 데이터를 제외하려면 excludes를 인수로 전달하여 제외할 수 있습니다. 예: clear(['key'])로 하면 `key`는 제거되지 않습니다.

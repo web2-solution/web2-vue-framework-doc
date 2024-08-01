@@ -1,14 +1,15 @@
 # Editor 리치 텍스트 컴포넌트
 
-[wangeditor](https://www.wangeditor.com/)를 기반으로 확장。
+wangeditor를 기반으로 확장。
+<!-- (https://www.wangeditor.com/) -->
 
-현재 프로젝트의 `editor` 는 단한 패키지일 뿐이며, 
+현재 프로젝트의 `editor` 는 기본적인 패키지일 뿐이며, 
 
-개발자는 필요에따라 `editorConfig` 속성을 직접 설정해야 합니다, 예를 들어, 이미지 업로드 기능을 설정할 수 있습니다。
+개발자는 필요에따라 `editorConfig` 속성을 직접 설정해야 합니다, 예를 들어, 이미지 업로드와 같은 기능을 설정할 수 있습니다。
 
-[wangeditor문서](https://www.wangeditor.com/v5/)
+<!-- [wangeditor문서](https://www.wangeditor.com/v5/) -->
 
-Editor 컴포넌트 [src/components/Editor](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Editor)
+Editor 컴포넌트 [src/components/Editor](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Editor)
 
 ## 사용법
 

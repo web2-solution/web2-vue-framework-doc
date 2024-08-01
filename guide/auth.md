@@ -1,31 +1,35 @@
-# 权限
+# 권한
 
-项目中集成了 2 种权限处理方式：
+프로젝트에는 두 가지 권한 처리 방식이 통합되어 있습니다:
 
-1. 第一种是由前端来控制菜单，即服务端只返回有权限的 keys，由前端自行去匹配
-2. 第二种是通过服务端返回的路由数据结构来动态生成路由表
 
-目前项目中提供了测试的帐号：
+1. 첫 번째 방법은 프론트엔드가 메뉴를 제어하는 것입니다. 
+즉, 서버는 권한이 있는 키만 반환하고, 프론트엔드가 이를 통해 매칭을 수행합니다.
+2. 두 번째 방법은 서버에서 반환된 라우팅 데이터 구조를 통해 동적으로 라우팅 테이블을 생성하는 것입니다
+
+현재 프로젝트에서 제공하는 테스트 계정은 다음과 같습니다.
 
 **admin/admin**
 
-## 前端控制权限
+## 프론트엔드 권한 제어
 
-**实现原理：** 在前端固定写死路由的权限，指定路由有哪些权限可以查看。只初始化通用的路由，需要权限才能访问的路由没有被加入路由表内。在登陆后或者其他方式获取对应的路由 keys 后，遍历路由表去匹配 keys，过滤生成可以访问的路由表，再通过 `router.addRoutes` 添加到路由实例，实现权限的过滤。
+**구현 원리:** 프론트엔드에서 라우트 권한을 고정적으로 작성하고, 각 라우트에 대한 권한을 지정합니다. 일반적인 라우트만 초기화하며, 권한이 필요한 라우트는 라우트 테이블에 추가되지 않습니다. 로그인 후 또는 다른 방법으로 해당 라우트 키를 가져온 후, 라우트 테이블을 순회하여 키를 매칭하고, 필터링하여 접근 가능한 라우트 테이블을 생성합니다. 이후 `router.addRoutes`를 통해 라우트 인스턴스에 추가하여 권한 필터링을 구현합니다.
 
-**缺点：** 权限相对不自由，因为路由表的控制在前端，不管是要排序还是修改，都需要前端去修改，服务端只提供有权限的路由 keys
+**단점:** 권한이 상대적으로 자유롭지 않습니다. 라우트 테이블의 제어가 프론트엔드에서 이루어지기 때문에, 정렬이나 수정이 필요할 때마다 프론트엔드에서 직접 변경해야 하며, 서버는 단지 권한이 있는 라우트 키만 제공할 뿐입니다.
 
-## 后台动态获取
+## 백엔드에서 동적으로 가져오기
 
-**实现原理：** 是通过接口动态生成路由表，且遵循一定的数据结构返回。前端根据需要处理该数据为可识别的结构，再通过 `router.addRoutes` 添加到路由实例，实现权限的动态生成。
+**구현 원리：** 인터페이스를 통해 동적으로 라우트 테이블을 생성하고, 일정한 데이터 구조를 따라 반환합니다. 프론트엔드는 이 데이터를 필요에 따라 처리하여 인식 가능한 구조로 변환한 후, `router.addRoutes`를 통해 라우트 인스턴스에 추가하여 권한을 동적으로 생성합니다.
 
-**优点：** 所有的菜单控制都是通过服务端的接口返回，前端只负责渲染，后期维护成本降低，优先推荐此方式。
+**장점：** 모든 메뉴 제어가 서버의 인터페이스를 통해 이루어지며, 프론트엔드는 오직 렌더링만 담당합니다. 이로 인해 후속 유지 보수 비용이 낮아지며, 추천 되는 방식입니다.
 
-## 实现
+## 구현
 
-1. 在[src/store/modules/permission.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/store/modules/permission.ts) 中 `generateRoutes()` 进行更改。
+1. [src/store/modules/permission.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/store/modules/permission.ts)에서 `generateRoutes()`를 수정하세요.
 
-接收的 `type` 参数，目前只是针对于本项目的模拟情况，如果不需要或者不适用，可自行改动。
+받아들이는 type 매개변수는 현재 본 프로젝트의 테스트 상황에만 해당됩니다. 
+
+필요 없거나 적합하지 않다면 자유롭게 수정해도 됩니다.
 
 ```ts
 generateRoutes(
@@ -35,16 +39,16 @@ generateRoutes(
   return new Promise<void>((resolve) => {
     let routerMap: AppRouteRecordRaw[] = []
     if (type === 'server') {
-      // 模拟后端过滤菜单
+      // 백엔드 필터링 메뉴 
       routerMap = generateRoutesByServer(routers as AppCustomRouteRecordRaw[])
     } else if (type === 'frontEnd') {
-      // 模拟前端过滤菜单
+      // 프론트엔드 필터링 메뉴
       routerMap = generateRoutesByFrontEnd(cloneDeep(asyncRouterMap), routers as string[])
     } else {
-      // 直接读取静态路由表
+      // 정적 라우팅 테이블 직접 읽기
       routerMap = cloneDeep(asyncRouterMap)
     }
-    // 动态路由，404一定要放到最后面
+    // 동적 라우팅에서 404 페이지는 반드시 마지막에 배치해야 합니다.
     this.addRouters = routerMap.concat([
       {
         path: '/:path(.*)*',
@@ -56,19 +60,19 @@ generateRoutes(
         }
       }
     ])
-    // 渲染菜单的所有路由
+    // 메뉴를 렌더링하는 모든 라우트
     this.routers = cloneDeep(constantRouterMap).concat(routerMap)
     resolve()
   })
 }
 ```
 
-### 前端控制实现
+### 프론트엔드 컨트롤 구현
 
-2. 在[src/utils/routerHelper.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/utils/routerHelper.ts) 中 `generateRoutesByFrontEnd ()` 进行更改。目前本项目的前端权限控制，是根据 `path` 是否相同来进行过滤演示的，如果不符合需求，需要手动更改以下判断逻辑。
+2. [src/utils/routerHelper.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/utils/routerHelper.ts) 에서`generateRoutesByFrontEnd ()`를 수정하세요 현재 이 프로젝트의 프론트엔드 권한 제어는`path`가 동일한지 여부를 기준으로 필터링을 시연하고 있습니다. 요구 사항에 맞지 않는 경우, 아래의 판단 로직을 수동으로 변경해야 합니다.
 
 ```ts
-// 前端控制路由生成
+// 프론트엔드 라우트 생성 제어
 export const generateRoutesByFrontEnd  = (
   routes: AppRouteRecordRaw[],
   keys: string[],
@@ -94,9 +98,9 @@ export const generateRoutesByFrontEnd  = (
       ) as string;
     }
 
-    // 开发者可以根据实际情况进行扩展
+    // 개발자가 상황에 따라 확장할 수 있습니다.
     for (const item of keys) {
-      // 通过路径去匹配
+      // 경로를 통해 매칭
       if (isUrl(item) && (onlyOneChild === item || route.path === item)) {
         data = Object.assign({}, route);
       } else {
@@ -119,12 +123,12 @@ export const generateRoutesByFrontEnd  = (
 };
 ```
 
-### 后台动态获取
+### 백엔드에서 동적으로 가져오기
 
-3. 在[src/utils/routerHelper.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/utils/routerHelper.ts) 中 `generateRoutesByServer ()` 进行更改。
+3. [src/utils/routerHelper.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/utils/routerHelper.ts) 에서 `generateRoutesByServer ()` 를 수정하세요
 
 ```ts
-// 后端控制路由生成
+// 백엔드에서 라우트 생성 제어
 export const generateRoutesByServer  = (routes: AppCustomRouteRecordRaw[]): AppRouteRecordRaw[] => {
   const res: AppRouteRecordRaw[] = [];
 
@@ -140,9 +144,10 @@ export const generateRoutesByServer  = (routes: AppCustomRouteRecordRaw[]): AppR
         modules[`../${route.component}.vue`] || modules[`../${route.component}.tsx`];
       const component = route.component as string;
       if (!comModule && !component.includes('#')) {
-        console.error(`未找到${route.component}.vue文件或${route.component}.tsx文件，请创建`);
+        console.error(`${route.component}.vue 파일 또는 ${route.component}.tsx 파일을 찾을 수 없습니다. 파일을 생성해 주세요.`
+        );
       } else {
-        // 动态加载路由文件，可根据实际情况进行自定义逻辑
+        // 라우트 파일을 동적으로 로드할 수 있으며, 상황에 따라 맞춤 로직을 적용할 수 있습니다
         data.component =
           component === '#' ? Layout : component.includes('##') ? getParentLayout() : comModule;
       }
@@ -157,14 +162,14 @@ export const generateRoutesByServer  = (routes: AppCustomRouteRecordRaw[]): AppR
 };
 ```
 
-### 公用部分修改
+### 공통 부분 수정
 
-4. 在[src/views/Login/components/LoginForm.vue](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/views/Login/components/LoginForm.vue) 中 `getRole()` 进行更改。
+4. [src/views/Login/components/LoginForm.vue](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/views/Login/components/LoginForm.vue)에서 `getRole()` 을 수정하세요.
 
-需要开发者自行根据需求进行代码变更。
+개발자가 필요에 따라 직접 코드를 수정해야 합니다.
 
 ```ts
-// 获取角色信息
+// 권한 정보 조회
 const getRole = async () => {
   const formData = await getFormData<UserType>()
   const params = {
@@ -182,7 +187,7 @@ const getRole = async () => {
       : await permissionStore.generateRoutes('frontEnd', routers).catch(() => {})
 
     permissionStore.getAddRouters.forEach((route) => {
-      addRoute(route as RouteRecordRaw) // 动态添加可访问路由表
+      addRoute(route as RouteRecordRaw) // 동적으로 접근 가능한 라우팅 테이블 추가
     })
     permissionStore.setIsAddRouters(true)
     push({ path: redirect.value || permissionStore.addRouters[0].path })
@@ -190,13 +195,13 @@ const getRole = async () => {
 };
 ```
 
-5. 在[src/permission.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/permission.ts)，以下这种情况，是考虑到手动刷新，所以需要获取到缓存中的动态菜单重新渲染。
+5. [src/permission.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/permission.ts)에서, 다음과 같은 상황을 고려하여 수동 새로고침을 감안하여 캐시된 동적 메뉴를 다시 렌더링 해야 합니다.
 
 ```ts
-// 开发者可根据实际情况进行修改
+// 개발자가 상황에 따라 수정할 수 있습니다.
 const roleRouters = getStorage('roleRouters') || []
 
-// 是否使用动态路由
+// 동적 라우트 사용 여부
 if (appStore.getDynamicRouter) {
   appStore.serverDynamicRouter
     ? await permissionStore.generateRoutes('server', roleRouters as AppCustomRouteRecordRaw[])
@@ -206,7 +211,7 @@ if (appStore.getDynamicRouter) {
 }
 
 permissionStore.getAddRouters.forEach((route) => {
-  router.addRoute(route as unknown as RouteRecordRaw) // 动态添加可访问路由表
+  router.addRoute(route as unknown as RouteRecordRaw) // 동적으로 접근 가능한 라우트 테이블 추가
 })
 const redirectPath = from.query.redirect || to.path
 const redirect = decodeURIComponent(redirectPath as string)
@@ -215,8 +220,10 @@ permissionStore.setIsAddRouters(true)
 next(nextData)
 ```
 
-## 静态路由（无权限）
+## 정적라우트 (권한 없음)
 
-有时候，我们并不需要动态路由，那么可以在 `src/config/app.ts` 中把 `dynamicRouter` 设置为 `false`，这样我们取得都是项目中的静态路由表了。
+"때때로 동적 라우트가 필요하지 않을 수 있습니다. 이 경우, `src/config/app.ts`에서 `dynamicRouter`를 `false`로 설정하면, 
 
-内部逻辑已经处理了静态路由的部分，所以可以无需关心其他。
+프로젝트 내의 정적 라우트 테이블만을 사용할 수 있습니다.
+
+내부 로직에서 정적 라우트 부분은 이미 처리되었으므로, 나머지 부분에 대해서는 신경 쓸 필요가 없습니다.

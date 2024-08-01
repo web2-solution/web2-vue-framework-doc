@@ -2,7 +2,8 @@
 
 `1.2.4` 추가
 
-Sticky 컴포넌트 : [src/components/Sticky](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Search)
+Sticky 컴포넌트 
+<!-- : [src/components/Sticky](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Search) -->
 
 ## 사용법
 

@@ -1,14 +1,14 @@
-# 数据mock&联调
+# 데이터mock&설정
 
-## 开发环境
+## 개발환경
 
-如果前端应用和后端接口服务器没有运行在同一个主机上，你需要在开发环境下将接口请求代理到接口服务器。
+프론트엔드 애플리케이션과 백엔드 API 서버가 동일한 호스트에서 실행되지 않는 경우, 개발 환경에서 API 요청을 API 서버로 프록시해야 합니다.
 
-如果是同一个主机，可以直接请求具体的接口地址。
+같은 호스트에서 실행되는 경우, 구체적인 API 주소로 직접 요청할 수 있습니다.
 
-### 跨域设置
+### CORS 설정
 
-在 `vite.config.ts` 配置文件中，提供了 server 的 proxy 功能，用于代理 API 请求。
+`vite.config.ts` 구성 파일에서 서버의 프록시 기능을 제공하여 API 요청을 프록시를 설정할 수 있습니다.
 
 ```ts
 server: {
@@ -23,29 +23,29 @@ server: {
 },
 ```
 
-配置接口前缀，可以在对应的 `env` 文件中，修改 `VITE_API_BASE_PATH` 的值
+인터페이스 접두어를 설정하려면, 해당 `env` 파일에서 `VITE_API_BASE_PATH`의 값을 수정할 수 있습니다.
 
-::: tip 注意
+::: tip 주의
 
-该配置只能作用于 本地开发环境。
+이 설정은 로컬 개발 환경에서만 적용됩니다.
 
-从浏览器控制台的 Network 看，请求是 `http://localhost:3000/api/xxx`，这是因为 proxy 配置不会改变本地请求的 url。
+브라우저 콘솔의 네트워크(Network) 탭에서 요청이 `http://localhost:3000/api/xxx`로 표시되는데, 이는 프록시 설정이 로컬 요청의 URL을 변경하지 않기 때문입니다.
 
 :::
 
-## 接口请求
+## API 요청
 
-在本项目中，所有的接口数据都是使用 `Mock` 模拟
+본 프로젝트에서는 모든 API 데이터가 `Mock`을 사용하여 시뮬레이션됩니다.
 
-接口统一存放于 [src/api/](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/api) 下面管理
+API는 [src/api/](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/api) 디렉토리 아래에 통합 관리됩니다.
 
-以获取列表接口为例:
+리스트 조회 API를 예로 들어 설명하겠습니다:
 
-在 **src/api/** 内新建模块文件，其中参数与返回值最好定义一下类型，方便校验。虽然麻烦，但是后续维护字段很方便。
+**src/api/** 폴더 내에 모듈 파일을 새로 만들 때, 매개변수와 반환값의 타입을 정의하는 것이 좋습니다. 이렇게 하면 검증이 용이해집니다. 비록 번거로울 수 있지만, 이후에 필드를 유지보수하는 데 매우 편리합니다.
 
-::: tip 提示
+::: tip 
 
-类型定义文件可以抽取出去统一管理，具体参考项目
+타입 정의 파일을 분리하여 통합 관리할 수 있습니다. 자세한 내용은 프로젝트를 참조하세요.
 
 :::
 
@@ -75,72 +75,72 @@ export const delTableListApi = (ids: string[] | number[]): Promise<IResponse> =>
 
 ```
 
-## axios 配置
+## axios 설정
 
-**axios** 请求封装存放于 [src/axios](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/axios) 中。
+**axios** 패키징은 [src/axios](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/axios) 디렉토리에 저장됩니다.
 
-### 全局 axios 配置说明
+### 전역 axios 설정 설명
 
-axios 全局配置放在 [src/constants](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/constants) 中。
+axios의 전역 설정은 [src/constants](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/constants) 디렉토리에 있습니다.
 
-::: tip 注意
+::: tip 주의
 
-更改之后，将影响所有的请求。
+변경 후에는 모든 요청에 영향을 미칩니다.
 
 :::
 
 ```ts
 /**
- * 请求成功状态码
+ * 요청 성공 상태 코드
  */
 export const SUCCESS_CODE = 0
 
 /**
- * 请求contentType
+ * 요청 contentType
  */
 export const CONTENT_TYPE = 'application/json'
 
 /**
- * 请求超时时间
+ * 요청 타임아웃 시간
  */
 export const REQUEST_TIMEOUT = 60000
 ```
 
-## Mock 服务
+## Mock 서비스
 
-Mock 数据是前端开发过程中必不可少的一环，是分离前后端开发的关键链路。通过预先跟服务器端约定好的接口，模拟请求数据甚至逻辑，能够让前端开发独立自主，不会被服务端的开发进程所阻塞。
+Mock 데이터는 프론트엔드 개발 과정에서 필수적인 요소이며, 프론트엔드와 백엔드 개발을 분리하는 핵심 링크입니다. 서버 측과 미리 약정한 인터페이스를 통해 요청 데이터 및 로직을 시뮬레이션함으로써, 프론트엔드 개발자가 독립적으로 작업할 수 있게 하며, 서버 측 개발 과정에 의해 차단되지 않도록 합니다.
 
-本项目使用 [vite-mock-plugin](https://github.com/vbenjs/vite-plugin-mock) 来进行 mock 数据处理。**项目内 mock 服务分本地和线上**。
+본 프로젝트는 vite-mock-plugin을 사용하여 Mock 데이터 처리를 진행합니다. **프로젝트 내 Mock 서비스는 로컬과 온라인으로 나뉩니다**
 
-### 本地 Mock
+### 로컬 Mock
 
-本地 mock 采用 Node.js 中间件进行参数拦截（不采用 mock.js 的原因是本地开发看不到请求参数和响应结果）。
+로컬 Mock은 Node.js 미들웨어를 사용하여 파라미터를 가로채며, mock.js를 사용하지 않는 이유는 로컬 개발 중에 요청 매개변수와 응답 결과를 확인할 수 없기 때문입니다.
 
-#### 如何新增 mock 接口
+#### Mock 인터페이스 추가 방법
 
-如果你想添加 mock 数据，只要在根目录下找到 mock 文件，添加对应的接口，对其进行拦截和模拟数据。
+Mock 데이터를 추가하려면, 루트 디렉토리에서 mock 파일을 찾아 해당 인터페이스를 추가하고, 이를 가로채서 Mock 데이터를 시뮬레이션하면 됩니다.
 
-在 mock 文件夹内新建文件
+mock 폴더 내에 새 파일을 생성하세요.
 
 ::: tip
 
-文件新增后会自动更新，不需要手动重启，可以在代码控制台查看日志信息 mock 文件夹内会自动注册
+파일을 새로 추가하면 자동으로 업데이트되며, 수동으로 재시작할 필요가 없습니다. 코드 콘솔에서 로그 정보를 확인할 수 있으며, mock 폴더 내의 파일은 자동으로 등록됩니다
 
 :::
 
 ::: tip
 
-mock 的值可以直接使用 [mock.js](http://mockjs.com/) 的语法。
+mock 값은 [mock.js](http://mockjs.com/)의 문법을 직접 사용할 수 있습니다.
 
 :::
 
-#### 接口有了，如何去掉 mock
+#### 인터페이스가 준비되면, Mock을 어떻게 제거하나요?
 
-可以在对应的 `env` 文件中设置 `VITE_USE_MOCK` 为 `false` ，如果想要更彻底一点，可以在vite.config.ts中删除 `viteMockServe` 对应的代码。
+해당 `env` 파일에서 `VITE_USE_MOCK` 을 `false`로 설정하면 Mock을 비활성화할 수 있습니다.완전히 제거하려면,`vite.config.ts`에서 `viteMockServe`와 관련된 코드를 삭제할 수 있습니다.
 
 
-### 线上 mock
+### 온라인 mock
 
-由于该项目是一个展示类项目，线上也是用 mock 数据，所以在打包后同时也集成了 mock。通常项目线上一般为正式接口。
+이 프로젝트는 시연용 프로젝트이기 때문에, 온라인 환경에서도 Mock 데이터를 사용합니다. 그래서 패키징 후에도 Mock 데이터가 통합되어 있습니다. 일반적으로는 운영 환경에서는 실제 인터페이스를 사용하는 것이 일반적입니다.
 
-项目线上 mock 采用的是 [mock.js](http://mockjs.com/) 进行 mock 数据模拟。
+이 프로젝트의 온라인 Mock은 [mock.js](http://mockjs.com/)를 사용하여 Mock 데이터를 시뮬레이션합니다.

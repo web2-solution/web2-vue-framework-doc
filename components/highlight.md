@@ -1,6 +1,6 @@
 # Highlight 하이라이트 컴포넌트
 
-Highlight 컴포넌트 : [src/components/Highlight](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Highlight) 
+Highlight 컴포넌트 : [src/components/Highlight](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Highlight) 
 
 ## 사용법
 
@@ -23,9 +23,9 @@ import { Highlight } from '@/components/Highlight'
 
 | 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| tag | 包裹标签 | `string` | - | span |
-| keys | 高亮的关键字 | `string[]` | - | [] |
-| color | 高亮的颜色 | `string` | - | var(--el-color-primary) |
+| tag | 패키징 라벨 | `string` | - | span |
+| keys | 하이라이트 키워드 | `string[]` | - | [] |
+| color | 하이라이트 색상 | `string` | - | var(--el-color-primary) |
 
 ## Highlight 이벤트
 

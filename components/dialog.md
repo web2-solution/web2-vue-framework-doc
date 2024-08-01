@@ -2,7 +2,7 @@
 
 `element-plus`의 `Dialog` 을 확장.
 
-Dialog 컴포넌트 [src/components/Dialog](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Dialog) 
+Dialog 컴포넌트 [src/components/Dialog](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Dialog) 
 
 ## 사용법
 

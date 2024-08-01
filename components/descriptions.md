@@ -5,15 +5,12 @@
 
 ~~`element-plus` 의 `Descriptions` 의 컴포넌트를 확장。~~
 
-Descriptions 컴포넌트 : [src/components/Descriptions](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Descriptions) 
+Descriptions 컴포넌트 : [src/components/Descriptions](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Descriptions) 
 
 ::: warning Descriptions 컴포넌트를 사용하려면 **tsx**를 사용하는 것이 좋습니다.
 :::
 
 ## 사용법
-
-더 복잡한 예시, [온라인 미리보기](https://element-plus-admin.cn/#/components/descriptions)
-
 ```vue
 <script setup lang="tsx">
 import { Descriptions, DescriptionsSchema } from '@/components/Descriptions'

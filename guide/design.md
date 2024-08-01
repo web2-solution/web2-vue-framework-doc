@@ -1,37 +1,37 @@
-# 样式
+# 스타일
 
-## 介绍
+## 소개
 
-主要介绍如何在项目中使用和规划样式文件。
+주로 프로젝트에서 스타일 파일을 사용하는 방법과 계획하는 방법에 대해 소개합니다.
 
-默认使用 `less` 作为预处理语言，建议在使用前或者遇到疑问时学习一下 [Less](http://lesscss.org/) 的相关特性。
+기본적으로 `less` 를 전처리 언어로 사용합니다. 사용하기 전 또는 의문이 있을경우 [Less](http://lesscss.org/)의 관련 특성을 학습하는 것이 좋습니다.
 
-项目中使用的通用样式，都存放于 [src/style/](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/styles) 下面。
+프로젝트에서 사용하는 공통 스타일은 모두 [src/style/](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/styles)폴더에 저장되어 있습니다.
 
 ```bash
 .
-├── index.less # 入口
-├── theme.less # 主题相关
-├── var.css  # css变量
-└── variables.module.less # less变量
+├── index.less # 진입점
+├── theme.less # 테마 관련
+├── var.css  # css 변수
+└── variables.module.less # less 변수
 
 ```
 
-::: tip 全局注入
+::: tip 전역 주입
 
-variables.module.less 这个文件会被全局注入到所有文件，所以在页面内可以直接使用变量而不需要手动引入。
+variables.module.less 파일은 모든 파일에 전역으로 주입되므로, 페이지 내에서 직접 변수를 사용할 수 있으며, 별도로 import할 필요가 없습니다.
 
-var.css 则是注入到根元素，所以在每个地方也都能用到。
+var.css 는 루트 요소에 주입되므로, 모든 곳에서 사용할 수 있습니다.
 
 :::
 
 ## unocss
 
-项目中使用了 [unocss](https://github.com/unocss/unocss#readme)，具体参见文件使用说明。
+프로젝트에서는  [unocss](https://github.com/unocss/unocss#readme)를 사용하고 있으며, 자세한 사용 방법은 문서를 참조하세요.
+<!-- 
+사용하지 않은 사람들은 다소 불편하게 느낄 수 있지만, 개인적으로는 매우 유용하게 느껴집니다. 많은 불필요한 번거로움을 줄여주었습니다. -->
 
-可能没有用到人会觉得用起来很不习惯，但就个人而言，用起来还是挺香的。减少了很多不必要的麻烦
-
-语法如下:
+문법은 다음과 같습니다.
 
 ```html
 <div class="relative w-full h-full px-4"></div>

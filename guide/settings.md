@@ -1,26 +1,26 @@
-# 项目配置项
+# 프로젝트 설정 항목
 
-本文将介绍一些常用的项目配置，方便开发者可以根据需求进行定制化改造。
+본 문서에서는 개발자가 요구 사항에 맞게 설정할 수 있도록 몇 가지 일반적인 프로젝트 설정을 소개합니다.
 
-## 环境变量配置
+## 환경 변수 설정
 
-项目的环境变量配置位于项目根目录下的，这里主要配置四个个环境变量，分别为：
-- [本地开发环境](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/.env.base)
-- [开发环境](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/.env.dev)
-- [测试环境](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/.env.test)
-- [生产环境](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/.env.pro)
+프로젝트의 환경 변수 설정은 프로젝트 루트 디렉토리에 위치해 있으며, 여기서는 네 가지 환경 변수를 주로 설정합니다:
+- [로컬 개발 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.base)
+- [개발 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.dev)
+- [테스트 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.test)
+- [생산 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.pro)
 
-在开发调试的时候，会读取 `.env.base` 里面的数据。其他环境亦是如此，根据打包命令的不同，来读取不同的环境变量。
+개발 및 디버깅 중에는 `.env.base` 파일의 데이터를 읽습니다. 다른 환경에서도 마찬가지로, 빌드 명령에 따라 다른 환경 변수를 읽습니다.
 
-也许你会疑惑，为什么会有多个环境变量？
+여러 환경 변수가 있는 이유
 
-以 `生产环境` 为例，当我们执行 `pnpm run build:pro` 时，输出的包是用于线上环境的，所以代码都应该是压缩，我们需要删除掉代码中的 `console.log` 和 `degubber`，保证打包后代码的整洁度和不可见性。而其他环境，所以应该保留 `console.log` 和 `degubber` 用于调试，这样才能快速定位到问题所在。
+예를 들어, `생산 환경`을 살펴보면, `pnpm run build:pro` 명령을 실행할 때 출력되는 패키지는 온라인 환경에서 사용됩니다. 따라서 코드가 압축되어야 하며, 코드에서 `console.log`와 `debugger`를 제거하여 빌드 후 코드의 깔끔함과 보이지 않음을 보장해야 합니다. 다른 환경에서는 `console.log`와 `debugger`를 유지하여 디버깅을 용이하게 하고 문제를 빠르게 찾을 수 있도록 해야 합니다.
 
-所以环境变量的作用就是为了，在不同环境下有不同的表现。
+따라서 환경 변수의 역할은 각기 다른 환경에서 다른 동작을 하도록 하는 것입니다.
 
-::: tip 提示
+::: tip 
 
-- 只有以 `VITE_ ` 开头的变量会被嵌入到项目中，你可以项目代码中这样访问它们：
+- `VITE_`로 시작하는 변수만 프로젝트에 포함됩니다. 이러한 변수는 프로젝트 코드에서 다음과 같이 접근할 수 있습니다:
 
 ```js
 console.log(import.meta.env.VITE_APP_TITLE)
@@ -28,197 +28,197 @@ console.log(import.meta.env.VITE_APP_TITLE)
 
 :::
 
-### 配置项说明
+### 설정 항목 설명
 
 ### .env.base
 
-本地开发环境适用
+로컬 개발 환경 적용
 
 ```bash
-# 环境
+# 환경
 NODE_ENV = development
 
-# 接口前缀
+# 인터페이스 접두사
 VITE_API_BASEPATH = base
 
-# 打包路径
+# 빌드 경로
 VITE_BASE_PATH = /
 
-# 标题
+# 제목
 VITE_APP_TITLE = ElementAdmin
 ```
 
 ### .env.dev
 
-开发环境适用
+개발 환경 적용
 
 ```bash
-# 环境
+# 환경
 NODE_ENV = production
 
-# 接口前缀
+# 인터페이스 접두사
 VITE_API_BASEPATH = dev
 
-# 打包路径
+# 빌드 경로
 VITE_BASE_PATH = /dist-dev/
 
-# 是否删除debugger
+# debugger 삭제 여부
 VITE_DROP_DEBUGGER = false
 
-# 是否删除console.log
+# console.log 삭제 여부
 VITE_DROP_CONSOLE = false
 
-# 是否sourcemap
+# sourcemap 삭제 여부
 VITE_SOURCEMAP = true
 
-# 输出路径
+# 출력 경로
 VITE_OUT_DIR = dist-dev
 
-# 标题
+# 제목
 VITE_APP_TITLE = ElementAdmin
 
 ```
 
 ### .env.test
 
-测试环境适用
+테스트 환경 적용
 
 ```bash
-# 环境
+# 환경
 NODE_ENV = production
 
-# 接口前缀
+# 인터페이스 접두사
 VITE_API_BASEPATH = test
 
-# 打包路径
+# 빌드 경로
 VITE_BASE_PATH = /dist-test/
 
-# 是否删除debugger
+# debugger 삭제 여부
 VITE_DROP_DEBUGGER = false
 
-# 是否删除console.log
+# console.log 삭제 여부
 VITE_DROP_CONSOLE = false
 
-# 是否sourcemap
+# sourcemap 생성 여부
 VITE_SOURCEMAP = true
 
-# 输出路径
+# 출력 경로
 VITE_OUT_DIR = dist-test
 
 ```
 
 ### .env.pro
 
-生产环境适用
+생산 환경 적용
 
 ```bash
-# 环境
+# 환경
 NODE_ENV = production
 
-# 接口前缀
+# 인터페이스 접두사
 VITE_API_BASEPATH = pro
 
-# 打包路径
+# 빌드 경로
 VITE_BASE_PATH = /
 
-# 是否删除debugger
+# debugger 삭제 여부
 VITE_DROP_DEBUGGER = true
 
-# 是否删除console.log
+# console.log 삭제 여부
 VITE_DROP_CONSOLE = true
 
-# 是否sourcemap
+# sourcemap 생성 여부
 VITE_SOURCEMAP = false
 
-# 输出路径
+# 출력 경로
 VITE_OUT_DIR = dist-pro
 
-# 标题
+# 제목
 VITE_APP_TITLE = ElementAdmin
 
 ```
 
-## 项目及主题配置
+## 프로젝트 및 테마 설정
 
-::: tip 提示
+::: tip 
 
-项目配置文件用于配置项目内展示的内容、布局、主题色等效果。
+프로젝트 설정 파일은 프로젝트 내에서 표시되는 콘텐츠, 레이아웃, 테마 색상 등의 효과를 구성하는 데 사용됩니다.
 
 :::
 
-### 配置文件路径
+### 설정 파일 경로
 
-[src/store/modules/app.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/store/modules/app.ts)
+[src/store/modules/app.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/store/modules/app.ts)
 
-### 说明
+### 설명
 
-修改完之后，会添加到全局的状态管理中，方便其他地方使用。
+수정 후, 전역 상태 관리에 추가되어 다른 곳에서 쉽게 사용할 수 있습니다.
 
 ```js
 export const appModules: AppState = {
   sizeMap: ['default', 'large', 'small'],
-  mobile: false, // 是否是移动端
-  title: import.meta.env.VITE_APP_TITLE as string, // 标题
-  pageLoading: false, // 路由跳转loading
+  mobile: false, // 이동 단말 여부
+  title: import.meta.env.VITE_APP_TITLE as string, // 제목
+  pageLoading: false, // 라우팅 전환 시 로딩
 
-  breadcrumb: true, // 面包屑
-  breadcrumbIcon: true, // 面包屑图标
-  collapse: false, // 折叠菜单
-  hamburger: true, // 折叠图标
-  screenfull: true, // 全屏图标
-  size: true, // 尺寸图标
-  locale: true, // 多语言图标
-  tagsView: true, // 标签页
-  logo: true, // logo
-  fixedHeader: true, // 固定toolheader
-  footer: true, // 显示页脚
-  greyMode: false, // 是否开始灰色模式，用于特殊悼念日
+  breadcrumb: true, // 브레드크럼 표시
+  breadcrumbIcon: true, // 브레드크럼 아이콘 표시
+  collapse: false, // 메뉴 접기
+  hamburger: true, // 메뉴 접기 아이콘 표시
+  screenfull: true, // 전체 화면 아이콘 표시
+  size: true, // 크기 아이콘 표시
+  locale: true, // 다국어 아이콘 표시
+  tagsView: true, // 태그 페이지 표시
+  logo: true, // 로고 표시
+  fixedHeader: true, // 헤더 고정
+  footer: true, // 페이지 하단 표시
+  greyMode: false, // 회색 모드 활성화 여부, 특별한 추모일에 사용
 
-  layout: wsCache.get('layout') || 'classic', // layout布局
-  isDark: wsCache.get('isDark') || false, // 是否是暗黑模式
-  currentSize: wsCache.get('default') || 'default', // 组件尺寸
+  layout: wsCache.get('layout') || 'classic', // 레이아웃 설정
+  isDark: wsCache.get('isDark') || false, // 다크 모드 여부
+  currentSize: wsCache.get('default') || 'default', // 컴포넌트 크기
   theme: wsCache.get('theme') || {
-    // 主题色
+    // 테마 색상
     elColorPrimary: '#409eff',
-    // 左侧菜单边框颜色
+    // 좌측 메뉴 테두리 색상
     leftMenuBorderColor: 'inherit',
-    // 左侧菜单背景颜色
+    // 좌측 메뉴 배경 색상
     leftMenuBgColor: '#001529',
-    // 左侧菜单浅色背景颜色
+    // 좌측 메뉴 밝은 배경 색상
     leftMenuBgLightColor: '#0f2438',
-    // 左侧菜单选中背景颜色
+    // 좌측 메뉴 선택 배경 색상
     leftMenuBgActiveColor: 'var(--el-color-primary)',
-    // 左侧菜单收起选中背景颜色
+    // 좌측 메뉴 접힌 상태의 선택 배경 색상
     leftMenuCollapseBgActiveColor: 'var(--el-color-primary)',
-    // 左侧菜单字体颜色
+    // 좌측 메뉴 글자 색상
     leftMenuTextColor: '#bfcbd9',
-    // 左侧菜单选中字体颜色
+    // 좌측 메뉴 선택 글자 색상
     leftMenuTextActiveColor: '#fff',
-    // logo字体颜色
+    // 로고 글자 색상
     logoTitleTextColor: '#fff',
-    // logo边框颜色
+    // 로고 테두리 색상
     logoBorderColor: 'inherit',
-    // 头部背景颜色
+    // 상단 헤더 배경 색상
     topHeaderBgColor: '#fff',
-    // 头部字体颜色
+    // 상단 헤더 글자 색상
     topHeaderTextColor: 'inherit',
-    // 头部悬停颜色
+    // 상단 헤더 호버 색상
     topHeaderHoverColor: '#f6f6f6',
-    // 头部边框颜色
+    // 상단 툴 테두리 색상
     topToolBorderColor: '#eee'
   }
 }
 ```
 
-### 如何添加新属性
+### 새 속성 추가하기
 
-如果想要添加新的全局配置属性，需要在 [src/store/modules/app.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/store/modules/app.ts) 中 `AppState` 添加对应的类型，并在 `appModules` 对象中，赋予新属性的默认值。
+새로운 전역 구성 속성을 추가하려면, [src/store/modules/app.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/store/modules/app.ts)파일의 AppState에서 해당 타입을 추가하고, appModules 객체에 새 속성의 기본값을 부여해야 합니다.
 
-## 多语言配置
+## 다국어 설정
 
-用于配置多语言信息
+다국어 정보를 구성하는 데 사용됩니다
 
-在 [src/store/modules/locale.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/store/modules/locale.ts) 内配置
+[src/store/modules/locale.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/store/modules/locale.ts) 파일에서 구성
 
 ```ts
 import { useCache } from '@/hooks/web/useCache'
@@ -241,11 +241,11 @@ export const localeModules: LocaleState = {
     lang: wsCache.get('lang') || 'zh-CN',
     elLocale: elLocaleMap[wsCache.get('lang') || 'zh-CN']
   },
-  // 多语言
+  // 다국어
   localeMap: [
     {
       lang: 'zh-CN',
-      name: '简体中文'
+      name: '简体中文'//간체 중국어
     },
     {
       lang: 'en',
@@ -256,23 +256,23 @@ export const localeModules: LocaleState = {
 
 ```
 
-## 样式配置
+## 스타일 구성
 
-### css 前缀设置
+### css 접두사 설정
 
-用于修改项目内组件及 `element-plus` 组件的 `class` 前缀。
+컴포넌트 및 `element-plus` 컴포넌트의 `class` 접두사 수정에 사용됩니다.
 
-由于 `element-plus` 的组件还没有全部采用动态配置前缀，所以目前还是使用 `el` 前缀。
+현재 `element-plus`의 컴포넌트가 모두 동적 접두사를 채택하지 않으므로, 현재는 `el` 접두사를 사용하고 있습니다.。
 
-- 在 [src/styles/variables.module.less](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/styles/variables.module.less) 内配置
+- [src/styles/variables.module.less](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/styles/variables.module.less) 파일에서 구성
 
 ```less
-// 命名空间
+// 네임스페이스
 @namespace: v;
-// el命名空间
+// el 네임스페이스
 @elNamespace: el;
 
-// 导出变量
+// 변수 내보내기
 :export {
   namespace: @namespace;
   elNamespace: @elNamespace;
@@ -280,13 +280,13 @@ export const localeModules: LocaleState = {
 
 ```
 
-### 前缀使用
+### 접두사 사용
 
-**在 css 内**
+**CSS 내에서**
 
 ```vue
 <style lang="less" scoped>
-  /* namespace已经全局注入，不需要额外在引入 */
+  /* namespace가 이미 전역적으로 주입되었으므로 추가로 import할 필요 없음 */
   @prefix-cls: ~'@{namespace}-app';
 
   .@{prefix-cls} {
@@ -295,7 +295,7 @@ export const localeModules: LocaleState = {
 </style>
 ```
 
-**在 vue/ts 内**
+**Vue / TypeScript 내에서**
 
 ```ts
 import { useDesign } from '/@/hooks/web/useDesign'

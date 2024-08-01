@@ -2,7 +2,7 @@
 
 xgplayer를 기반으로 한 비디오 플레이어의 재구성
 
-VideoPlayer 컴포넌트 : [src/components/VideoPlayer](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/VideoPlayer)
+VideoPlayer 컴포넌트 : [src/components/VideoPlayer](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/VideoPlayer)
 
 
 ## 사용법

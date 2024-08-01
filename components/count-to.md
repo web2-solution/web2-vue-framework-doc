@@ -2,7 +2,7 @@
 
 `vue-count-to`를 기반으로 개선
 
-CountTo 컴포넌트 : [src/components/CountTo](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/CountTo) 
+CountTo 컴포넌트 : [src/components/CountTo](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/CountTo) 
 
 ## 사용법
 

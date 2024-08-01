@@ -2,7 +2,7 @@
 
 `element-plus`의 `Table` 컴포넌트를 래핑하여 `columns`와 `data` 매개변수만 전달하면 응답하는 테이블을 렌더링할 수 있습니다.
 
-Table 컴포넌트 : [src/components/Table](https://github.com/web2-solution/web2-vue-framework/tree/dev/src/components/Table)
+Table 컴포넌트 : [src/components/Table](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Table)
 
 ::: warning 주의
 Table 컴포넌트를 사용할 때는 tsx를 사용하는 것이 좋습니다.
@@ -53,7 +53,7 @@ const data = reactive([
 
 element-plus의 Table 컴포넌트를 사용할 때 `useTable` 훅을 함께 사용하는 것이 유용합니다. 
 
-복잡한 예제는 [온라인 미리보기](https://element-plus-admin.cn/#/components/table/use-table)를 참조하세요.
+<!-- 복잡한 예제는 [온라인 미리보기](https://element-plus-admin.cn/#/components/table/use-table)를 참조하세요. -->
 
 ```vue
 <script setup lang="tsx">

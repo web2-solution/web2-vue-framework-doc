@@ -1,8 +1,8 @@
-# 组件注册
+# 컴포넌트 등록
 
-## 按需引入
+## 필요에 따라 가져오기
 
-项目目前的组件注册机制是按需注册，是在需要用到的页面才引入。
+현재 프로젝트의 컴포넌트 등록 방식은 필요에 따라 등록되는 방식입니다. 즉, 필요한 페이지에서만 컴포넌트를 가져옵니다
 
 ```vue
 <script setup lang="ts">
@@ -23,15 +23,17 @@ const prefixCls = getPrefixCls('backtop')
 
 ```
 
-### tsx 文件注册
+### tsx 파일 등록
 
-**tsx 文件内不能使用全局注册组件**，需要手动引入组件使用。
+**tsx 파일 내에서는 전역 등록된 컴포넌트를 사용할 수 없습니다**，컴포넌트를 수동으로 가져와서 사용해야 합니다.
 
-## 全局注册
+## 전역 등록
 
-如果觉得按需引入太麻烦，可以进行全局注册，在[src/components/index.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/components/index.ts)，添加需要注册的组件。
+필요에 따라 가져오는 방식이 번거롭게 느껴진다면, 전역 등록을 사용할 수 있습니다. 
 
-目前只有 `Icon` 组件进行了全局注册。
+이 경우,[src/components/index.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/components/index.ts)파일에 등록할 컴포넌트를 추가하면 됩니다.
+
+현재 `Icon` 컴포넌트만 전역으로 등록되어 있습니다.
 
 ```ts
 import type { App } from 'vue'
@@ -43,14 +45,15 @@ export const setupGlobCom = (app: App<Element>): void => {
 
 ```
 
-如果 `element-plus` 的组件需要全局注册，在 [src/plugins/elementPlus/index.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/plugins/elementPlus/index.ts) 添加需要注册的组件。
+만약 `element-plus`의 컴포넌트를 전역 등록해야 한다면, [src/plugins/elementPlus/index.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/plugins/elementPlus/index.ts) 파일에 등록할 컴포넌트를 추가하세요.
 
-目前 `element-plus` 中只有 `ElLoading` 与 `ElScrollbar` 进行了全局注册。
+현재 `element-plus` 에서는 `ElLoading` 과 `ElScrollbar`만 전역 등록되어 있습니다.
 
 ```
 import type { App } from 'vue'
 
-// 需要全局引入一些组件，如ElScrollbar，不然一些下拉项样式有问题
+// 일부 컴포넌트, 예를 들어 ElScrollbar를 전역적으로 등록해야 합니다. 
+// 그렇지 않으면 드롭다운 항목의 스타일이 제대로 적용되지 않을 수 있습니다.
 import { ElLoading, ElScrollbar } from 'element-plus'
 
 const plugins = [ElLoading]

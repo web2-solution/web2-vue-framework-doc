@@ -3,7 +3,7 @@
 
 `VideoPlayer` 컴포넌트를 함수형으로 변환하여, 함수를 통해 컴포넌트를 쉽게 생성할 수 있도록 합니다.
 
-VideoViewer 컴포넌트 : [src/components/VideoViewer](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/VideoViewer) 内
+<!-- VideoViewer 컴포넌트 : [src/components/VideoViewer](https://github.com/kailong321200875/vue-element-plus-admin/tree/master/src/components/VideoViewer) 内 (404)-->
 
 ## 사용법
 

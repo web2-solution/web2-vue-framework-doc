@@ -1,58 +1,64 @@
-# 路由
+# 라우터
 
-项目路由配置存放于 [src/router/index.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/router/index.ts) 中。
+프로젝트의 라우터 구성은 [src/router/index.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/router/index.ts) 파일에 저장되어 있습니다.
 
-为了方便阅读和查找，目前项目中并没有去对路由进行拆分，而是统一写在了一起，如果需要拆分，可自行更改。
+편리한 읽기와 검색을 위해 현재 프로젝트에서는 라우터를 분리하지 않고 하나의 파일에 통합하여 작성했습니다. 필요에 따라 분리할 수 있습니다.
 
-因为路由是生成菜单关键，所以本项目中对路由提供了以下配置，方便开发者进行定制。
+라우터는 메뉴 생성의 핵심이므로, 본 프로젝트에서는 라우터에 대한 다음과 같은 구성을 제공하여 개발자가 맞춤 설정할 수 있도록 했습니다.
 
-## 配置
+
+
+## 설정
 
 ``` js
 /**
-* redirect: noredirect        当设置 noredirect 的时候该路由在面包屑导航中不可被点击
-* name:'router-name'          设定路由的名字，一定要填写不然使用<keep-alive>时会出现各种问题
+* redirect: noredirect        
+  noredirect로 설정하면 해당 라우트는 breadcrumb 내에서 클릭할 수 없습니다.
+
+* name:'router-name'          
+  라우트 이름을 설정하는 것은 필수입니다. 그렇지 않으면 <keep-alive>를 사용할 때 다양한 문제가 발생할 수 있습니다.
+
 * meta : {
-    hidden: true              当设置 true 的时候该路由不会再侧边栏出现 如404，login等页面(默认 false)
+      hidden: true             
+     설정을 true로 하면 해당 라우트는 사이드바에 더 이상 표시되지 않습니다. 
+     예를 들어, 404 페이지나 로그인 페이지 등 (기본값 : false)
 
-    alwaysShow: true          当你一个路由下面的 children 声明的路由大于1个时，自动会变成嵌套的模式，
-                              只有一个时，会将那个子路由当做根路由显示在侧边栏，
-                              若你想不管路由下面的 children 声明的个数都显示你的根路由，
-                              你可以设置 alwaysShow: true，这样它就会忽略之前定义的规则，
-                              一直显示根路由(默认 false)
+    alwaysShow: true          
+    하나의 라우트 아래에 선언된 children 라우트가 1개를 초과하면 자동으로 중첩된 모드로 변환됩니다.
+    하위 라우트가 하나만 있을 경우, 해당 하위 라우트를 사이드바에 루트 라우트로 표시합니다. 만약 하위 라우트의 개수와 관계없이 항상 루트 라우트를 사이드바에 표시하고 싶다면, alwaysShow: true로 설정할 수 있습니다. 이 경우, 이전에 정의된 규칙을 무시하고 루트 라우트를 계속 표시합니다 (기본값 : false).
 
-    title: 'title'            设置该路由在侧边栏和面包屑中展示的名字
+    title: 'title'            해당 라우트가 사이드바와 breadcrumb에 표시될 이름을 설정 합니다.
 
-    icon: 'svg-name'          设置该路由的图标
+    icon: 'svg-name'          해당 라우트의 아이콘을 설정합니다.
 
-    noCache: true             如果设置为true，则不会被 <keep-alive> 缓存(默认 false)
+    noCache: true             true로 설정하면 <keep-alive>에 의해 캐시되지 않습니다. (기본값 : false)
 
-    breadcrumb: false         如果设置为false，则不会在breadcrumb面包屑中显示(默认 true)
+    breadcrumb: false         false로 설정하면 breadcrumb에서 표시되지 않습니다.(기본값 : true)
 
-    affix: true               如果设置为true，则会一直固定在tag项中(默认 false)
+    affix: true               true로 설정하면 태그 항목에서 항상 고정됩니다 (기본값 : false).
 
-    noTagsView: true          如果设置为true，则不会出现在tag中(默认 false)
+    noTagsView: true          true로 설정하면 태그에서 표시되지 않습니다 (기본값 : false).
 
-    activeMenu: '/dashboard'  显示高亮的路由路径
+    activeMenu: '/dashboard'  하이라이트된 라우트 경로 표시
 
-    canTo: true               设置为true即使hidden为true，也依然可以进行路由跳转(默认 false)
+    canTo: true               true로 설정하면, hidden이 true로 설정되어 있더라도 여전히 라우트 전환이 가능합니다 (기본값 : false).
 
-    permission: ['edit','add', 'delete']    设置该路由的权限
+    permission: ['edit','add', 'delete']    해당 라우트의 권한을 설정합니다.
   }
 **/
 ```
 
-### 如何添加新配置
+### 새로운 설정을 추가하는 방법
 
-如果本项目中的路由配置项，满足不了你当前的开发工作，可以自行添加新的属性。
+본 프로젝트의 라우트 구성 항목이 현재 개발 작업에 적합하지 않은 경우, 새로운 속성을 직접 추가할 수 있습니다.
 
-::: warning 注意
+::: warning 주의
 
-所有的路由项配置，都必须放在 `meta` 中。
+모든 라우트 항목 구성은 반드시 `meta`에 포함되어야 합니다.
 
 :::
 
-在 [types/router.d.ts](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/types/router.d.ts) 中添加对应的类型，之后就可以在路由中添加你需要的配置项了。
+[types/router.d.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/types/router.d.ts) 파일에 해당 타입을 추가한 후, 라우트에 필요한 구성 항목을 추가할 수 있습니다.
 
 ```ts
 declare module 'vue-router' {
@@ -69,24 +75,25 @@ declare module 'vue-router' {
     canTo?: boolean
     permission?: string[]
 
-    // 添加新的配置类型
+    // 새로운 구성 유형 추가
     ...
   }
 }
 
 ```
 
-### 多级路由
+### 다중 라우트
 
-::: warning 注意事项
+::: warning 주의 사항
 
-- 整个项目所有路由 `name` 不能重复
-- 所有的多级路由最终都会转成二级路由，所以不能内嵌子路由
-- 除了 layout 对应的 path 前面需要加 `/`，其余子路由都不要以`/`开头
+- 전체 프로젝트의 모든 라우트 `name`은 중복될 수 없습니다.
+- 모든 다단계 라우트는 최종적으로 2단계 라우트로 변환되므로, 자식 라우트를 내장할 수  없습니다.
+- layout에 해당하는 경로를 제외하고, 나머지 자식 라우트의 경로는 `/`로 시작하지 않아야 합니다.
+
 
 :::
 
-**示例**
+**예시**
 
 ```ts
 {
@@ -151,9 +158,9 @@ declare module 'vue-router' {
 
 ```
 
-### 外链
+### 외부링크
 
-只需要将 `path` 设置为需要跳转的**HTTP 地址**即可。
+`path`를 이동할 **HTTP 주소**로 설정하면 됩니다.
 
 ```ts
 {
@@ -164,27 +171,27 @@ declare module 'vue-router' {
   },
   children: [
     {
-      path: 'https://github.com/kailong321200875/vue-element-plus-admin-doc',
-      meta: { name: 'Link', title: '文档' }
+      path: 'https://github.com/web2-solution/web2-vue-framework-doc',
+      meta: { name: 'Link', title: '문서' }
     }
   ]
 }
 ```
 
-## 图标
+## 아이콘
 
-这里的 `icon` 配置，会同步到 **菜单**（icon 的值可以查看[此处](../components/icon.md)）。
+여기서 설정한 `icon` 구성은 **메뉴**에 동기화됩니다. icon 값은 [여기](../components/icon.md)에서 확인할 수 있습니다.
 
-## 多标签页
+## 다중 탭
 
-标签页使用的是 `keep-alive` 和 `router-view` 实现，实现切换 `tab` 后还能保存切换之前的状态。
+다중 탭 페이지는 `keep-alive` 와 `router-view` 를 사용하여 구현되며 `tab`을 전환한 후에도 이전 상태를 유지할 수 있습니다.
 
-### 如何开启页面缓存
+### 페이지 캐시를 활성화 하는법
 
-开启缓存有 2 个条件
+캐시를 활성화하려면 두 가지 조건이 있습니다.
 
-1. 路由设置 `name`，且**不能重复**
-2. 路由对应的组件加上 `name`，与路由设置的 `name` 保持一致
+1. 라우터 설정에서 `name`을 지정해야 하며,**중복되지 않아야 합니다.**
+2. 라우터에 해당하는 컴포넌트에 `name`을 추가하고, 이 `name`이 라우터 설정의 `name`과 일치해야 합니다.
 
 ```ts
 {
@@ -205,16 +212,16 @@ defineOptions({
 
 ```
 
-:::warning 注意
+:::warning 주의
 
-keep-alive 生效的前提是：需要将路由的 `name` 属性及对应的页面的 `name` 设置成一样。因为：
+keep-alive가 작동하려면: 라우터의 `name` 속성과 해당 페이지의 컴포넌트 `name`을 동일하게 설정해야 합니다.
 
-**include - 字符串或正则表达式，只有名称匹配的组件会被缓存**
+**include - 문자열 또는 정규 표현식으로, 이름이 일치하는 컴포넌트만 캐시됩니다**
 :::
 
-### 如何让某个页面不缓存
+### 특정 페이지를 캐시하지 않도록 하는법
 
-可以将 `noCache` 配置成 `true` 即可关闭缓存或者组件不添加 `name` 属性。
+`noCache`를 `true`로 설정하면 캐시를 비활성화할 수 있으며, 또는 컴포넌트에 `name` 속성을 추가하지 않으면 됩니다.
 
 ```ts
 {
@@ -228,8 +235,8 @@ keep-alive 生效的前提是：需要将路由的 `name` 属性及对应的页�
 }
 ```
 
-## 默认跳转地址
+## 기본 리다이렉션 주소
 
-目前项目中，登录进来，默认是进入到当前第一个能找到的路由页面。
+현재 프로젝트에서는 로그인 후 기본적으로 현재 가장 먼저 찾을 수 있는 라우터 페이지로 이동합니다.
 
-后续会考虑弄成一个配置项出来。
+추후에는 이를 설정 항목으로 제공할 계획입니다.
