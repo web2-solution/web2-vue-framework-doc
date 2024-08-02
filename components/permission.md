@@ -4,9 +4,9 @@
 
 Permission 컴포넌트 [src/components/Permission](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Permission)
 
-## 온라인 예제
+<!-- ## 온라인 예제 -->
 
-[온라인 예제](https://element-plus-admin.cn/#/authorization/test)
+<!-- [온라인 예제](https://element-plus-admin.cn/#/authorization/test) -->
 
 ## 사용법
 
