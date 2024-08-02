@@ -2,7 +2,7 @@
 
 네트워크 상태를 모니터링합니다.
 
-useNetwork 는 [src/hooks/web/useNetwork.ts](https://github.com/web2-solution/web2-vue-framework/blob/dev/src/hooks/web/useNetwork.ts)파일에 위치해 있습니다.
+useNetwork 는 [src/hooks/web/useNetwork.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/hooks/web/useNetwork.ts)파일에 위치해 있습니다.
 
 ## 사용법
 

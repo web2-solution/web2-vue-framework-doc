@@ -81,7 +81,7 @@ export const delTableListApi = (ids: string[] | number[]): Promise<IResponse> =>
 
 ### 전역 axios 설정 설명
 
-axios의 전역 설정은 [src/constants](https://github.com/kailong321200875/vue-element-plus-admin/blob/master/src/constants) 디렉토리에 있습니다.
+axios의 전역 설정은 [src/constants](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/constants) 디렉토리에 있습니다.
 
 ::: tip 주의
 

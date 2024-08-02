@@ -155,15 +155,15 @@ const { allSchemas } = useCrudSchemas(crudSchemas)
 
 ***allSchemas.fromSchema***
 
-`Form` 컴포넌트의  `Sechema`
+`Form` 컴포넌트의  `Schema`
 
 ***allSchemas.searchSchema***
 
-`Search` 컴포넌트의  `Sechema`
+`Search` 컴포넌트의  `Schema`
 
 ***allSchemas.detailSchema***
 
-`Descriptions` 컴포넌트의  `Sechema`
+`Descriptions` 컴포넌트의  `Schema`
 
 ***allSchemas.tableColumns***
 
