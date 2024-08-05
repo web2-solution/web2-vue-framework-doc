@@ -1,0 +1,1 @@
+import{o as a,c as n,a as s}from"./app.4ba3de9e.js";const t='{"title":"Footer 바닥글","description":"","frontmatter":{},"headers":[{"level":2,"title":"사용법","slug":"사용법"}],"relativePath":"components/footer.md","lastUpdated":1722835573426}',p={},e=s('',7);p.render=function(s,t,p,o,c,r){return a(),n("div",null,[e])};export default p;export{t as __pageData};

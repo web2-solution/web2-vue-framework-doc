@@ -1,0 +1,1 @@
+import{o as e,c as n,a}from"./app.4ba3de9e.js";const s='{"title":"vue-element-plus-admin-doc","description":"","frontmatter":{},"headers":[{"level":2,"title":"로컬 개발 방법","slug":"로컬-개발-방법"}],"relativePath":"README.md","lastUpdated":1722835573421}',t={},o=a('',3);t.render=function(a,s,t,d,c,l){return e(),n("div",null,[o])};export default t;export{s as __pageData};
