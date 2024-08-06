@@ -1,1 +1,0 @@
-import{o as e,c as a,a as r}from"./app.4ba3de9e.js";const d='{"title":"다크모드","description":"","frontmatter":{},"headers":[{"level":2,"title":"소개","slug":"소개"},{"level":2,"title":"테마 변경","slug":"테마-변경"}],"relativePath":"dep/dark.md","lastUpdated":1722835573432}',t={},h=r('',6);t.render=function(r,d,t,o,i,l){return e(),a("div",null,[h])};export default t;export{d as __pageData};
