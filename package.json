@@ -1,7 +1,8 @@
 {
+  "name": "vue-element-plus-admin-doc",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/web2-solution/web2-vue-framework-doc",
+  "repository": "https://github.com/kailong321200875/vue-element-plus-admin-doc",
   "author": "Archer <502431556@11.com>",
   "license": "MIT",
   "scripts": {

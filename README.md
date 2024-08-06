@@ -1,4 +1,4 @@
-# web2-vue-framework-doc
+# vue-element-plus-admin-doc
 
 ## 로컬 개발 방법
 
