@@ -18,4 +18,4 @@ pnpm-debug.log*
 
 *.zip
 .vitepress/
-.yarn
+.yarn/
