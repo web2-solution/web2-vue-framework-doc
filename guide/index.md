@@ -16,7 +16,7 @@
 
 ## 툴 설정
 
-만약 사용하는 IDE 가[vscode](https://code.visualstudio.com/)라면, 개발 효율성과 코드 포맷팅을 향상시키기 위해 다음 도구를 설치 할 수 있습니다.
+만약 사용하는 IDE 가 [vscode](https://code.visualstudio.com/)라면, 개발 효율성과 코드 포맷팅을 향상시키기 위해 다음 도구를 설치 할 수 있습니다.
 
 - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Iconify 아이콘 플러그인
 - [unocss](https://marketplace.visualstudio.com/items?itemName=antfu.unocss) - unocss 팁 플러그인
@@ -43,25 +43,11 @@ git clone https://github.com/web2-solution/web2-vue-framework/tree/demo.git
 
 ```
 
-<!-- ### Gitee에서 코드 가져오기
-
-```bash
-git clone https://gitee.com/kailong110120130/vue-element-plus-admin.git
-```
-
-::: tip 코드 동기화
-
-[Gitee](https://gitee.com/kailong110120130/vue-element-plus-admin)와 [Github](https://github.com/kailong321200875/vue-element-plus-admin) 코드 저장소가 동기화되지 않을까 걱정할 필요 없습니다.
-
- 버전이 제출되고 배포될 때마다 [Gitee](https://gitee.com/kailong110120130/vue-element-plus-admin)에서 즉시 동기화됩니다."
-
-::: -->
-
 ## 설치
 
 ### Node.js 설치
 
-컴퓨터에[Node.js](https://nodejs.org/en/)가 설치되어 있지 않다면， `18.x` 이상을 권장합니다.
+컴퓨터에 [Node.js](https://nodejs.org/en/)가 설치되어 있지 않다면， `18.x` 이상을 권장합니다.
 
 **확인**
 
@@ -79,9 +65,9 @@ node -v
 
 #### Pnpm 설치
 
- [Pnpm](https://pnpm.io/)을 사용하여 패키지를 설치하는 것을 권장합니다(다른 패키지 관리자로 설치할 수 없는 경우에는 별도로 처리해야 합니다).
+[Pnpm](https://pnpm.io/)을 사용하여 패키지를 설치하는 것을 권장합니다(다른 패키지 관리자로 설치할 수 없는 경우에는 별도로 처리해야 합니다).
 
- `Pnpm`이 설치되어 있지 않은 경우, 아래 명령어를 사용하여 전역으로 설치할 수 있습니다.
+`Pnpm`이 설치되어 있지 않은 경우, 아래 명령어를 사용하여 전역으로 설치할 수 있습니다.
 
 ```bash
 # pnpm 전역 설치

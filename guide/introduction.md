@@ -1,24 +1,10 @@
 <!-- # 소개 -->
 
-<!-- ::: warning 주의
-
-- 如果需要 v1 版本的文档，请到 [v1](https://github.com/kailong321200875/vue-element-plus-admin-doc/tree/v1) 分支进行 clone ，目前文档仅支持 v2 版本
-
-::: -->
-
 ## 개요
 
-[vue-element-plus-admin](https://github.com/web2-solution/web2-vue-framework/tree/demo)은 element-plus를 기반으로 한 무료 오픈 소스 중간 백엔드 템플릿입니다. 최신 [Vue3](https://github.com/vuejs/vue-next)，[Vite](https://github.com/vitejs/vite)，[Typescript](https://www.typescriptlang.org/) 등 주류 기술을 사용하여 개발되었습니다. 이 템플릿은 즉시 사용할 수 있는 중간 백엔드 프론트엔드 솔루션을 제공하며, 프로젝트 시작 템플릿으로 사용하거나 학습 및 참고용으로도 활용할 수 있습니다. 최신 기술 동향을 항상 주시하며 가능한  빠르게 업데이트됩니다.
+[vue-element-plus-admin](https://github.com/web2-solution/web2-vue-framework/tree/demo)은 element-plus를 기반으로 한 템플릿입니다. 최신 [Vue3](https://github.com/vuejs/vue-next)，[Vite](https://github.com/vitejs/vite)，[Typescript](https://www.typescriptlang.org/) 등 주류 기술을 사용하여 개발되었습니다. 이 템플릿은 즉시 사용할 수 있는 중간 백엔드 프론트엔드 솔루션을 제공하며, 프로젝트 시작 템플릿으로 사용하거나 학습 및 참고용으로도 활용할 수 있습니다. 최신 기술 동향을 항상 주시하며 가능한 빠르게 업데이트됩니다.
 
 [vue-element-plus-admin](https://github.com/web2-solution/web2-vue-framework/tree/demo)의 목적은 백엔드 통합 솔루션을 제공하는 것입니다. 많은 기능이 통합되어 있어 일부는 필요하지 않을 수 있으며, 이로 인해 코드가 다소 중복될 수 있습니다. 만약 프로젝트가 이러한 문제에 신경 쓰지 않는다면, 이 템플릿을 기반으로 직접 추가 개발을 진행할 수 있습니다.
-
-<!-- ::: warning 주의
-
-- 由于精力有限，[template](https://github.com/kailong321200875/vue-element-plus-admin/tree/template) 分支将不再维护，如果需要精简版，请自行删除不需要的文件及代码。
-
-::: -->
-
-<!-- 如需要基础模版，请切换到 [mini](https://github.com/kailong321200875/vue-element-plus-admin/tree/mini) 分支，[mini](https://github.com/kailong321200875/vue-element-plus-admin/tree/mini) 只简单集成了一些如：布局、动态菜单等常用布局功能，更适合开发者进行二次开发。 -->
 
 ## 필요한 기본 지식
 
