@@ -1,0 +1,44 @@
+import{_ as n,f as s,k as a,N as t}from"./plugin-vue_export-helper.e5331ba5.js";const m='{"title":"\uCEF4\uD3EC\uB10C\uD2B8 \uB4F1\uB85D","description":"","frontmatter":{},"headers":[{"level":2,"title":"\uD544\uC694\uC5D0 \uB530\uB77C \uAC00\uC838\uC624\uAE30","slug":"\uD544\uC694\uC5D0-\uB530\uB77C-\uAC00\uC838\uC624\uAE30"},{"level":3,"title":"tsx \uD30C\uC77C \uB4F1\uB85D","slug":"tsx-\uD30C\uC77C-\uB4F1\uB85D"},{"level":2,"title":"\uC804\uC5ED \uB4F1\uB85D","slug":"\uC804\uC5ED-\uB4F1\uB85D"}],"relativePath":"guide/component.md","lastUpdated":1723014140914}',p={},e=t(`__VP_STATIC_START__<h1 id="\uCEF4\uD3EC\uB10C\uD2B8-\uB4F1\uB85D"><a class="header-anchor" href="#\uCEF4\uD3EC\uB10C\uD2B8-\uB4F1\uB85D" aria-hidden="true">#</a> \uCEF4\uD3EC\uB10C\uD2B8 \uB4F1\uB85D</h1><h2 id="\uD544\uC694\uC5D0-\uB530\uB77C-\uAC00\uC838\uC624\uAE30"><a class="header-anchor" href="#\uD544\uC694\uC5D0-\uB530\uB77C-\uAC00\uC838\uC624\uAE30" aria-hidden="true">#</a> \uD544\uC694\uC5D0 \uB530\uB77C \uAC00\uC838\uC624\uAE30</h2><p>\uD604\uC7AC \uD504\uB85C\uC81D\uD2B8\uC758 \uCEF4\uD3EC\uB10C\uD2B8 \uB4F1\uB85D \uBC29\uC2DD\uC740 \uD544\uC694\uC5D0 \uB530\uB77C \uB4F1\uB85D\uB418\uB294 \uBC29\uC2DD\uC785\uB2C8\uB2E4. \uC989, \uD544\uC694\uD55C \uD398\uC774\uC9C0\uC5D0\uC11C\uB9CC \uCEF4\uD3EC\uB10C\uD2B8\uB97C \uAC00\uC838\uC635\uB2C8\uB2E4</p><div class="language-vue"><pre><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ElBacktop <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;element-plus&#39;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useDesign <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;@/hooks/web/useDesign&#39;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> getPrefixCls<span class="token punctuation">,</span> variables <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useDesign</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> prefixCls <span class="token operator">=</span> <span class="token function">getPrefixCls</span><span class="token punctuation">(</span><span class="token string">&#39;backtop&#39;</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ElBacktop</span>
+    <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>\`\${prefixCls}-backtop\`<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>\`.\${variables.namespace}-layout-content-scrollbar .\${variables.elNamespace}-scrollbar__wrap\`<span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><h3 id="tsx-\uD30C\uC77C-\uB4F1\uB85D"><a class="header-anchor" href="#tsx-\uD30C\uC77C-\uB4F1\uB85D" aria-hidden="true">#</a> tsx \uD30C\uC77C \uB4F1\uB85D</h3><p><strong>tsx \uD30C\uC77C \uB0B4\uC5D0\uC11C\uB294 \uC804\uC5ED \uB4F1\uB85D\uB41C \uCEF4\uD3EC\uB10C\uD2B8\uB97C \uC0AC\uC6A9\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4</strong>\uFF0C\uCEF4\uD3EC\uB10C\uD2B8\uB97C \uC218\uB3D9\uC73C\uB85C \uAC00\uC838\uC640\uC11C \uC0AC\uC6A9\uD574\uC57C \uD569\uB2C8\uB2E4.</p><h2 id="\uC804\uC5ED-\uB4F1\uB85D"><a class="header-anchor" href="#\uC804\uC5ED-\uB4F1\uB85D" aria-hidden="true">#</a> \uC804\uC5ED \uB4F1\uB85D</h2><p>\uD544\uC694\uC5D0 \uB530\uB77C \uAC00\uC838\uC624\uB294 \uBC29\uC2DD\uC774 \uBC88\uAC70\uB86D\uAC8C \uB290\uAEF4\uC9C4\uB2E4\uBA74, \uC804\uC5ED \uB4F1\uB85D\uC744 \uC0AC\uC6A9\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.</p><p>\uC774 \uACBD\uC6B0,<a href="https://github.com/web2-solution/web2-vue-framework/blob/demo/src/components/index.ts" target="_blank" rel="noopener noreferrer">src/components/index.ts</a>\uD30C\uC77C\uC5D0 \uB4F1\uB85D\uD560 \uCEF4\uD3EC\uB10C\uD2B8\uB97C \uCD94\uAC00\uD558\uBA74 \uB429\uB2C8\uB2E4.</p><p>\uD604\uC7AC <code>Icon</code> \uCEF4\uD3EC\uB10C\uD2B8\uB9CC \uC804\uC5ED\uC73C\uB85C \uB4F1\uB85D\uB418\uC5B4 \uC788\uC2B5\uB2C8\uB2E4.</p><div class="language-ts"><pre><code><span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">{</span> App <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;vue&#39;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Icon <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;./Icon&#39;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> setupGlobCom <span class="token operator">=</span> <span class="token punctuation">(</span>app<span class="token operator">:</span> App<span class="token operator">&lt;</span>Element<span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  app<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">&#39;Icon&#39;</span><span class="token punctuation">,</span> Icon<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>\uB9CC\uC57D <code>element-plus</code>\uC758 \uCEF4\uD3EC\uB10C\uD2B8\uB97C \uC804\uC5ED \uB4F1\uB85D\uD574\uC57C \uD55C\uB2E4\uBA74, <a href="https://github.com/web2-solution/web2-vue-framework/blob/demo/src/plugins/elementPlus/index.ts" target="_blank" rel="noopener noreferrer">src/plugins/elementPlus/index.ts</a> \uD30C\uC77C\uC5D0 \uB4F1\uB85D\uD560 \uCEF4\uD3EC\uB10C\uD2B8\uB97C \uCD94\uAC00\uD558\uC138\uC694.</p><p>\uD604\uC7AC <code>element-plus</code> \uC5D0\uC11C\uB294 <code>ElLoading</code> \uACFC <code>ElScrollbar</code>\uB9CC \uC804\uC5ED \uB4F1\uB85D\uB418\uC5B4 \uC788\uC2B5\uB2C8\uB2E4.</p><div class="language-"><pre><code>import type { App } from &#39;vue&#39;
+
+// \uC77C\uBD80 \uCEF4\uD3EC\uB10C\uD2B8, \uC608\uB97C \uB4E4\uC5B4 ElScrollbar\uB97C \uC804\uC5ED\uC801\uC73C\uB85C \uB4F1\uB85D\uD574\uC57C \uD569\uB2C8\uB2E4. 
+// \uADF8\uB807\uC9C0 \uC54A\uC73C\uBA74 \uB4DC\uB86D\uB2E4\uC6B4 \uD56D\uBAA9\uC758 \uC2A4\uD0C0\uC77C\uC774 \uC81C\uB300\uB85C \uC801\uC6A9\uB418\uC9C0 \uC54A\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4.
+import { ElLoading, ElScrollbar } from &#39;element-plus&#39;
+
+const plugins = [ElLoading]
+
+const components = [ElScrollbar]
+
+export const setupElementPlus = (app: App) =&gt; {
+  plugins.forEach((plugin) =&gt; {
+    app.use(plugin)
+  })
+
+  components.forEach((component) =&gt; {
+    app.component(component.name, component)
+  })
+}
+
+</code></pre></div>__VP_STATIC_END__`,14),o=[e];function c(l,r,u,i,k,d){return a(),s("div",null,o)}var h=n(p,[["render",c]]);export{m as __pageData,h as default};
