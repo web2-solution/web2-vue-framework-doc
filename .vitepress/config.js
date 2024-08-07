@@ -35,7 +35,7 @@ function createHead() {
         content: 'web2-vue-framework, vitejs, vite, element-plus, vue',
       },
     ],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
     [
       'meta',
       {
@@ -45,7 +45,7 @@ function createHead() {
       },
     ],
     ['meta', { name: 'keywords', content: 'web2-vue-framework-doc' }],
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: 'favicon.ico' }],
   ];
 }
 
