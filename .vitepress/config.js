@@ -8,7 +8,7 @@ module.exports = {
   base: '/web2-vue-framework-doc/',
   title: 'web2-vue-framework',
   lang: 'ko-KO',
-  description: 'Vue 3, Element Plus, TypeScript, Vite를 기반으로 한 백엔드 통합 솔루션',
+  description: 'Vue 3, Element Plus, TypeScript, Vite를 기반 통합 솔루션',
   head: createHead(),
   // plugins: [docsearchPlugin({})],
   themeConfig: {
