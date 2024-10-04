@@ -15,7 +15,7 @@ const { setWatermark, clear } = useWatermark()
 
 const { t } = useI18n()
 
-setWatermark('ElementPlusAdmin')
+setWatermark('WiLS')
 
 onBeforeUnmount(() => {
   clear()

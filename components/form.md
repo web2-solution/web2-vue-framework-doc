@@ -1,6 +1,6 @@
 # Form 폼 컴포넌트
 
-`element-plus`의 `Form` 컴포넌트를 래핑하여, `element-plus`의 모든 폼 컴포넌트를 지원하며, 추가적인 기능도 확장하였습니다.
+`element-plus`의 `Form` 컴포넌트를 래핑하여 구현되었습니다. `element-plus`의 모든 폼 컴포넌트를 지원하며, 추가적인 기능도 확장하였습니다.
 
 Form 컴포넌트: [src/components/Form](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Form)
 
@@ -186,6 +186,6 @@ on?: {
 
 프로젝트에 내장된 폼 컴포넌트가 요구 사항을 충족하지 않을 때, 직접 자신의 컴포넌트를 추가할 수 있습니다.
 
-1. [src/components/Form/src/types/index.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/components/Form/src/types/index.ts) 에서 `ComponentName` 컴포넌트 이름을 추가 할 수 있습니다.
-2.  [src/components/Form/src/helper/componentMap.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/components/Form/src/helper/componentMap.ts) 에서 `componentMap` 객체에 키-값을 추가 하세요.
-3. 더 나은 타입 힌트를 원하시면, 사용자 정의 컴포넌트의 타입을  `componentProps`에도 추가 하세요.
+1. [src/components/Form/src/types/index.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/components/Form/src/types/index.ts) 에서 `ComponentName` 컴포넌트 이름을 추가할 수 있습니다.
+2.  [src/components/Form/src/helper/componentMap.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/components/Form/src/helper/componentMap.ts) 에서 `componentMap` 객체에 키-값을 추가하세요.
+3. 더 나은 타입 힌트를 원하시면, 사용자 정의 컴포넌트의 타입을  `componentProps`에도 추가하세요.

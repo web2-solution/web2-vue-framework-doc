@@ -4,10 +4,6 @@
 
 Permission 컴포넌트 [src/components/Permission](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Permission)
 
-<!-- ## 온라인 예제 -->
-
-<!-- [온라인 예제](https://element-plus-admin.cn/#/authorization/test) -->
-
 ## 사용법
 
 프로젝트의 세분화된 권한은 라우터 테이블에 포함되어 있으므로, 현재 라우터의 `meta.permission`에 전달된 권한 값이 포함되어 있는지 여부를 확인합니다. 포함되어 있다면 해당 권한에 따라 표시됩니다

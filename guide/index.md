@@ -1,12 +1,10 @@
 # 시작
 
-본 문서에서는 프로젝트를 처음부터 실행하고 시작하는 방법을 빠르게 안내해 드리겠습니다.
+본 문서에서는 프로젝트를 처음부터 실행하고 시작하는 방법을 안내합니다.
 
 ## 환경 준비
 
 로컬 환경에서는 [Pnpm](https://pnpm.io/)、[Node.js](http://nodejs.org/) 및 [Git](https://git-scm.com/)을 설치해야 합니다.
-
-왜 [Pnpm](https://pnpm.io/)을 사용하는지，다른 패키지 관리자를 사용하지 않는 이유는 여기에서는 자세히 설명하지 않겠습니다.
 
 ::: warning 주의
 
@@ -16,7 +14,7 @@
 
 ## 툴 설정
 
-만약 사용하는 IDE 가 [vscode](https://code.visualstudio.com/)라면, 개발 효율성과 코드 포맷팅을 향상시키기 위해 다음 도구를 설치 할 수 있습니다.
+만약 사용하는 IDE가 [vscode](https://code.visualstudio.com/)라면, 개발 효율성과 코드 포맷팅을 향상시키기 위해 다음 도구를 설치할 수 있습니다.
 
 - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Iconify 아이콘 플러그인
 - [unocss](https://marketplace.visualstudio.com/items?itemName=antfu.unocss) - unocss 팁 플러그인
@@ -47,7 +45,7 @@ git clone https://github.com/web2-solution/web2-vue-framework/tree/demo.git
 
 ### Node.js 설치
 
-컴퓨터에 [Node.js](https://nodejs.org/en/)가 설치되어 있지 않다면， `18.x` 이상을 권장합니다.
+로컬 환경에 [Node.js](https://nodejs.org/en/)가 설치되어 있지 않다면， `18.x` 이상 설치를 권장합니다.
 
 **확인**
 
@@ -59,13 +57,13 @@ npm -v
 node -v
 ```
 
-여러버전의 `node`를 동시에 사용해야 하는 경우， [Nvm](https://github.com/nvm-sh/nvm) 또는 다른 Node.js버전 관리를 할 수 있습니다.
+여러 버전의 `node`를 동시에 사용해야 하는 경우， [Nvm](https://github.com/nvm-sh/nvm) 또는 다른 Node.js 버전 관리 도구를 사용할 수 있습니다.
 
 ### 패키지 설치
 
 #### Pnpm 설치
 
-[Pnpm](https://pnpm.io/)을 사용하여 패키지를 설치하는 것을 권장합니다(다른 패키지 관리자로 설치할 수 없는 경우에는 별도로 처리해야 합니다).
+[Pnpm](https://pnpm.io/)을 사용하여 패키지를 설치하는 것을 권장합니다. (다른 패키지 관리자로 설치할 수 없는 경우에는 별도로 처리해야 합니다.)
 
 `Pnpm`이 설치되어 있지 않은 경우, 아래 명령어를 사용하여 전역으로 설치할 수 있습니다.
 
@@ -85,10 +83,6 @@ pnpm -v
 # 패키지 설치
 pnpm i
 ```
-
-::: tip 패키지 설치 시 husky 설치 실패
-
-소스 코드를 [Github](https://github.com/kailong321200875/vue-element-plus-admin) 또는 [Gitee](https://gitee.com/kailong110120130/vue-element-plus-admin) 에서 직접 다운로드했는지 확인해 보세요. 직접 다운로드한 경우 `.git` 폴더가 없으며, `husky`는 `git`에 의존하므로 설치할 수 없습니다. 이 경우, `git init` 명령어로 프로젝트를 초기화한 후, 다시 설치를 시도해 보세요."
 
 :::
 

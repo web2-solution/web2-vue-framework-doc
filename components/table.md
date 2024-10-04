@@ -4,7 +4,7 @@
 
 Table 컴포넌트 : [src/components/Table](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Table)
 
-::: warning 주의 Table 컴포넌트를 사용할 때는 tsx를 사용하는 것이 좋습니다. :::
+::: warning 주의 Table 컴포넌트를 사용할 때는 tsx를 사용하는 것을 권장합니다. :::
 
 ## 사용법
 
@@ -50,8 +50,6 @@ Table 컴포넌트 : [src/components/Table](https://github.com/web2-solution/web
 ### useTable
 
 element-plus의 Table 컴포넌트를 사용할 때 `useTable` 훅을 함께 사용하는 것이 유용합니다.
-
-<!-- 복잡한 예제는 [온라인 미리보기](https://element-plus-admin.cn/#/components/table/use-table)를 참조하세요. -->
 
 ```vue
 <script setup lang="tsx">

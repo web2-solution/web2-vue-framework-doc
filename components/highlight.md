@@ -12,7 +12,7 @@ import { Highlight } from '@/components/Highlight'
 </script>
 
 <template>
-  <Highlight :keys="['10년전', '현재']">
+  <Highlight :keys="['10년 전', '현재']">
     나무를 심기에 가장 좋은 때는 10년 전이었고, 그 다음이 지금이다.
   </Highlight>
 </template>

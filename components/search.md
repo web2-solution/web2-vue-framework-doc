@@ -11,7 +11,6 @@ Search 컴포넌트 :  [src/components/Search](https://github.com/web2-solution/
 ## 사용법
 
 ### 기본 사용법
-<!-- 좀 더 복잡한 예시는 [온라인 미리보기](https://element-plus-admin.cn/#/components/search)에서 확인 하세요. -->
 
 ```vue
 <script setup lang="ts">

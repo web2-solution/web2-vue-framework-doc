@@ -17,7 +17,7 @@
       <div v-if="repo" class="item">
         <a
           class="nav-btn"
-          href="https://github.com/kailong321200875/vue-element-plus-admin"
+          href="https://web2-solution.github.io/web2-vue-framework-doc"
           target="_blank"
           aria-label="View GitHub Repo"
         >

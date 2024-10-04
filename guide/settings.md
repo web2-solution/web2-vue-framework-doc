@@ -1,6 +1,6 @@
 # 프로젝트 설정 항목
 
-본 문서에서는 개발자가 요구 사항에 맞게 설정할 수 있도록 몇 가지 일반적인 프로젝트 설정을 소개합니다.
+본 문서에서는 개발자가 요구 사항에 맞게 프로젝트 환경을 설정할 수 있도록 몇 가지 일반적인 설정을 안내합니다.
 
 ## 환경 변수 설정
 
@@ -8,13 +8,13 @@
 - [로컬 개발 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.base)
 - [개발 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.dev)
 - [테스트 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.test)
-- [생산 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.pro)
+- [프로덕션 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.pro)
 
 개발 및 디버깅 중에는 `.env.base` 파일의 데이터를 읽습니다. 다른 환경에서도 마찬가지로, 빌드 명령에 따라 다른 환경 변수를 읽습니다.
 
-여러 환경 변수가 있는 이유
+여러 환경 변수가 있는 이유?
 
-예를 들어, `생산 환경`을 살펴보면, `pnpm run build:pro` 명령을 실행할 때 출력되는 패키지는 온라인 환경에서 사용됩니다. 따라서 코드가 압축되어야 하며, 코드에서 `console.log`와 `debugger`를 제거하여 빌드 후 코드의 깔끔함을 보장해야 합니다. 다른 환경에서는 `console.log`와 `debugger`를 유지하여 디버깅을 용이하게 하고 문제를 빠르게 찾을 수 있도록 해야 합니다.
+예를 들어, `프로덕션 환경`을 살펴보면, `pnpm run build:pro` 명령을 실행할 때 출력되는 패키지는 온라인 환경에서 사용됩니다. 따라서 코드가 압축되어야 하며, 코드에서 `console.log`와 `debugger`를 제거하여 빌드 후 코드의 깔끔함을 보장해야 합니다. 하지만 다른 환경에서는 `console.log`와 `debugger`를 유지하여 디버깅을 용이하게 하고 문제를 빠르게 찾을 수 있도록 해야 합니다.
 
 따라서 환경 변수의 역할은 각기 다른 환경에서 다른 동작을 하도록 하는 것입니다.
 
@@ -45,7 +45,7 @@ VITE_API_BASEPATH = base
 VITE_BASE_PATH = /
 
 # 제목
-VITE_APP_TITLE = ElementAdmin
+VITE_APP_TITLE = WiLS
 ```
 
 ### .env.dev
@@ -75,7 +75,7 @@ VITE_SOURCEMAP = true
 VITE_OUT_DIR = dist-dev
 
 # 제목
-VITE_APP_TITLE = ElementAdmin
+VITE_APP_TITLE = WiLS
 
 ```
 
@@ -109,7 +109,7 @@ VITE_OUT_DIR = dist-test
 
 ### .env.pro
 
-생산 환경 적용
+프로덕션 환경 적용
 
 ```bash
 # 환경
@@ -134,7 +134,7 @@ VITE_SOURCEMAP = false
 VITE_OUT_DIR = dist-pro
 
 # 제목
-VITE_APP_TITLE = ElementAdmin
+VITE_APP_TITLE = WiLS
 
 ```
 
@@ -217,42 +217,50 @@ export const appModules: AppState = {
 ## 다국어 설정
 
 다국어 정보를 구성하는 데 사용됩니다
-
 [src/store/modules/locale.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/store/modules/locale.ts) 파일에서 구성
 
 ```ts
-import { useCache } from '@/hooks/web/useCache'
-import zhCn from 'element-plus/lib/locale/lang/zh-cn'
-import en from 'element-plus/lib/locale/lang/en'
+import { defineStore } from 'pinia'
+import { store } from '../index'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+import en from 'element-plus/es/locale/lang/en'
+import ko from 'element-plus/es/locale/lang/ko'
+import { useStorage } from '@/hooks/web/useStorage'
+import { LocaleDropdownType } from '@/components/LocaleDropdown'
 
-const { wsCache } = useCache()
+const { getStorage, setStorage } = useStorage('localStorage')
 
-export const elLocaleMap = {
+const elLocaleMap = {
   'zh-CN': zhCn,
-  en: en
+  EN: en,
+  KO: ko
 }
-export interface LocaleState {
+interface LocaleState {
   currentLocale: LocaleDropdownType
   localeMap: LocaleDropdownType[]
 }
 
-export const localeModules: LocaleState = {
-  currentLocale: {
-    lang: wsCache.get('lang') || 'zh-CN',
-    elLocale: elLocaleMap[wsCache.get('lang') || 'zh-CN']
-  },
-  // 다국어
-  localeMap: [
-    {
-      lang: 'zh-CN',
-      name: '简体中文'//간체 중국어
-    },
-    {
-      lang: 'en',
-      name: 'English'
+export const useLocaleStore = defineStore('locales', {
+  state: (): LocaleState => {
+    return {
+      currentLocale: {
+        lang: getStorage('lang') || 'KO',
+        elLocale: elLocaleMap[getStorage('lang') || 'KO']
+      },
+      // multi-language
+      localeMap: [
+        {
+          lang: 'KO',
+          name: '한국어'
+        },
+        {
+          lang: 'EN',
+          name: 'English'
+        }
+      ]
     }
-  ]
-}
+  },
+  ...
 
 ```
 
@@ -262,7 +270,7 @@ export const localeModules: LocaleState = {
 
 컴포넌트 및 `element-plus` 컴포넌트의 `class` 접두사 수정에 사용됩니다.
 
-현재 `element-plus`의 컴포넌트가 모두 동적 접두사를 채택하지 않으므로, 현재는 `el` 접두사를 사용하고 있습니다.。
+현재 `element-plus`의 컴포넌트가 모두 동적 접두사를 채택하지 않으므로, 현재는 `el` 접두사를 사용하고 있습니다.
 
 - [src/styles/variables.module.less](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/styles/variables.module.less) 파일에서 구성
 

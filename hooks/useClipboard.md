@@ -1,6 +1,6 @@
 # useClipboard
 
-클립보드
+클립보드 기능을 제공하는 hook입니다.
 
 useClipboard는 [src/hooks/web/useClipboard.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/hooks/web/useClipboard.ts) 파일에 위치해 있습니다.
 

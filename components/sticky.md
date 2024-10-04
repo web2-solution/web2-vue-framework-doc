@@ -3,7 +3,6 @@
 `1.2.4` 추가
 
 Sticky 컴포넌트 
-<!-- : [src/components/Sticky](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Search) -->
 
 ## 사용법
 
@@ -14,7 +13,7 @@ import { Sticky } from '@/components/Sticky'
 
 <template>
   <Sticky :offset="90">
-    <div style="padding: 10px; background-color: lightblue"> Sticky 상단에서 부터90px </div>
+    <div style="padding: 10px; background-color: lightblue"> Sticky 상단에서부터 90px </div>
   </Sticky>
 </template>
 

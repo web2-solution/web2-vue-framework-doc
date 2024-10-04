@@ -66,10 +66,6 @@ function createNav() {
           text: '심화',
           link: '/dep/i18n',
         },
-        {
-          text: 'v2버전의 주요 업데이트',
-          link: '/guide/version',
-        },
       ],
     },
     {
@@ -106,7 +102,7 @@ function createNav() {
       text: '관련 링크',
       items: [
         {
-          text: 'wils 데모 사이트',
+          text: 'WiLS 데모 사이트',
           link: 'http://demo-wils.logis-hub.co.kr/',
         },
       ],
@@ -249,10 +245,6 @@ function createSidebar() {
             link: '/components/waterfall',
           },
           {
-            text: '비디오 플레이어 컴포넌트（2.5.0+）',
-            link: '/components/video-player',
-          },
-          {
             text: '프로필 사진 목록 컴포넌트（2.7.0+）',
             link: '/components/avatars',
           },
@@ -336,15 +328,6 @@ function createSidebar() {
           {
             text: '템플릿 생성',
             link: '/dep/create-module',
-          },
-        ],
-      },
-      {
-        text: 'v2버전 주요 업데이트',
-        children: [
-          {
-            text: '소개',
-            link: '/guide/version',
           },
         ],
       },

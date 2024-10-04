@@ -1,6 +1,6 @@
 # useStorage（2.1.0+）
 
-localStorage와 sessionStorage를 조작하는 데 사용됩니다.
+localStorage와 sessionStorage를 조작하는데 사용되는 hook입니다.
 
 
 useStorage는 [src/hooks/web/useStorage.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/hooks/web/useStorage.ts)파일에 위치해 있습니다.
@@ -49,4 +49,4 @@ const { setStorage, getStorage, removeStorage, clear } = useStorage('localStorag
 
 **clear**
 
-`clear`모든 캐시 데이터를 제거합니다. 특정 데이터를 제외하려면 excludes를 인수로 전달하여 제외할 수 있습니다. 예: clear(['key'])로 하면 `key`는 제거되지 않습니다.
+`clear` 모든 캐시 데이터를 제거합니다. 특정 데이터를 제외하려면 excludes를 인수로 전달하여 제외할 수 있습니다. 예: clear(['key'])로 하면 `key`는 제거되지 않습니다.

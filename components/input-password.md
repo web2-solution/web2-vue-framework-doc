@@ -26,5 +26,5 @@ const password = ref('')
 
 | 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
-| strength | 비밀번호 강도검사 표시여부 | `boolean` | - | false |
+| strength | 비밀번호 강도 검사 표시여부 | `boolean` | - | false |
 | modelValue | 선택된 항목 바인딩 값, v-model 지원 | `string` | - | - |

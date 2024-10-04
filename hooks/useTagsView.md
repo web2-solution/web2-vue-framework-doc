@@ -1,6 +1,6 @@
 # useTagsView（2.1.0+）
 
-탭 페이지 조작
+탭 페이지 조작 기능을 제공하는 hook입니다.
 
 useTagsView 는 [src/hooks/web/useTagsView.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/store/modules/tagsView.ts) 파일에 위치해 있습니다.
 

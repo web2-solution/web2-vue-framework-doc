@@ -1,5 +1,5 @@
 # useCrudSchemas
-`Search`、`Form`、`Descriptions`、`Table` 컴포넌트에 필요한 데이터 구조를 통합 생성
+`Search`、`Form`、`Descriptions`、`Table` 컴포넌트에 필요한 데이터 구조를 통합 생성하는 hook입니다.
 
 위 네 가지 컴포넌트 모두 `Schema` 또는 `columns` 필드를 필요로 하며, 각 컴포넌트마다 이러한 구조를 작성하면 많은 중복 코드가 발생할 수 있습니다. 따라서 `useCrudSchemas를` 제공하여 데이터를 통합 생성할 수 있습니다.
 
