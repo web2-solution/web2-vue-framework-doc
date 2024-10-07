@@ -171,7 +171,7 @@ const { allSchemas } = useCrudSchemas(crudSchemas)
 
 ## CrudSchema
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본 값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본 값 |
 | ---- | ---- | ---- | ---- | ---- |
 | search | `searchSchema`를 설정하는 데 사용 | `CrudSearchParams` | - | - |
 | table | `tableColumns`를 설정하는 데 사용 | `CrudTableParams` | - | - |

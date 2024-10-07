@@ -200,7 +200,7 @@ const { tableRegister, tableState, tableMethods } = useTable(props: UseTableConf
 
 테이블 상태
 
-| 속성        | 설명                    | 타입      | 선택 가능 값 | 기본값 |
+| 속성        | 설명                    | 타입      | 옵션 | 기본값 |
 | ----------- | ----------------------- | --------- | ------------ | ------ |
 | pageSize    | 페이지당 표시할 항목 수 | `number`  | -            | 10     |
 | currentPage | 현재 페이지             | `number`  | -            | 1      |
@@ -225,7 +225,7 @@ const { tableRegister, tableState, tableMethods } = useTable(props: UseTableConf
 
 다음 파라미터 이외에, `element-plus` 의 `Table` 컴포넌트가 지원하는 모든 속성도 지원합니다，[자세히 보기](https://element-plus.org/zh-CN/component/table.html#table-attributes)
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | --- | --- | --- | --- | --- |
 | pageSize | 페이지당 표시할 항목 수, v-model을 통한 양방향 바인딩 지원 | `number` | - | 10 |
 | currentPage | 현재 페이지, v-model을 통한 양방향 바인딩 지원 | `number` | - | 1 |
@@ -253,7 +253,7 @@ const { tableRegister, tableState, tableMethods } = useTable(props: UseTableConf
 
 다음 속성 이외에, `element-plus`의 `TableColumn` 속성도 지원합니다.
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | --- | --- | --- | --- | --- |
 | field | 고유 값. 올바른 데이터를 표시하려면 data 내의 속성명과 일치해야 합니다. | `string` | - | - |
 | label | 헤더 이름 | `string` | - | - |

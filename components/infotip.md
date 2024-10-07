@@ -31,7 +31,7 @@ import { Infotip } from '@/components/Infotip'
 
 ## Infotip 속성
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | title | 제목 | `string` | - | - |
 | schema | 표시할 데이터 내용 | `string[]`/`TipSchema[]` | - | [] |

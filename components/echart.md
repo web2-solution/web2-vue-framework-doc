@@ -16,7 +16,7 @@ Echart 컴포넌트 :  [src/components/Echart](https://github.com/web2-solution/
 
 ## Echart 속성
 <!-- [자세히 보기](https://echarts.apache.org/zh/option.html#title) -->
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | options | echart 설정 항목 | `EChartsOption` | - | [] |
 | width | 차트 너비 | `string`/`number` | - | - |

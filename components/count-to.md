@@ -6,7 +6,7 @@ CountTo 컴포넌트 : [src/components/CountTo](https://github.com/web2-solution
 
 ## 사용법
 
-더 복잡한 예시, [온라인 미리보기](http://demo-wils.logis-hub.co.kr/#/components/form/default-form)
+더 복잡한 예시는 [온라인 미리보기](http://demo-wils.logis-hub.co.kr/#/components/form/default-form)에서 확인할 수 있습니다.
 
 ```vue
 <script setup lang="ts">
@@ -21,7 +21,7 @@ import { CountTo } from '@/components/CountTo'
 
 ## CountTo 속성
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | startVal | 초기값 | `number` | - | 0 |
 | endVal | 최종값 | `number` | - | 2021 |

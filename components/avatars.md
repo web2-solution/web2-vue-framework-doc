@@ -59,7 +59,7 @@ const data = ref<AvatarItem[]>([
 
 ## Avatars 속성<span id="Avatars"></span>
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | size | 아바타 크기 | `ComponentSize、number` | - | - |
 | max | 최대 표시 개수 | `number` | - | 5 |
@@ -68,7 +68,7 @@ const data = ref<AvatarItem[]>([
 
 ### data<span id="data"></span>
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | url | 이미지 url | `string` | - | - |
 | name | 이름，(선택적 요소) | `string` | - | - |

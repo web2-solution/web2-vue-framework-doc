@@ -8,7 +8,7 @@ module.exports = {
   base: '/web2-vue-framework-doc/',
   title: 'web2-vue-framework',
   lang: 'ko-KO',
-  description: 'Vue 3, Element Plus, TypeScript, Vite를 기반 통합 솔루션',
+  description: 'Vue 3, Element Plus, TypeScript, Vite 기반 통합 솔루션',
   head: createHead(),
   // plugins: [docsearchPlugin({})],
   themeConfig: {
@@ -174,7 +174,7 @@ function createSidebar() {
           },
           {
             text: 'CustomGrid 컴포넌트',
-            link: '/components/customGrid',
+            link: '/components/custom-grid',
           },
           {
             text: 'Table 테이블 컴포넌트',
@@ -233,11 +233,11 @@ function createSidebar() {
             link: '/components/footer',
           },
           {
-            text: 'JsonEditor JSON편집기 컴포넌트（2.2.0+）',
+            text: 'JsonEditor JSON 편집기 컴포넌트（2.2.0+）',
             link: '/components/json-editor',
           },
           {
-            text: '아이콘 선택기 컴포넌트（2.3.0+）',
+            text: '아이콘 선택 컴포넌트（2.3.0+）',
             link: '/components/icon-picker',
           },
           {
@@ -293,7 +293,7 @@ function createSidebar() {
             link: '/guide/auth',
           },
           {
-            text: 'Mock&통합 테스트',
+            text: 'Mock & 통합 테스트',
             link: '/guide/mock',
           },
           {
@@ -305,7 +305,7 @@ function createSidebar() {
             link: '/guide/design',
           },
           {
-            text: '빌드&배포',
+            text: '빌드 & 배포',
             link: '/guide/deploy',
           },
         ],

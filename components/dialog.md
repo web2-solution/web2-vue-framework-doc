@@ -32,7 +32,7 @@ Dialog 컴포넌트 [src/components/Dialog](https://github.com/web2-solution/web
 
 [자세히 보기](https://element-plus.org/zh-CN/component/dialog.html#%E5%B1%9E%E6%80%A7)
 
-| 속성       | 설명                        | 타입              | 선택 가능 값 | 기본값 |
+| 속성       | 설명                        | 타입              | 옵션 | 기본값 |
 | ---------- | --------------------------- | ----------------- | ------------ | ------ |
 | modelValue | 팝업 표시 여부，v-model지원 | `boolean`         | -            | false  |
 | fullscreen | 전체화면 버튼 표시 여부     | `boolean`         | -            | true   |

@@ -62,7 +62,7 @@ Descriptions 컴포넌트 : [src/components/Descriptions](https://github.com/web
 
 [자세히 보기](https://element-plus.org/zh-CN/component/descriptions.html#descriptions-%E5%B1%9E%E6%80%A7)
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | --- | --- | --- | --- | --- |
 | title | 제목 | `string` | - | - |
 | message | 알림 | `string` | - | - |
@@ -72,7 +72,7 @@ Descriptions 컴포넌트 : [src/components/Descriptions](https://github.com/web
 
 ### Schema<span id="Schema"></span>
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | --- | --- | --- | --- | --- |
 | span | 그리드 비율 | `number` | - | - |
 | field | 필드 이름, 고유 값, (data에서의 속성 이름과 일치해야 합니다.) | `string` | - | - |

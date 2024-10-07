@@ -17,7 +17,7 @@ import { Qrcode } from '@/components/Qrcode'
 
 ## Qrcode 속성
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | tag | QR 코드를 생성할 태그 | `string` | canvas/img | canvas |
 | text | QR 코드 내용 | `string`/`Array` | - | - |

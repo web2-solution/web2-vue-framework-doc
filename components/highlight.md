@@ -21,7 +21,7 @@ import { Highlight } from '@/components/Highlight'
 
 ## Highlight 속성
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | tag | 패키징 라벨 | `string` | - | span |
 | keys | 하이라이트 키워드 | `string[]` | - | [] |

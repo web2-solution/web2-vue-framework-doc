@@ -330,7 +330,7 @@ const { searchRegister, searchMethods } = useSearch()
 
 ## Search 속성
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | schema | Search의 레이아웃 구조 배열을 생성 [자세히 보기](#Schema) | `FormSchema` | - | [] |
 | isCol | 격자 레이아웃 필요 여부 | `boolean` | - | true |

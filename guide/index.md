@@ -1,6 +1,6 @@
 # 시작
 
-본 문서에서는 프로젝트를 처음부터 실행하고 시작하는 방법을 안내합니다.
+이 문서에서는 프로젝트를 처음부터 설정하고 실행하는 방법을 안내합니다.
 
 ## 환경 준비
 
@@ -8,13 +8,13 @@
 
 ::: warning 주의
 
-- Node.js 버전 요구 사항은 14.x 이상이며, 16.x 이상의 버전을 권장합니다.
+- Node.js는 14.x 이상의 버전이 필요하며, 16.x 이상의 버전을 권장합니다.
 
 :::
 
 ## 툴 설정
 
-만약 사용하는 IDE가 [vscode](https://code.visualstudio.com/)라면, 개발 효율성과 코드 포맷팅을 향상시키기 위해 다음 도구를 설치할 수 있습니다.
+만약 Visual Studio Code를 사용 중이라면, 개발 효율성과 코드 포맷팅을 위해 다음 플러그인 설치를 권장합니다:
 
 - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Iconify 아이콘 플러그인
 - [unocss](https://marketplace.visualstudio.com/items?itemName=antfu.unocss) - unocss 팁 플러그인
@@ -29,7 +29,7 @@
 
 ::: warning 주의
 
-코드를 저장하는 디렉토리 및 모든 상위 디렉토리에는 중국어, 한국어, 일본어 문자나 공백이 없어야 합니다. 그렇지 않으면 패키지를 설치한 후 시작 시 오류가 발생할 수 있습니다.
+코드를 저장하는 디렉터리 및 모든 상위 디렉터리 이름에 한국어, 중국어, 일본어와 같은 비영어 문자가 포함되거나 공백이 있으면 패키지를 설치하거나 프로젝트를 실행할 때 오류가 발생할 수 있습니다.
 
 :::
 
@@ -45,7 +45,7 @@ git clone https://github.com/web2-solution/web2-vue-framework/tree/demo.git
 
 ### Node.js 설치
 
-로컬 환경에 [Node.js](https://nodejs.org/en/)가 설치되어 있지 않다면， `18.x` 이상 설치를 권장합니다.
+로컬 환경에 [Node.js](https://nodejs.org/en/)가 설치되어 있지 않다면 `18.x` 이상의 버전을 권장합니다.
 
 **확인**
 
@@ -57,7 +57,7 @@ npm -v
 node -v
 ```
 
-여러 버전의 `node`를 동시에 사용해야 하는 경우， [Nvm](https://github.com/nvm-sh/nvm) 또는 다른 Node.js 버전 관리 도구를 사용할 수 있습니다.
+여러 버전의 `node`를 동시에 사용해야 하는 경우， [Nvm](https://github.com/nvm-sh/nvm)과 같은 Node.js 버전 관리 도구를 사용할 수 있습니다.
 
 ### 패키지 설치
 
@@ -108,11 +108,11 @@ pnpm run dev
   "build:dev": "npm run ts:check && vite build --mode dev",
   # 테스트 환경으로 빌드
   "build:test": "npm run ts:check && vite build --mode test",
-  # 프로덕션 환경으로 빌드된 프로젝트 패키지 로컬 미리보기
+  # 프로덕션 환경으로 빌드된 프로젝트 미리보기
   "serve:pro": "vite preview --mode pro",
-  # 개발 환경으로 빌드된 프로젝트 패키지 로컬 미리보기
+  # 개발 환경으로 빌드된 프로젝트 미리보기
   "serve:dev": "vite preview --mode dev",
-  # 테스트 환경으로 빌드된 프로젝트 패키지 로컬 미리보기
+  # 테스트 환경으로 빌드된 프로젝트 미리보기
   "serve:test": "vite preview --mode test",
   # 업데이트 가능한 의존성 검사
   "npm:check": "npx npm-check-updates",

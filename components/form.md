@@ -95,7 +95,7 @@ const { formRegister, formMethods } = useForm()
 다음 매개변수 이외에, element-plus의 Form의 모든 속성을 지원합니다.  
 [온라인 미리보기](https://element-plus.org/zh-CN/component/form.html#form-%E5%B1%9E%E6%80%A7)
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | schema | Form의 레이아웃 구조 배열을 생성 [자세한 내용](#Schema) | `FormSchema` | - | [] |
 | isCol | 격자 레이아웃 필요 여부 | `boolean` | - | true |
@@ -106,7 +106,7 @@ const { formRegister, formMethods } = useForm()
 
 ### Schema<span id="Schema"></span>
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | field | 필드 이름, 고유 값(필수 항목) | `string` | - | - |
 | label | 제목 | `string` | - | - |
@@ -164,7 +164,7 @@ on?: {
 
 다음 속성 외에도, `element-plus`의 `FormItem`에서 지원하는 모든 속성을 지원합니다.
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | slots | FormItem의 슬롯 | `Object` | - | - |
 | style | Form 항목의 스타일 | `CSSProperties` | - | - |

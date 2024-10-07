@@ -6,21 +6,52 @@
 
 ## 필요한 기본 지식
 
-본 프로젝트를 다루기 위해서는 일정한 프론트엔드 기초 지식이 필요합니다. Vue의 기초 지식을 숙지해두면 일반적은 문제를 해결하는데 도움이 될 것입니다.
+본 프로젝트를 원활하게 다루기 위해서는 일정한 프론트엔드 기초 지식이 필요합니다. **Vue.js**를 포함한 여러 도구와 개념에 대한 기초를 익혀두면 프로젝트 진행 시 발생하는 문제를 해결하는 데 도움이 됩니다.
 
-이 프로젝트를 신속하게 익히기 위해서는 문서와 온라인 예제를 살펴보는 것이 좋습니다.
+### 권장 학습 내용
 
-개발 전에 다음 내용을 학습해 두면 프로젝트 이해에 유용합니다.:
+1. **HTML/CSS**:
+   - HTML의 기본 구조와 CSS를 사용한 스타일링 방법
+   - Flexbox 및 Grid 레이아웃에 대한 이해
+   - 반응형 웹 디자인 및 미디어 쿼리 사용법
 
-- [Vue3](https://v3.vuejs.org/)
-- [Pinia](https://pinia.vuejs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vue-router](https://next.router.vuejs.org/)
-- [Element-plus](https://element-plus.org/)
-- [Es6](https://es6.ruanyifeng.com/)
-- [Vitejs](https://vitejs.dev/)
-- [unocss](https://unocss.dev/)
-- [Axios](https://axios-http.com/)
+2. **JavaScript**:
+   - ES6 이상의 자바스크립트 문법 (화살표 함수, 템플릿 리터럴, 비구조화 할당 등)
+   - 비동기 프로그래밍 (Promise, async/await)
+   - 모듈 시스템과 import/export 사용법
+
+3. **Vue.js**:
+   - Vue 인스턴스와 기본 구조
+   - Vue 컴포넌트의 작성 및 컴포넌트 간의 통신 (Props, Events)
+   - Vue의 반응형 데이터 바인딩과 라이프사이클 훅
+   - Vue Router와 상태 관리(Pinia) 기본 개념
+   - Vue CLI를 사용한 프로젝트 생성 및 설정
+
+4. **패키지 관리 및 빌드 도구**:
+   - npm 또는 pnpm과 같은 패키지 관리 도구 사용법
+   - Vite와 같은 빌드 도구의 기본 설정 및 명령어 이해
+
+5. **Version Control (Git)**:
+   - Git의 기본적인 명령어 및 브랜치 관리 방법
+   - GitHub와 같은 원격 저장소 사용법
+
+6. **API 통신**:
+   - Axios 또는 Fetch API를 사용한 HTTP 요청 처리
+   - RESTful API의 기본 개념과 데이터 처리
+
+위의 주제들을 미리 학습해두면 프로젝트 작업에 빠르게 적응하고 효율적으로 개발을 진행할 수 있습니다.
+
+또한 이 프로젝트를 신속하게 이해하고 익히기 위해서 아래 문서와 온라인 예제를 참고할 수 있습니다. 개발 전에 다음 항목을 학습해두면 프로젝트 코드를 이해하는 데 매우 유용합니다:
+
+- [Vue 3](https://v3.vuejs.org/) - 최신 Vue.js 버전으로, Vue의 반응형 데이터 시스템 및 컴포넌트 기반 개발 방식 학습
+- [Pinia](https://pinia.vuejs.org/) - Vuex의 대안으로 간편하고 직관적인 상태 관리 도구
+- [TypeScript](https://www.typescriptlang.org/) - 정적 타입 지원을 통해 대규모 애플리케이션에서 더 안전한 코드를 작성할 수 있음
+- [Vue Router](https://next.router.vuejs.org/) - Vue.js에서 페이지 간의 라우팅을 관리하는 도구
+- [Element Plus](https://element-plus.org/) - Vue 3를 위한 UI 라이브러리로, 다양한 UI 컴포넌트를 제공
+- [ES6](https://es6.ruanyifeng.com/) - 최신 자바스크립트 문법 및 기능에 대한 이해 (화살표 함수, 비구조화 할당, 템플릿 리터럴 등)
+- [Vite.js](https://vitejs.dev/) - 빠르고 가벼운 빌드 도구로, 프로젝트의 성능을 최적화할 수 있음
+- [unocss](https://unocss.dev/) - 유틸리티-퍼스트 CSS 프레임워크로, 빠르고 유연한 스타일링을 지원
+- [Axios](https://axios-http.com/) - HTTP 클라이언트 라이브러리로, API 통신을 쉽게 구현 가능
 
 ## 디렉토리 구조
 

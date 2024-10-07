@@ -21,7 +21,7 @@ import { Sticky } from '@/components/Sticky'
 
 ## Sticky 속성
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | offset | 상단 또는 하단에서의 거리 | `number` | - | 0 |
 | zIndex | 요소의 쌓이는 순서 | `number` | - | 999 |

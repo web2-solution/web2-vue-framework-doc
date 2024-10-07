@@ -33,7 +33,7 @@ Editor 컴포넌트 [src/components/Editor](https://github.com/web2-solution/web
 
 ## Editor 속성
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | --- | --- | --- | --- | --- |
 | editorId | 리치 텍스트 컴포넌트 고유 값, 필수 항목 | `string` | - | wangeEditor-1 |
 | height | 높이 | `string`/`number` | - | 500px |

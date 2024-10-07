@@ -73,7 +73,7 @@ const loadMore = () => {
 
 ## Waterfall 속성<span id="Waterfall"></span>
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | data | 표시할 데이터 | `Array` | - | - |
 | reset | 창 크기 변경 시 레이아웃 재구성 여부| `boolean` | true/false | true |

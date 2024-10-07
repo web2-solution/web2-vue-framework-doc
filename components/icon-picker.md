@@ -34,6 +34,6 @@ const currentIcon = ref('tdesign:book-open')
 
 ## Icon 속성<span id="Icon"></span>
 
-| 속성 | 설명 | 타입 | 선택 가능 값 | 기본값 |
+| 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
 | modelValue | 선택된 항목의 바인딩 값, v-model 지원 | `string` | - | - |
