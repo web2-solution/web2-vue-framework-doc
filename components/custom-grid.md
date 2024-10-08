@@ -36,8 +36,6 @@ CutomGrid 컴포넌트: [src/components/CustomGrid](https://github.com/web2-solu
 | primaryKey | 각 행의 고유 식별자로 사용될 필드의 이름 | `string` | - | - |
 | label | 각 그리드의 고유 식별자로 사용될 그리드의 라벨 | `string` | - | - |
 
-
-
 ## CustomGrid 속성
 
 | 속성 | 설명 | 타입 | 옵션 | 기본값 |
