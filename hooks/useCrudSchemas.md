@@ -3,7 +3,7 @@
 
 위 네 가지 컴포넌트 모두 `Schema` 또는 `columns` 필드를 필요로 하며, 각 컴포넌트마다 이러한 구조를 작성하면 많은 중복 코드가 발생할 수 있습니다. 따라서 `useCrudSchemas를` 제공하여 데이터를 통합 생성할 수 있습니다.
 
-useCrudSchemas는 [src/hooks/web/useCrudSchemas.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/hooks/web/useCrudSchemas.ts) 파일에 위치해 있습니다.
+useCrudSchemas는 [src/hooks/web/useCrudSchemas.ts](https://github.com/web2-solution/web2-vue-framework/blob/main/src/hooks/web/useCrudSchemas.ts) 파일에 위치해 있습니다.
 
 ## 사용법
 

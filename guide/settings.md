@@ -5,10 +5,10 @@
 ## 환경 변수 설정
 
 프로젝트의 환경 변수는 프로젝트 루트 디렉토리에 위치하며, 주로 네 가지 환경 변수를 설정합니다:
-- [로컬 개발 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.base)
-- [개발 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.dev)
-- [테스트 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.test)
-- [프로덕션 환경](https://github.com/web2-solution/web2-vue-framework/blob/demo/.env.pro)
+- [로컬 개발 환경](https://github.com/web2-solution/web2-vue-framework/blob/main/.env.base)
+- [개발 환경](https://github.com/web2-solution/web2-vue-framework/blob/main/.env.dev)
+- [테스트 환경](https://github.com/web2-solution/web2-vue-framework/blob/main/.env.test)
+- [프로덕션 환경](https://github.com/web2-solution/web2-vue-framework/blob/main/.env.pro)
 
 개발 및 디버깅 중에는 `.env.base` 파일의 변수를 사용하며, 빌드 명령에 따라 각 환경에 맞는 변수를 사용하게 됩니다.
 
@@ -131,7 +131,7 @@ VITE_APP_TITLE = WiLS
 
 ### 설정 파일 경로
 
-[src/store/modules/app.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/store/modules/app.ts)
+[src/store/modules/app.ts](https://github.com/web2-solution/web2-vue-framework/blob/main/src/store/modules/app.ts)
 
 ### 설정 항목 설명
 
@@ -139,55 +139,59 @@ VITE_APP_TITLE = WiLS
 
 ```js
 export const appModules: AppState = {
-  sizeMap: ['default', 'large', 'small'],
-  mobile: false, // 모바일 여부
-  title: import.meta.env.VITE_APP_TITLE as string, // 제목
-  pageLoading: false, // 페이지 전환 시 로딩 표시 여부
+  sizeMap: ['default', 'large', 'small'], // 컴포넌트의 사용 가능한 크기
+  mobile: false, // 애플리케이션이 모바일 장치에서 실행되고 있는지 여부
+  title: import.meta.env.VITE_APP_TITLE, // 애플리케이션 제목
+  pageLoading: false, // 라우트 전환 중 로딩 상태 표시 여부
+  breadcrumb: true, // 브레드크럼 내비게이션 활성화 여부
+  breadcrumbIcon: false, // 브레드크럼에 아이콘 표시 여부
+  collapse: false, // 메뉴를 접을 수 있는지 여부
+  uniqueOpened: true, // 한 번에 하나의 하위 메뉴만 확장되도록 설정
+  hamburger: true, // 햄버거 메뉴 아이콘 표시 여부
+  screenfull: true, // 전체 화면 모드 아이콘 활성화 여부
+  size: true, // 크기 선택 아이콘 표시 여부
+  locale: true, // 다국어 지원 아이콘 활성화 여부
+  tagsView: true, // 페이지 북마크 기능 활성화 여부
+  tagsViewIcon: true, // 태그 뷰에 아이콘 표시 여부
+  logo: true, // 애플리케이션 로고 표시 여부
+  fixedHeader: true, // 페이지 상단에 헤더 고정
+  footer: false, // 푸터 표시 여부
+  greyMode: false, // 그레이 모드 활성화 여부
+  dynamicRouter: true, // 동적 라우팅 활성화 여부
+  serverDynamicRouter: true, // 동적 라우트를 위한 서버 사이드 렌더링 활성화 여부
+  fixedMenu: false, // cutMenu 레이아웃에서 메뉴 고정
+  layout: 'classic', // 레이아웃 스타일 지정
+  isDark: false, // 다크 모드 활성화 여부
+  currentSize: 'small', // 현재 컴포넌트 크기 설정
 
-  breadcrumb: true, // 브레드크럼 표시 여부
-  breadcrumbIcon: true, // 브레드크럼 아이콘 표시 여부
-  collapse: false, // 메뉴 접기 여부
-  hamburger: true, // 메뉴 접기 아이콘 표시 여부
-  screenfull: true, // 전체 화면 아이콘 표시 여부
-  size: true, // 크기 조절 아이콘 표시 여부
-  locale: true, // 다국어 아이콘 표시 여부
-  tagsView: true, // 태그 페이지 표시 여부
-  logo: true, // 로고 표시 여부
-  fixedHeader: true, // 헤더 고정 여부
-  footer: true, // 페이지 하단 표시 여부
-  greyMode: false, // 회색 모드 활성화 여부
-
-  layout: wsCache.get('layout') || 'classic', // 레이아웃 설정
-  isDark: wsCache.get('isDark') || false, // 다크 모드 여부
-  currentSize: wsCache.get('default') || 'default', // 컴포넌트 크기 설정
-  theme: wsCache.get('theme') || {
-    // 테마 색상
+  theme: {
+    // 테마의 기본 색상
     elColorPrimary: '#409eff',
-    // 좌측 메뉴 테두리 색상
+    // 왼쪽 메뉴의 테두리 색상
     leftMenuBorderColor: 'inherit',
-    // 좌측 메뉴 배경 색상
+    // 왼쪽 메뉴의 배경 색상
     leftMenuBgColor: '#001529',
-    // 좌측 메뉴 밝은 배경 색상
+    // 왼쪽 메뉴의 밝은 배경 색상
     leftMenuBgLightColor: '#0f2438',
-    // 좌측 메뉴 선택 배경 색상
+    // 활성화된 왼쪽 메뉴 항목의 배경 색상
     leftMenuBgActiveColor: 'var(--el-color-primary)',
-    // 좌측 메뉴 접힌 상태의 선택 배경 색상
+    // 접힌 상태에서 활성화된 왼쪽 메뉴 항목의 배경 색상
     leftMenuCollapseBgActiveColor: 'var(--el-color-primary)',
-    // 좌측 메뉴 글자 색상
+    // 왼쪽 메뉴 항목의 글꼴 색상
     leftMenuTextColor: '#bfcbd9',
-    // 좌측 메뉴 선택 글자 색상
+    // 활성화된 왼쪽 메뉴 항목의 글꼴 색상
     leftMenuTextActiveColor: '#fff',
-    // 로고 글자 색상
+    // 로고 제목의 글꼴 색상
     logoTitleTextColor: '#fff',
-    // 로고 테두리 색상
+    // 로고의 테두리 색상
     logoBorderColor: 'inherit',
-    // 상단 헤더 배경 색상
+    // 상단 헤더의 배경 색상
     topHeaderBgColor: '#fff',
-    // 상단 헤더 글자 색상
+    // 상단 헤더의 글꼴 색상
     topHeaderTextColor: 'inherit',
-    // 상단 헤더 호버 색상
+    // 상단 헤더의 호버 색상
     topHeaderHoverColor: '#f6f6f6',
-    // 상단 툴 테두리 색상
+    // 상단 도구 영역의 테두리 색상
     topToolBorderColor: '#eee'
   }
 }
@@ -195,12 +199,12 @@ export const appModules: AppState = {
 
 ### 새 속성 추가하기
 
-새로운 전역 구성 속성을 추가하려면 [src/store/modules/app.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/store/modules/app.ts) 파일에서 AppState 타입에 해당 속성을 추가하고, appModules 객체에 기본값을 설정해주면 됩니다.
+새로운 전역 구성 속성을 추가하려면 [src/store/modules/app.ts](https://github.com/web2-solution/web2-vue-framework/blob/main/src/store/modules/app.ts) 파일에서 AppState 타입에 해당 속성을 추가하고, appModules 객체에 기본값을 설정해주면 됩니다.
 
 ## 다국어 설정
 
 다국어 관련 설정은 아래 파일에서 관리됩니다:
-[src/store/modules/locale.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/store/modules/locale.ts)
+[src/store/modules/locale.ts](https://github.com/web2-solution/web2-vue-framework/blob/main/src/store/modules/locale.ts)
 
 ```ts
 import { defineStore } from 'pinia'
@@ -251,7 +255,7 @@ export const useLocaleStore = defineStore('locales', {
 
 컴포넌트 및 `element-plus`의 클래스 접두사를 수정할 때 사용됩니다.
 
-- [src/styles/variables.module.less](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/styles/variables.module.less)
+- [src/styles/variables.module.less](https://github.com/web2-solution/web2-vue-framework/blob/main/src/styles/variables.module.less)
 
 ```less
 // 네임스페이스
@@ -271,7 +275,7 @@ export const useLocaleStore = defineStore('locales', {
 
 ```vue
 <style lang="less" scoped>
-  @prefix-cls: ~'@{namespace}-app';
+  @prefix-cls: ~'@{namespace}-app'; // v-app
 
   .@{prefix-cls} {
     width: 100%;

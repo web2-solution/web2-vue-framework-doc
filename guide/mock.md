@@ -35,13 +35,13 @@ server: {
 
 ## API 요청
 
-본 프로젝트에서는 모든 API 데이터가 `Mock`을 사용하여 시뮬레이션됩니다. 
+본 프로젝트에서는 `Mock`을 사용하여 API를 시뮬레이션할 수 있습니다. 
 
-API는 [src/api/](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/api) 디렉토리 아래에 통합 관리됩니다.
+API는 [src/api/](https://github.com/web2-solution/web2-vue-framework/tree/main/src/api) 디렉토리 아래에 통합 관리됩니다.
 
 리스트 조회 API를 예로 들어 설명하겠습니다:
 
-**src/api/** 폴더 내에 새로운 모듈 파일을 생성할 때, 매개변수와 반환값의 타입을 정의하는 것이 좋습니다. 이렇게 하면 검증이 용이해집니다. 비록 번거로울 수 있지만, 이후에 필드를 유지보수하는 데 매우 편리합니다.
+**src/api/** 폴더에 새로운 모듈 파일을 생성할 때, 매개변수와 반환값의 타입을 정의하는 것이 좋습니다. 이는 데이터 검증을 용이하게 하고, 향후 유지보수를 간편하게 합니다.
 
 ::: tip 
 
@@ -76,11 +76,11 @@ export const delTableListApi = (ids: string[] | number[]): Promise<IResponse> =>
 
 ## axios 설정
 
-**axios** 패키지는 [src/axios](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/axios) 디렉토리에 저장됩니다.
+**axios** 패키지는 [src/axios](https://github.com/web2-solution/web2-vue-framework/tree/main/src/axios) 디렉토리에 저장됩니다.
 
 ### 전역 axios 설정 설명
 
-axios의 전역 설정은 [src/constants](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/constants) 디렉토리에 있습니다.
+axios의 전역 설정은 [src/constants](https://github.com/web2-solution/web2-vue-framework/tree/main/src/constants) 디렉토리에 있습니다.
 
 ::: tip 주의
 
@@ -134,9 +134,3 @@ mock 값은 [mock.js](http://mockjs.com/)의 문법을 직접 사용할 수 있�
 #### 인터페이스가 준비되면, Mock을 어떻게 제거하나요?
 
 해당 `env` 파일에서 `VITE_USE_MOCK`을 `false`로 설정하면 Mock을 비활성화할 수 있습니다. 완전히 제거하려면, `vite.config.ts`에서 `viteMockServe`와 관련된 코드를 삭제해야 합니다.
-
-### 온라인 Mock
-
-이 프로젝트는 시연용 프로젝트이기 때문에, 온라인 환경에서도 Mock 데이터를 사용합니다. 그래서 패키징 후에도 Mock 데이터가 통합되어 있습니다. 일반적으로 운영 환경에서는 실제 서버 인터페이스를 사용합니다.
-
-이 프로젝트의 온라인 Mock은 [mock.js](http://mockjs.com/)를 사용하여 Mock 데이터를 시뮬레이션합니다.

@@ -3,7 +3,7 @@
 localStorage와 sessionStorage를 조작하는데 사용되는 hook입니다.
 
 
-useStorage는 [src/hooks/web/useStorage.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/hooks/web/useStorage.ts)파일에 위치해 있습니다.
+useStorage는 [src/hooks/web/useStorage.ts](https://github.com/web2-solution/web2-vue-framework/blob/main/src/hooks/web/useStorage.ts)파일에 위치해 있습니다.
 
 기본적으로 `sessionStorage`를 사용하며, `localStorage`를 사용하려면 `localStorage`를 인수로 전달하면 됩니다. 예: useStorage('localStorage')
 

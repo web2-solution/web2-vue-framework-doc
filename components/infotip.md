@@ -2,7 +2,7 @@
 
 `Highlight` 컴포넌트를 기반으로 래핑
 
-Infotip 컴포넌트 [src/components/Infotip](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Infotip)
+Infotip 컴포넌트 [src/components/Infotip](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Infotip)
 
 ## 사용법
 

@@ -10,7 +10,7 @@ wangeditor를 기반으로 확장.
 
 <!-- [wangeditor문서](https://www.wangeditor.com/v5/) -->
 
-Editor 컴포넌트 [src/components/Editor](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Editor)
+Editor 컴포넌트 [src/components/Editor](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Editor)
 
 ## 사용법
 

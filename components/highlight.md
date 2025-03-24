@@ -1,6 +1,6 @@
 # Highlight 하이라이트 컴포넌트
 
-Highlight 컴포넌트 : [src/components/Highlight](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Highlight) 
+Highlight 컴포넌트 : [src/components/Highlight](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Highlight) 
 
 ## 사용법
 

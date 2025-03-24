@@ -2,7 +2,7 @@
 
 요소에 워터마크를 설정합니다
 
-useWatermark 은 [src/hooks/web/useWatermark.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/hooks/web/useWatermark.ts) 파일에 위치해 있습니다.
+useWatermark 은 [src/hooks/web/useWatermark.ts](https://github.com/web2-solution/web2-vue-framework/blob/main/src/hooks/web/useWatermark.ts) 파일에 위치해 있습니다.
 
 ## 사용법
 

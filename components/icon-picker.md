@@ -2,7 +2,7 @@
 
 Iconify 아이콘을 선택하는데 사용됩니다.
 
-IconPicker 컴포넌트 [src/components/IconPicker](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/IconPicker) 
+IconPicker 컴포넌트 [src/components/IconPicker](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/IconPicker) 
 
 ::: tip
 
@@ -30,7 +30,7 @@ const currentIcon = ref('tdesign:book-open')
 
 `pnpm run icon`을 실행한 후, 원하는 아이콘 세트를 선택할 수 있습니다.
 
-그 후, [IconPicker.vue](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/components/IconPicker/src/IconPicker.vue) 에서 해당 아이콘을 가져와 `icons`에 추가하면 됩니다.
+그 후, [IconPicker.vue](https://github.com/web2-solution/web2-vue-framework/blob/main/src/components/IconPicker/src/IconPicker.vue) 에서 해당 아이콘을 가져와 `icons`에 추가하면 됩니다.
 
 ## Icon 속성<span id="Icon"></span>
 

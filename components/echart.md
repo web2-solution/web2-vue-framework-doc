@@ -2,7 +2,7 @@
 
 `echarts` 를 캡슐화，창 크기 조절。
 
-Echart 컴포넌트 :  [src/components/Echart](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Echart)
+Echart 컴포넌트 :  [src/components/Echart](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Echart)
 
 ## 사용법
 

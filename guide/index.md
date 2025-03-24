@@ -19,7 +19,7 @@
 - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Iconify 아이콘 플러그인
 - [unocss](https://marketplace.visualstudio.com/items?itemName=antfu.unocss) - unocss 팁 플러그인
 - [I18n-ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally) - i18n 플러그인
-- [Volar](https://gitee.com/link?target=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Djohnsoncodehk.volar) - vue 개발 필수 도구
+- [Vue - Official](https://marketplace.cursorapi.com/items?itemName=Vue.volar) - vue 개발 필수 도구
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - 스크립트 코드 검사
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 코드 포맷팅
 - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - css 포맷팅
@@ -37,8 +37,7 @@
 
 ```bash
 # clone code
-git clone https://github.com/web2-solution/web2-vue-framework/tree/demo.git
-
+git clone https://github.com/web2-solution/web2-vue-framework.git
 ```
 
 ## 설치
@@ -71,7 +70,7 @@ node -v
 # pnpm 전역 설치
 npm i -g pnpm
 
-# 확인
+# pnppm이 성공적으로 설치되었는지 확인
 pnpm -v
 ```
 
@@ -89,6 +88,7 @@ pnpm i
 패키지 설치가 완료된 후, 다음 명령어를 실행하여 프로젝트를 시작할 수 있습니다:：
 
 ```bash
+# 로컬에서 프론트엔드 개발 서버 실행
 pnpm run dev
 ```
 
@@ -99,37 +99,54 @@ pnpm run dev
   # 패키지 설치
   "i": "pnpm install",
   # 로컬 개발 환경 실행
-  "dev": "vite --mode base",
-  # typeScript 검사
-  "ts:check": "vue-tsc --noEmit",
+  "dev": "pnpm vite --mode base",
+  # TypeScript 타입 검사
+  "ts:check": "pnpm vue-tsc --noEmit --skipLibCheck",
+
   # 프로덕션 환경으로 빌드
-  "build:pro": "vite build --mode pro",
+  "build:pro": "pnpm vite build --mode pro",
+  # Gitee 배포용 빌드
+  "build:gitee": "pnpm vite build --mode gitee",
   # 개발 환경으로 빌드
-  "build:dev": "npm run ts:check && vite build --mode dev",
+  "build:dev": "pnpm vite build --mode dev",
   # 테스트 환경으로 빌드
-  "build:test": "npm run ts:check && vite build --mode test",
+  "build:test": "pnpm vite build --mode test",
+
   # 프로덕션 환경으로 빌드된 프로젝트 미리보기
-  "serve:pro": "vite preview --mode pro",
+  "serve:pro": "pnpm vite preview --mode pro",
   # 개발 환경으로 빌드된 프로젝트 미리보기
-  "serve:dev": "vite preview --mode dev",
+  "serve:dev": "pnpm vite preview --mode dev",
   # 테스트 환경으로 빌드된 프로젝트 미리보기
-  "serve:test": "vite preview --mode test",
-  # 업데이트 가능한 의존성 검사
-  "npm:check": "npx npm-check-updates",
+  "serve:test": "pnpm vite preview --mode test",
+
+  # WiLS 기술 문서 개발 서버 실행
+  "docs:dev": "vitepress dev docs",
+  # WiLS 기술 문서 정적 파일 빌드
+  "docs:build": "vitepress build docs",
+  # WiLS 기술 문서 빌드 결과 미리보기
+  "docs:preview": "vitepress preview docs",
+
+  # 업데이트 가능한 의존성 검사 및 갱신
+  "npm:check": "pnpx npm-check-updates -u",
   # node_modules 삭제
-  "clean": "npx rimraf node_modules",
+  "clean": "pnpx rimraf node_modules",
   # 캐시 삭제
-  "clean:cache": "npx rimraf node_modules/.cache",
-  # eslint 검사
+  "clean:cache": "pnpx rimraf node_modules/.cache",
+
+  # eslint 검사 및 자동 수정
   "lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
-  # eslint 포맷팅
+  # prettier 포맷팅
   "lint:format": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,vue,html,md}\"",
   # stylelint 포맷팅
   "lint:style": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+  # 커밋 전 린트 검사
   "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
-  "lint:pretty": "pretty-quick --staged",
-  "postinstall": "husky install",
+  
+  # husky 설치
+  "prepare": "husky install",
   # 모듈 생성
-  "p": "plop"
-},
+  "p": "plop",
+  # 아이콘 자동 생성 스크립트
+  "icon": "esno ./scripts/icon.ts"
+}
 ```

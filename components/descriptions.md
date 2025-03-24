@@ -1,12 +1,16 @@
 # Descriptions 컴포넌트 설명
 
-::: warning v2.5.3 이후, Descriptions 컴포넌트는 더 이상 `element-plus`의 `Descriptions`를 기반으로 한 확장성을 제공하지 않습니다. 따라서 일부 속성을 사용할 수 없을 수 있습니다. 구체적인 수정이나 변경은 직접 진행하시거나, 이슈를 제기하실 수 있습니다. :::
+::: warning 
+v2.5.3 이후, Descriptions 컴포넌트는 더 이상 `element-plus`의 `Descriptions`를 기반으로 한 확장성을 제공하지 않습니다. 따라서 일부 속성을 사용할 수 없을 수 있습니다. 
+:::
 
 ~~`element-plus` 의 `Descriptions` 의 컴포넌트를 확장。~~
 
-Descriptions 컴포넌트 : [src/components/Descriptions](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Descriptions)
+Descriptions 컴포넌트 : [src/components/Descriptions](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Descriptions)
 
-::: warning Descriptions 컴포넌트를 사용하려면 **tsx**를 사용하는 것이 좋습니다. :::
+::: warning 
+Descriptions 컴포넌트를 사용하려면 **tsx**를 사용하는 것이 좋습니다. 
+:::
 
 ## 사용법
 

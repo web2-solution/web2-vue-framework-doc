@@ -2,7 +2,7 @@
 
 ## 개요
 
-[web2-vue-framework](https://github.com/web2-solution/web2-vue-framework/tree/demo)은 element-plus를 기반으로 한 템플릿입니다. 최신 [Vue3](https://github.com/vuejs/vue-next)，[Vite](https://github.com/vitejs/vite)，[Typescript](https://www.typescriptlang.org/) 등 주류 프론트엔드 기술을 사용하여 개발되었습니다. 
+[web2-vue-framework](https://github.com/web2-solution/web2-vue-framework/tree/main)은 element-plus를 기반으로 한 템플릿입니다. 최신 [Vue3](https://github.com/vuejs/vue-next)，[Vite](https://github.com/vitejs/vite)，[Typescript](https://www.typescriptlang.org/) 등 주류 프론트엔드 기술을 사용하여 개발되었습니다. 
 
 ## 필요한 기본 지식
 
@@ -98,8 +98,7 @@
 ├── package.json
 ├── .postcssrc.js # postcss 설정
 ├── prettier.config.js # prettier 설정
-├── README.md # 영어 README
-├── README.zh-CN.md # 중국어 README
+├── README.md # README
 ├── stylelint.config.js # stylelint 설정
 ├── tsconfig.json # typescript 설정
 ├── vite.config.ts # vite 설정

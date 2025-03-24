@@ -2,7 +2,7 @@
 
 격자형 레이아웃 컴포넌트
 
-Waterfall 컴포넌트 : [src/components/Waterfall](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Waterfall) 
+Waterfall 컴포넌트 : [src/components/Waterfall](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Waterfall) 
 
 ::: tip
 
@@ -71,7 +71,8 @@ const loadMore = () => {
 
 ```
 
-## Waterfall 속성<span id="Waterfall"></span>
+## Waterfall 속성
+
 
 | 속성 | 설명 | 타입 | 옵션 | 기본값 |
 | ---- | ---- | ---- | ---- | ---- |
@@ -83,7 +84,7 @@ const loadMore = () => {
 | loading | 로딩 중 여부 | `boolean` | - | false |
 | end | 로딩 완료 여부 | `boolean` | - | false |
 | endText | 로딩 완료 텍스트 여부 | `string` | - | 더 이상 없습니다 |
-| props | 필드 별칭 | `object` | - | { src: 'src', height: 'height' } |
+| props | 필드 별칭 | `object` | - | `{ src: 'src', height: 'height' }` |
 
 ## Waterfall 이벤트
 

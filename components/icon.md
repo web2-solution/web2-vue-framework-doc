@@ -2,7 +2,7 @@
 
 프로젝트 내 컴포넌트 표시를 위해 사용되며, 기본적으로 모든 아이콘 라이브러리를 지원합니다 (필요에 따라 로드되며, 사용된 아이콘만 패키징됨). 로컬 SVG와 Iconify 아이콘 사용을 지원합니다.
 
-Icon 컴포넌트 : [src/components/Icon](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Icon)
+Icon 컴포넌트 : [src/components/Icon](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Icon)
 
 ::: tip
 

@@ -2,9 +2,11 @@
 
 `element-plus`의 `Table` 컴포넌트를 래핑하여 `columns`와 `data` 매개변수만 전달하면 응답하는 테이블을 렌더링할 수 있습니다.
 
-Table 컴포넌트 : [src/components/Table](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Table)
+Table 컴포넌트 : [src/components/Table](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Table)
 
-::: warning 주의 Table 컴포넌트를 사용할 때는 tsx를 사용하는 것을 권장합니다. :::
+::: warning 주의 
+Table 컴포넌트를 사용할 때는 tsx를 사용하는 것을 권장합니다. 
+:::
 
 ## 사용법
 

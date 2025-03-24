@@ -2,7 +2,7 @@
 
 `qrcode`를 기반으로 한 래핑
 
-Qrcode 컴포넌트 : [src/components/Qrcode](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Qrcode) 
+Qrcode 컴포넌트 : [src/components/Qrcode](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Qrcode) 
 
 ```vue
 <script setup lang="ts">

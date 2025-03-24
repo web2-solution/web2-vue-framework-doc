@@ -2,7 +2,7 @@
 
 `element-plus`의 `ImageViewer` 컴포넌트를 함수형으로 변환하여, 함수를 통해 컴포넌트를 쉽게 생성할 수 있도록 합니다.
 
-ImageViewer 컴포넌트 : [src/components/ImageViewer](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/ImageViewer)
+ImageViewer 컴포넌트 : [src/components/ImageViewer](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/ImageViewer)
 
 ## 사용법
 

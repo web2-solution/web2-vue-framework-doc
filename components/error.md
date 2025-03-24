@@ -2,7 +2,7 @@
 
 `404`,`403`,`500` 등 다양한 오류 페이지와 같은 컴포넌트에 사용됩니다。
 
-Error 컴포넌트 : [src/components/Error](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Error) 
+Error 컴포넌트 : [src/components/Error](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Error) 
 
 ## 사용법
 
@@ -33,4 +33,4 @@ import { Error } from '@/components/Error'
 
 현재는 `404`, `403`, `500`의 세 가지 유형만 제공됩니다. 만약 실제 요구에 맞지 않는 경우, 직접 확장할 수 있습니다.
 
-[src/components/Error/src/Error.vue](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/components/Error/src/Error.vue) 파일의 `errorMap` 객체에서 해당 유형을 확장하면 됩니다。
+[src/components/Error/src/Error.vue](https://github.com/web2-solution/web2-vue-framework/blob/main/src/components/Error/src/Error.vue) 파일의 `errorMap` 객체에서 해당 유형을 확장하면 됩니다。

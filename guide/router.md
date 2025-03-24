@@ -1,6 +1,6 @@
 # 라우팅 구성
 
-프로젝트의 라우팅 구성은 [src/router/index.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/router/index.ts) 파일에서 관리됩니다. 현재 프로젝트는 프론트엔드에서 라우터 데이터를 직접 저장하지 않고, 백엔드에서 권한에 따라 데이터를 가져와 메뉴를 생성하는 방식으로 설계되었습니다.
+프로젝트의 라우팅 구성은 [src/router/index.ts](https://github.com/web2-solution/web2-vue-framework/blob/main/src/router/index.ts) 파일에서 관리됩니다. 현재 프로젝트는 프론트엔드에서 라우터 데이터를 직접 저장하지 않고, 백엔드에서 권한에 따라 데이터를 가져와 메뉴를 생성하는 방식으로 설계되었습니다.
 
 라우터는 메뉴 생성의 핵심 요소이므로, 본 프로젝트에서는 개발자가 라우터를 쉽게 맞춤 설정할 수 있도록 다양한 구성 옵션을 제공합니다. 해당 설정은 데이터베이스의 메뉴 테이블에 저장되어야 합니다.
 
@@ -19,7 +19,7 @@
  *     hidden: true             
  *     설정을 true로 하면 해당 라우트는 사이드바에 표시되지 않습니다. (예: 404 페이지, 로그인 페이지)
  * 
- *     alwaysShow: true          
+ *     alwaysShow: true (사용 X)       
  *     하나의 라우트 아래에 선언된 children 라우트가 1개 이상이라면 자동으로 중첩 메뉴로 변환됩니다.
  *     하위 라우트가 하나만 있을 경우, 해당 하위 라우트를 사이드바에 루트 라우트로 표시합니다. 
  *     만약 하위 라우트의 개수와 관계없이 항상 루트 라우트를 사이드바에 표시하고 싶다면, alwaysShow: true로 설정할 수 있습니다. 
@@ -62,17 +62,17 @@
 
 ::: warning 주의
 
-모든 라우트 항목 구성은 반드시 `meta`에 포함되어야 합니다.
+모든 라우트 항목 구성은 반드시 `meta` 객체에 포함되어야 합니다.
 
 :::
 
-[types/router.d.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/types/router.d.ts) 파일에 해당 타입을 추가한 후, 라우트에 필요한 구성 항목을 추가할 수 있습니다.
+[types/router.d.ts](https://github.com/web2-solution/web2-vue-framework/blob/main/types/router.d.ts) 파일에 해당 타입을 추가한 후, 라우트에 필요한 구성 항목을 추가할 수 있습니다.
 
 ```ts
 declare module 'vue-router' {
   interface RouteMeta extends Record<string | number | symbol, unknown> {
     hidden?: boolean
-    alwaysShow?: boolean
+    alwaysShow?: boolean // 사용 X
     title?: string
     icon?: string
     noCache?: boolean
@@ -159,7 +159,7 @@ keep-alive가 작동하려면 라우터의 `name` 속성과 해당 페이지의 
 
 ### 특정 페이지 캐시 비활성화 방법
 
-`noCache`를 `true`로 설정하면 캐시를 비활성화할 수 있으며, 또는 컴포넌트에 `name` 속성을 추가하지 않으면 됩니다.
+캐시를 비활성화하려면 `noCache`를 `true`로 설정하거나, 컴포넌트에 `name` 속성을 지정하지 않으면 됩니다.
 
 ```ts
 {

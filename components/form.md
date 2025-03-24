@@ -2,10 +2,20 @@
 
 `element-plus`의 `Form` 컴포넌트를 래핑하여 구현되었습니다. `element-plus`의 모든 폼 컴포넌트를 지원하며, 추가적인 기능도 확장하였습니다.
 
-Form 컴포넌트: [src/components/Form](https://github.com/web2-solution/web2-vue-framework/tree/demo/src/components/Form)
+Form 컴포넌트: [src/components/Form](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Form)
 
-::: warning Form 컴포넌트 사용 시, tsx를 사용하는 것이 권장됩니다.
+::: warning Form 컴포넌트 사용 시, tsx 사용을 권장합니다.
 :::
+
+## Form 컴포넌트의 주요 기능
+
+`Form` 컴포넌트는 `element-plus`의 `Form` 컴포넌트를 기반으로 확장되었으며, 다음과 같은 주요 기능을 제공합니다:
+
+1. **동적 폼 생성**: `schema` 속성을 통해 폼 레이아웃과 컴포넌트를 동적으로 생성할 수 있습니다.
+2. **유연한 레이아웃**: `isCol` 속성을 사용하여 그리드 레이아웃을 활성화할 수 있습니다.
+3. **폼 데이터 관리**: `model` 속성을 통해 폼 데이터를 양방향으로 바인딩할 수 있습니다.
+4. **커스터마이징 가능**: `componentMap.ts`을 통해 사용자 정의 컴포넌트를 추가하거나 기존 컴포넌트를 확장할 수 있습니다.
+5. **슬롯 지원**: 각 컴포넌트는 `slots` 객체를 통해 사용자 정의 콘텐츠를 삽입할 수 있습니다.
 
 ## 사용법
 
@@ -14,7 +24,7 @@ Form 컴포넌트: [src/components/Form](https://github.com/web2-solution/web2-v
 ### 기본 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { Form, FormSchema } from '@/components/Form'
 import { reactive } from 'vue'
 
@@ -186,6 +196,49 @@ on?: {
 
 프로젝트에 내장된 폼 컴포넌트가 요구 사항을 충족하지 않을 때, 직접 자신의 컴포넌트를 추가할 수 있습니다.
 
-1. [src/components/Form/src/types/index.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/components/Form/src/types/index.ts) 에서 `ComponentName` 컴포넌트 이름을 추가할 수 있습니다.
-2.  [src/components/Form/src/helper/componentMap.ts](https://github.com/web2-solution/web2-vue-framework/blob/demo/src/components/Form/src/helper/componentMap.ts) 에서 `componentMap` 객체에 키-값을 추가하세요.
+1. [src/components/Form/src/types/index.ts](https://github.com/web2-solution/web2-vue-framework/blob/main/src/components/Form/src/types/index.ts) 에서 `ComponentName` 컴포넌트 이름을 추가할 수 있습니다.
+2.  [src/components/Form/src/helper/componentMap.ts](https://github.com/web2-solution/web2-vue-framework/blob/main/src/components/Form/src/helper/componentMap.ts) 에서 `componentMap` 객체에 키-값을 추가하세요.
 3. 더 나은 타입 힌트를 원하시면, 사용자 정의 컴포넌트의 타입을  `componentProps`에도 추가하세요.
+
+## Form 컴포넌트의 내부 동작
+
+### 1. `schema` 속성
+`schema`는 폼의 레이아웃과 컴포넌트를 정의하는 핵심 속성입니다. 각 항목은 `FormSchema` 타입을 따르며, 다음과 같은 속성을 포함합니다:
+
+| 속성 | 설명 | 타입 | 기본값 |
+| ---- | ---- | ---- | ---- |
+| `field` | 필드 이름 (고유 값) | `string` | - |
+| `label` | 폼 항목의 라벨 | `string` | - |
+| `component` | 렌더링할 컴포넌트 이름 | `ComponentName` | - |
+| `componentProps` | 컴포넌트의 추가 속성 | `any` | - |
+| `formItemProps` | `FormItem`의 추가 속성 | `FormItemProps` | - |
+| `hidden` | 항목 숨김 여부 | `boolean` | `false` |
+| `remove` | 항목 제거 여부 (값과 함께 삭제) | `boolean` | `false` |
+
+### 2. 컴포넌트 매핑 (`componentMap`)
+
+`componentMap`은 `Form` 컴포넌트에서 사용할 수 있는 하위 컴포넌트를 정의합니다. 새로운 컴포넌트를 추가하려면 다음 단계를 따르세요:
+
+1. **컴포넌트 이름 추가**:  
+   `src/components/Form/src/types/index.ts` 파일에서 `ComponentName`에 새 컴포넌트 이름을 추가합니다.
+
+2. **컴포넌트 매핑 등록**:  
+   `src/components/Form/src/helper/componentMap.ts` 파일의 `componentMap` 객체에 새 컴포넌트를 등록합니다.
+
+3. **타입 정의 추가** (선택 사항):  
+   사용자 정의 컴포넌트의 타입을 `componentProps`에 추가하여 더 나은 타입 힌트를 제공합니다.
+
+### 3. 슬롯 및 이벤트 처리
+
+`Form` 컴포넌트는 각 하위 컴포넌트에 대해 `slots`와 `on` 객체를 지원합니다.
+
+#### 슬롯 예제
+```ts
+InputComponentProps = {
+  slots?: {
+    prefix?: (...args: any[]) => JSX.Element | null
+    suffix?: (...args: any[]) => JSX.Element | null
+    prepend?: (...args: any[]) => JSX.Element | null
+    append?: (...args: any[]) => JSX.Element | null
+  }
+}
