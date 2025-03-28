@@ -15,7 +15,7 @@ Editor 컴포넌트 [src/components/Editor](https://github.com/web2-solution/web
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
   import { Editor } from '@/components/Editor';
   import { ref } from 'vue';
 

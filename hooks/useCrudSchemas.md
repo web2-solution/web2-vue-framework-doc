@@ -18,7 +18,7 @@ useCrudSchemas는 [src/hooks/web/useCrudSchemas.ts](https://github.com/web2-solu
 `search`와 `form` 필드는 `dictName`을 전달하여 전역 사전 데이터를 가져오거나 `api`를 전달하여 `API` 데이터를 가져올 수 있습니다. `api`를 사용하는 경우, 데이터를 직접 `return`해야 합니다.
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { CrudSchema, useCrudSchemas } from '@/hooks/web/useCrudSchemas'
 
 const crudSchemas = reactive<CrudSchema[]>([

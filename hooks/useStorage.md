@@ -12,7 +12,7 @@ useStorage는 [src/hooks/web/useStorage.ts](https://github.com/web2-solution/web
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { useStorage } from '@/hooks/web/useStorage'
 
 const { setStorage, getStorage, removeStorage, clear } = useStorage()

@@ -14,7 +14,10 @@ CustomGrid 컴포넌트: [src/components/CustomGrid](https://github.com/web2-sol
 6. **상태 기반 스타일링**: 특정 상태(추가, 수정, 비어있음 등)에 따라 셀 스타일을 동적으로 변경할 수 있습니다.
 7. **트랜잭션 관리**: `mutateRow`와 `transaction`을 통해 행 추가, 삭제, 수정 등의 트랜잭션을 관리할 수 있습니다.
 8. **그리드 API 노출**: `gridApi`를 통해 그리드의 다양한 기능을 외부에서 제어할 수 있습니다.
-9.  **자동 크기 조정**: `autoSizeStrategy`를 통해 컬럼 크기를 자동으로 조정할 수 있습니다.
+9. **자동 크기 조정**: `autoSizeStrategy`를 통해 컬럼 크기를 자동으로 조정할 수 있습니다.
+10. **다국어 지원**: `useI18n`을 활용하여 다국어 기능을 지원합니다.
+11. **그룹화 및 병합된 셀 지원**: 컬럼 그룹화 및 병합된 셀 스타일링을 지원합니다.
+12. **상태바 패널 확장**: `statusPanels`를 통해 상태바에 다양한 패널을 추가할 수 있습니다.
 
 ## 사용법
 
@@ -23,7 +26,7 @@ CustomGrid 컴포넌트: [src/components/CustomGrid](https://github.com/web2-sol
 ### 기본 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { CustomGrid } from '@/components/CustomGrid';
 
 const colDefs = [
@@ -115,7 +118,7 @@ CustomGrid 컴포넌트는 다양한 expose 메서드를 제공하여 부모 컴
 
 #### 1. 엑셀 내보내기
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { ref } from 'vue';
 import { CustomGrid, GridExpose } from '@/components/CustomGrid';
 
@@ -134,7 +137,7 @@ const handleExport = () => {
 
 #### 2. 행 추가
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 const handleAddRow = () => {
   gridRef.value?.mutateRow('add', [{ id: Date.now(), name: 'New User', age: 0 }]);
 };
@@ -147,7 +150,7 @@ const handleAddRow = () => {
 
 #### 3. 변경 사항 확인
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 const handleGetChanges = () => {
   const changes = gridRef.value?.getChanges();
   console.log('변경 사항:', changes);
@@ -161,7 +164,7 @@ const handleGetChanges = () => {
 
 #### 4. 특정 행 선택
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 const handleSelectFirstRow = () => {
   gridRef.value?.selectRow('first');
 };
@@ -174,7 +177,7 @@ const handleSelectFirstRow = () => {
 
 #### 5. 트랜잭션 초기화
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 const handleResetTransaction = () => {
   gridRef.value?.resetTransaction();
 };
@@ -187,7 +190,7 @@ const handleResetTransaction = () => {
 
 #### 6. 모든 행 데이터 가져오기
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 const handleGetAllRows = () => {
   const rows = gridRef.value?.getRowData();
   console.log('모든 행 데이터:', rows);
@@ -201,7 +204,7 @@ const handleGetAllRows = () => {
 
 #### 7. 선택 초기화 및 첫 번째 행 선택
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 const handleResetSelection = () => {
   gridRef.value?.resetGridSelection();
 };
@@ -216,7 +219,7 @@ const handleResetSelection = () => {
 `gridApi`를 사용하여 그리드의 다양한 기능에 직접 접근할 수 있습니다.
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { ref } from 'vue';
 import { CustomGrid } from '@/components/CustomGrid';
 
@@ -252,6 +255,9 @@ const handleEnsureVisible = () => {
 | 추가된 행      | `added-row`      | 새로 추가된 행                    |
 | 수정된 셀      | `updated-cell`   | 수정된 셀                         |
 | 비어있는 셀    | `empty-cell`     | 필수 입력 필드가 비어있는 셀      |
+| 그룹 레벨 0    | `group-lvl-0`    | 그룹 레벨 0에 해당하는 셀         |
+| 그룹 레벨 1    | `group-lvl-1`    | 그룹 레벨 1에 해당하는 셀         |
+| 그룹 레벨 2    | `group-lvl-2`    | 그룹 레벨 2에 해당하는 셀         |
 
 
 ## 확장 및 커스터마이징
@@ -271,5 +277,58 @@ const handleEnsureVisible = () => {
     treeData: true
   }"
 />
+```
+
+## Emit 이벤트
+
+`CustomGrid` 컴포넌트는 다양한 이벤트를 통해 부모 컴포넌트와 상호작용할 수 있습니다. 아래는 지원되는 이벤트와 그 설명입니다.
+
+| 이벤트 이름           | 설명                                                                                     | 매개변수                                                                                     |
+|-----------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| `register`            | 컴포넌트가 등록될 때 호출됩니다.                                                         | `defaultExpose: GridExpose`                                                                 |
+| `search`              | 검색 버튼 클릭 시 호출됩니다.                                                            | 없음                                                                                        |
+| `selectRow`           | 행이 선택될 때 호출됩니다.                                                               | `event: SelectionChangedEvent`, `selectedNode: IRowNode`                                    |
+| `add`                 | 행이 추가될 때 호출됩니다.                                                               | `newRowNode: IRowNode`                                                                      |
+| `remove`              | 행이 삭제될 때 호출됩니다.                                                               | `removeNodes: IRowNode[]`                                                                   |
+| `update`              | 행 데이터가 업데이트될 때 호출됩니다.                                                    | `updatedData: any`, `event?: CellValueChangedEvent`                                         |
+| `save`                | 변경 사항이 저장될 때 호출됩니다.                                                        | `changes: any[]`                                                                            |
+| `mutate`              | 트랜잭션이 발생할 때 호출됩니다.                                                         | `transaction: RowNodeTransaction`                                                          |
+| `email`               | 이메일 전송 버튼 클릭 시 호출됩니다.                                                     | 없음                                                                                        |
+| `uploadExcel`         | 엑셀 파일이 업로드될 때 호출됩니다.                                                      | `data: any`                                                                                 |
+| `downloadExcel`       | 엑셀 파일 다운로드 버튼 클릭 시 호출됩니다.                                              | 없음                                                                                        |
+| `addFunc`             | "화면에 기능 추가" 버튼 클릭 시 호출됩니다.                                              | `rows: any[]`                                                                               |
+| `addAuth`             | 권한 추가 버튼 클릭 시 호출됩니다.                                                       | `rows: any[]`                                                                               |
+| `gridApi`             | 그리드 API 객체가 초기화될 때 호출됩니다.                                                | `api: GridApi`                                                                              |
+| `up`                  | 선택된 행을 위로 이동할 때 호출됩니다.                                                   | 없음                                                                                        |
+| `down`                | 선택된 행을 아래로 이동할 때 호출됩니다.                                                 | 없음                                                                                        |
+| `expand`              | 그리드가 확장되거나 축소될 때 호출됩니다.                                                | `isExpanded: boolean`                                                                       |
+| `chkChanged`          | 행의 체크박스 상태가 변경될 때 호출됩니다.                                               | `node: IRowNode`                                                                            |
+
+### Emit 사용 예시
+
+#### 1. `selectRow` 이벤트 사용
+```vue
+<script setup lang="tsx">
+const handleRowSelect = (event, selectedNode) => {
+  console.log('선택된 행:', selectedNode);
+};
+</script>
+
+<template>
+  <CustomGrid @select-row="handleRowSelect" />
+</template>
+```
+
+#### 9. `chkChanged` 이벤트 사용
+```vue
+<script setup lang="tsx">
+const handleCheckboxChange = (node) => {
+  console.log('체크박스 상태 변경된 행:', node);
+};
+</script>
+
+<template>
+  <CustomGrid @chk-changed="handleCheckboxChange" />
+</template>
 ```
 

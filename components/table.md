@@ -13,7 +13,7 @@ Table 컴포넌트를 사용할 때는 tsx를 사용하는 것을 권장합니�
 ### 기본 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
   import { reactive } from 'vue';
   import { Table, TableColumn } from '@/components/Table';
 

@@ -143,7 +143,7 @@ declare module 'vue-router' {
 }
 
 // /@/views/Level/Menu2.vue
-<script setup lang="ts">
+<script setup lang="tsx">
 defineOptions({
   name: 'Menu2'
 })

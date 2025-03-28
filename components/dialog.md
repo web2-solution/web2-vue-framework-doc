@@ -7,7 +7,7 @@ Dialog 컴포넌트 [src/components/Dialog](https://github.com/web2-solution/web
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
   import { Dialog } from '@/components/Dialog';
   import { ElButton } from 'element-plus';
   import { ref } from 'vue';

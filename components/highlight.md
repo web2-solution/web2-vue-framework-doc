@@ -7,7 +7,7 @@ Highlight 컴포넌트 : [src/components/Highlight](https://github.com/web2-solu
 이 컴포넌트는 순수 텍스트만 받을 수 있습니다.
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { Highlight } from '@/components/Highlight'
 </script>
 

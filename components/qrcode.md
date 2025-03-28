@@ -5,7 +5,7 @@
 Qrcode 컴포넌트 : [src/components/Qrcode](https://github.com/web2-solution/web2-vue-framework/tree/main/src/components/Qrcode) 
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { Qrcode } from '@/components/Qrcode'
 </script>
 

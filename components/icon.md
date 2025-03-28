@@ -31,7 +31,7 @@ Iconify에서 원하는 모든 아이콘을 검색하고 사용할 수 있습니
 다른 컴포넌트, 예를 들어 `ElButton`에 `icon` 속성을 전달해야 하는 경우, `useIcon`을 사용할 수 있습니다.
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
   import { useIcon } from '@/hooks/web/useIcon';
   import { ElButton } from 'element-plus';
 

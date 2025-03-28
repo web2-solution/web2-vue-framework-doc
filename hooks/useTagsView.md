@@ -7,8 +7,8 @@ useTagsView 는 [src/hooks/web/useTagsView.ts](https://github.com/web2-solution/
 ## 사용법
 
 ```vue
-<script setup lang="ts">
-<script setup lang="ts">
+<script setup lang="tsx">
+<script setup lang="tsx">
 import { ContentWrap } from '@/components/ContentWrap'
 import { ElButton } from 'element-plus'
 import { useTagsView } from '@/hooks/web/useTagsView'

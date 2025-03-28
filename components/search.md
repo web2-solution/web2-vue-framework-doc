@@ -12,7 +12,7 @@ Search 컴포넌트: [src/components/Search](https://github.com/web2-solution/we
 ### 기본 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { Search } from '@/components/Search'
 import { FormSchema } from '@/components/Form'
 import { reactive } from 'vue'
@@ -43,7 +43,7 @@ const schema = reactive<FormSchema[]>([
 #### `useSearch` 사용 예시
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { useSearch } from '@/hooks/web/useSearch';
 import { Search } from '@/components/Search';
 import { reactive } from 'vue';
@@ -83,7 +83,7 @@ const setFormValues = () => {
 `model` prop을 사용하면 `Search` 컴포넌트의 초기 데이터와 동기화된 상태를 유지할 수 있습니다. `useSearch`를 사용하지 않아도 간단한 폼 데이터 관리가 가능합니다.
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { Search } from '@/components/Search';
 import { reactive } from 'vue';
 

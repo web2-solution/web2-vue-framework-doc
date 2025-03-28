@@ -9,7 +9,7 @@ CountTo 컴포넌트 : [src/components/CountTo](https://github.com/web2-solution
 더 복잡한 예시는 [온라인 미리보기](http://demo-wils.logis-hub.co.kr/#/components/form/default-form)에서 확인할 수 있습니다.
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { CountTo } from '@/components/CountTo'
 </script>
 

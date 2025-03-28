@@ -9,7 +9,7 @@ ContentDetailWrap 컴포넌트 : [src/components/ContentDetailWrap](https://gith
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { ContentDetailWrap } from '@/components/ContentDetailWrap'
 </script>
 

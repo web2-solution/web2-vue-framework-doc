@@ -8,7 +8,7 @@ Avatars 컴포넌트 : [src/components/Avatars](https://github.com/web2-solution
 
 
 ```vue
-<script lang="ts" setup>
+<script lang="tsx" setup>
 import { Avatars } from '@/components/Avatars'
 
 const data = ref<AvatarItem[]>([

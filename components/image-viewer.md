@@ -7,7 +7,7 @@ ImageViewer 컴포넌트 : [src/components/ImageViewer](https://github.com/web2-
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { createImageViewer } from '@/components/ImageViewer'
 import { ElButton } from 'element-plus'
 

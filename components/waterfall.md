@@ -13,7 +13,7 @@ data 데이터는 반드시 높이 필드를 포함해야 하며, 이는 올바�
 ## 사용법
 
 ```vue
-<script lang="ts" setup>
+<script lang="tsx" setup>
 import { Waterfall } from '@/components/Waterfall'
 import Mock from 'mockjs'
 import { ref, unref } from 'vue'

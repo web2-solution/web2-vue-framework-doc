@@ -9,7 +9,7 @@ VideoPlayer 컴포넌트 : [src/components/VideoPlayer](https://github.com/web2-
 
 
 ```vue
-<script lang="ts" setup>
+<script lang="tsx" setup>
 import { VideoPlayer } from '@/components/VideoPlayer'
 </script>
 

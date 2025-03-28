@@ -7,7 +7,7 @@ Infotip 컴포넌트 [src/components/Infotip](https://github.com/web2-solution/w
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { Infotip } from '@/components/Infotip'
 </script>
 

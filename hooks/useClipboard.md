@@ -7,7 +7,7 @@ useClipboard는 [src/hooks/web/useClipboard.ts](https://github.com/web2-solution
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { useClipboard } from '@/hooks/web/useClipboard'
 
 const { copy } = useClipboard()

@@ -7,7 +7,7 @@ useNetwork는 [src/hooks/web/useNetwork.ts](https://github.com/web2-solution/web
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { useNetwork } from '@/hooks/web/useNetwork'
 
 const { online } = useNetwork()

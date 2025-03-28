@@ -8,7 +8,7 @@
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { createVideoViewer } from '@/components/VideoPlayer'
 
 const open = () => {

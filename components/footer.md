@@ -11,7 +11,7 @@ Footer 컴포넌트 [src/components/Footer](https://github.com/web2-solution/web
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { Footer } from '@/components/Footer'
 </script>
 

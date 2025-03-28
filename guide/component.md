@@ -8,7 +8,7 @@ Vue 프로젝트에서 컴포넌트를 등록하는 방법에는 두 가지가 �
 현재 프로젝트는 페이지에서 필요한 컴포넌트를 임포트하는 방식으로 구성되어 있습니다.
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { ElBacktop } from 'element-plus' // 페이지에서 사용할 컴포넌트 가져오기
 import { useDesign } from '@/hooks/web/useDesign'
 

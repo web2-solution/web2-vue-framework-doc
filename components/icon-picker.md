@@ -14,7 +14,7 @@ IconPicker 컴포넌트 [src/components/IconPicker](https://github.com/web2-solu
 
 
 ```vue
-<script lang="ts" setup>
+<script lang="tsx" setup>
 import { IconPicker } from '@/components/IconPicker'
 
 const currentIcon = ref('tdesign:book-open')

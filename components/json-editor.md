@@ -9,8 +9,8 @@ JsonEditor 컴포넌트 : [src/components/JsonEditor](https://github.com/web2-so
 ## 사용법
 
 ```vue
-<script setup lang="ts">
-<script setup lang="ts">
+<script setup lang="tsx">
+<script setup lang="tsx">
 import { ContentWrap } from '@/components/ContentWrap'
 import { JsonEditor } from '@/components/JsonEditor'
 import { useI18n } from '@/hooks/web/useI18n'

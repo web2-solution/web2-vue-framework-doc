@@ -7,7 +7,7 @@ Error 컴포넌트 : [src/components/Error](https://github.com/web2-solution/web
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { Error } from '@/components/Error'
 </script>
 

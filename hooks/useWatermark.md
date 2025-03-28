@@ -7,7 +7,7 @@ useWatermark 은 [src/hooks/web/useWatermark.ts](https://github.com/web2-solutio
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { useWatermark } from '@/hooks/web/useWatermark'
 import { onBeforeUnmount } from 'vue'
 

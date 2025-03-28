@@ -7,7 +7,7 @@ Sticky 컴포넌트
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { Sticky } from '@/components/Sticky'
 </script>
 

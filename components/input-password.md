@@ -7,7 +7,7 @@ InputPassword 컴포넌트 : [src/components/InputPassword](https://github.com/w
 ## 사용법
 
 ```vue
-<script setup lang="ts">
+<script setup lang="tsx">
 import { InputPassword } from '@/components/InputPassword'
 import { ref } from 'vue'
 
